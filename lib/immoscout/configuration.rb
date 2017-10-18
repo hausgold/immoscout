@@ -2,6 +2,6 @@
 
 module Immoscout
   class Configuration
-    # TODO: specifiy attr_accessor
+    attr_accessor :access_token, :use_sandbox
   end
 end
