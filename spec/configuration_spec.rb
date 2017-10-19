@@ -7,11 +7,11 @@ RSpec.describe Immoscout::Configuration do
 
   it "can set access_token" do
     expect { instance.access_token = 'token' }.to \
-      change { instance.access_token }.from(nil).to('token')
+      change { instance.access_token }.to('token')
   end
 
   it "can set use_sandbox" do
     expect { instance.use_sandbox = true }.to \
-      change { instance.use_sandbox }.from(nil).to(true)
+      change { instance.use_sandbox }.to(true)
   end
 end

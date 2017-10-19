@@ -2,6 +2,8 @@
 
 module Immoscout
   class Configuration
-    attr_accessor :access_token, :use_sandbox
+    include ActiveSupport::Configurable
+    config_accessor(:access_token)
+    config_accessor(:use_sandbox) { false }
   end
 end

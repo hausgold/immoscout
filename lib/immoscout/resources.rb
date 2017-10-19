@@ -1,0 +1,13 @@
+# root hashie resource
+require_relative 'resources/base'
+
+# subresources
+require_relative 'resources/address'
+require_relative 'resources/contact'
+require_relative 'resources/price'
+require_relative 'resources/courtage'
+
+# renderable resources
+require_relative 'resources/residential'
+require_relative 'resources/house'
+require_relative 'resources/apartment'
