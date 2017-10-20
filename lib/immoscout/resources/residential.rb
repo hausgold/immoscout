@@ -5,6 +5,7 @@ require_relative 'concerns/with_address'
 require_relative 'concerns/with_contact'
 require_relative 'concerns/with_price'
 require_relative 'concerns/with_courtage'
+require_relative 'concerns/with_api_search_data'
 
 module Immoscout
   module Resources
@@ -14,17 +15,9 @@ module Immoscout
       include Immoscout::Resources::Concerns::WithContact
       include Immoscout::Resources::Concerns::WithPrice
       include Immoscout::Resources::Concerns::WithCourtage
+      include Immoscout::Resources::Concerns::WithApiSearchData
 
-      class ApiSearchData < Base
-        property :search_field1, from: :searchField1
-        property :search_field2, from: :searchField2
-        property :search_field3, from: :searchField3
-      end
-      property :api_search_data,
-               coerce: ApiSearchData,
-               default: {},
-               from: :apiSearchData
-
+      property :@id, from: :id
       property :creation_date, from: :creationDate
       property :last_modification_date, from: :lastModificationDate
       property :title

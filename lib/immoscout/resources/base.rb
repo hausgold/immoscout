@@ -6,6 +6,7 @@ module Immoscout
       include Hashie::Extensions::Dash::Coercion
       include Hashie::Extensions::Dash::PropertyTranslation
       include Hashie::Extensions::IndifferentAccess
+      include Hashie::Extensions::IgnoreUndeclared
     end
   end
 end

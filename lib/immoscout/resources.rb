@@ -6,6 +6,7 @@ require_relative 'resources/address'
 require_relative 'resources/contact'
 require_relative 'resources/price'
 require_relative 'resources/courtage'
+require_relative 'resources/api_search_data'
 
 # renderable resources
 require_relative 'resources/residential'

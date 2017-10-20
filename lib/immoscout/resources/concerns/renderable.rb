@@ -13,14 +13,14 @@ module Immoscout
                 end
             }
           end
+          alias_method :to_hash, :as_json
+          alias_method :to_h, :as_json
+          alias_method :inspect, :as_json
 
           def to_json
             as_json.to_json
           end
-
-          def inspect
-            as_json
-          end
+          alias_method :to_s, :to_json
 
           private
 
