@@ -26,11 +26,6 @@ module Immoscout
       property :furnishing_note, from: :furnishingNote
       property :location_note, from: :locationNote
       property :other_note, from: :otherNote
-
-      property :lodger_flat, from: :lodgerFlat
-      property :construction_phase, from: :constructionPhase
-      property :building_type, from: :buildingType
-
       property :cellar
       property :handicapped_accessible, from: :handicappedAccessible
       property :number_of_parking_spaces, from: :numberOfParkingSpaces
@@ -40,7 +35,6 @@ module Immoscout
       property :construction_year, from: :constructionYear
       property :free_from, from: :freeFrom
       property :heating_type_enev2014, from: :heatingTypeEnev2014
-
       property :building_energy_rating_type, from: :buildingEnergyRatingType
       property :thermal_characteristic, from: :thermalCharacteristic
       property :energy_consumption_contains_warm_water,
@@ -57,7 +51,6 @@ module Immoscout
       property :parking_space_price, from: :parkingSpacePrice
       property :summer_residence_practical, from: :summerResidencePractical
       property :living_space, from: :livingSpace
-      property :plot_area, from: :plotArea
       property :number_of_rooms, from: :numberOfRooms
       property :energy_performance_certificate,
                from: :energyPerformanceCertificate
