@@ -5,7 +5,9 @@ module Immoscout
         extend ActiveSupport::Concern
 
         included do
-          property :courtage, coerce: Immoscout::Resources::Courtage, default: {}
+          property :courtage,
+                   coerce: Immoscout::Resources::Courtage,
+                   default: {}
         end
 
         class_methods do

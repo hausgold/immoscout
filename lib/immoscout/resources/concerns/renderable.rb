@@ -5,17 +5,12 @@ module Immoscout
         extend ActiveSupport::Concern
 
         included do
-          attr_writer :type
-
-          def type
-            @type || default_type
-          end
-
           def as_json
             {
-              "realestates.#{type}" => super.deep_transform_keys do |key|
-                key.camelize :lower
-              end
+              "realestates.#{json_root_type}" => \
+                super.deep_transform_keys do |key|
+                  key.camelize :lower
+                end
             }
           end
 
@@ -23,10 +18,18 @@ module Immoscout
             as_json.to_json
           end
 
+          def inspect
+            as_json
+          end
+
           private
 
-          def default_type
-            self.class.name.split("::").last.camelize(:lower)
+          def json_root_type
+            try :type || default_json_root_type
+          end
+
+          def default_json_root_type
+            self.class.name.demodulize.camelize(:lower)
           end
         end
 

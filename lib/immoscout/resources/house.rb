@@ -3,7 +3,10 @@
 module Immoscout
   module Resources
     class House < Residential
-      # house related stuff
+      def type
+        # TODO: also support houseRent
+        :houseBuy
+      end
     end
   end
 end
