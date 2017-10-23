@@ -8,7 +8,7 @@ module Immoscout
           def as_json
             {
               "realestates.#{json_root_type}" => \
-                super.deep_transform_keys do |key|
+                deep_transform_keys do |key|
                   key.camelize :lower
                 end
             }
@@ -25,7 +25,7 @@ module Immoscout
           private
 
           def json_root_type
-            try :type || default_json_root_type
+            defined?(:type) ? type : default_json_root_type
           end
 
           def default_json_root_type

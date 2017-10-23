@@ -17,7 +17,7 @@ module Immoscout
       include Immoscout::Resources::Concerns::WithCourtage
       include Immoscout::Resources::Concerns::WithApiSearchData
 
-      property :@id, from: :id
+      property :id, from: :@id
       property :creation_date, from: :creationDate
       property :last_modification_date, from: :lastModificationDate
       property :title
@@ -42,7 +42,7 @@ module Immoscout
       property :number_of_floors, from: :numberOfFloors
       property :usable_floor_space, from: :usableFloorSpace
       property :number_of_bed_rooms, from: :numberOfBedRooms
-      property :number_of_bath_Rooms, from: :numberOfBathRooms
+      property :number_of_bath_rooms, from: :numberOfBathRooms
       property :guest_toilet, from: :guestToilet
       property :parking_space_type, from: :parkingSpaceType
       property :rented
@@ -54,6 +54,16 @@ module Immoscout
       property :number_of_rooms, from: :numberOfRooms
       property :energy_performance_certificate,
                from: :energyPerformanceCertificate
+
+      class EnergySource < Base
+        property :energy_source_enev2014,
+                 from: :energySourceEnev2014,
+                 coerce: Array[String]
+      end
+
+      property :energy_sources_enev2014,
+               from: :energySourcesEnev2014,
+               coerce: EnergySource
     end
   end
 end

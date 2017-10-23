@@ -1,0 +1,150 @@
+{
+   "@id": "74719707",
+   "externalId": "441",
+   "title": "house buy and project 2",
+   "creationDate": "2014-08-12T11:26:14.000+02:00",
+   "lastModificationDate": "2014-08-12T11:30:37.000+02:00",
+   "address":
+   {
+       "street": "andreasstr",
+       "houseNumber": "10",
+       "postcode": "10243",
+       "city": "berlin",
+       "wgs84Coordinate":
+       {
+           "latitude": 52.51245,
+           "longitude": 13.43134
+       },
+       "geoHierarchy":
+       {
+           "continent":
+           {
+               "geoCodeId": 1,
+               "fullGeoCodeId": "1"
+           },
+           "country":
+           {
+               "geoCodeId": 276,
+               "fullGeoCodeId": "1276"
+           },
+           "region":
+           {
+               "geoCodeId": 3,
+               "fullGeoCodeId": "1276003"
+           },
+           "city":
+           {
+               "geoCodeId": 1,
+               "fullGeoCodeId": "1276003001"
+           },
+           "quarter":
+           {
+               "geoCodeId": 17,
+               "fullGeoCodeId": "1276003001017"
+           },
+           "neighbourhood":
+           {
+               "geoCodeId": 11000000002348
+           }
+       }
+   },
+   "apiSearchData":
+   {
+       "searchField1": "searchApiField1",
+       "searchField2": "searchApiField2",
+       "searchField3": "searchApiField3"
+   },
+   "realEstateState": "ACTIVE",
+   "groupNumber": 500,
+   "descriptionNote": "Objektbeschreibung",
+   "furnishingNote": "Ausstattung ",
+   "locationNote": "Lage",
+   "otherNote": "Sonstiges ",
+   "attachments":
+   [
+       {
+           "@xlink.href": "http://devrst03.rz.is/restapi/api/offer/v1.0/user/me/realestate/74719707/attachment"
+       }
+   ],
+   "realEstateProjectId": 33505,
+   "showAddress": "true",
+   "contact":
+   {
+       "@id": "53323004"
+   },
+   "common.publishChannels":
+   [
+       {
+           "publishChannel":
+           [
+               {
+                   "@id": "10000",
+                   "@title": "ImmobilienScout24"
+               },
+               {
+                   "@id": "10001",
+                   "@title": "Homepage"
+               }
+           ]
+       }
+   ],
+   "lodgerFlat": "YES",
+   "constructionPhase": "PROJECTED",
+   "buildingType": "SINGLE_FAMILY_HOUSE",
+   "energyCertificate":
+   {
+       "energyCertificateAvailability": "AVAILABLE",
+       "energyCertificateCreationDate": "BEFORE_01_MAY_2014"
+   },
+   "cellar": "YES",
+   "handicappedAccessible": "YES",
+   "numberOfParkingSpaces": 2,
+   "condition": "FIRST_TIME_USE_AFTER_REFURBISHMENT",
+   "lastRefurbishment": 2002,
+   "interiorQuality": "SOPHISTICATED",
+   "constructionYear": 1999,
+   "freeFrom": "sofort",
+   "heatingType": "SELF_CONTAINED_CENTRAL_HEATING",
+   "heatingTypeEnev2014": "SELF_CONTAINED_CENTRAL_HEATING",
+   "energySourcesEnev2014":
+   {
+       "energySourceEnev2014":
+       [
+           "SOLAR_HEATING",
+           "WIND_ENERGY",
+           "GEOTHERMAL",
+           "COMBINED_HEAT_AND_POWER_BIO_ENERGY"
+       ]
+   },
+   "buildingEnergyRatingType": "ENERGY_REQUIRED",
+   "thermalCharacteristic": 174,
+   "energyConsumptionContainsWarmWater": "NOT_APPLICABLE",
+   "numberOfFloors": 1,
+   "usableFloorSpace": 100,
+   "numberOfBedRooms": 2,
+   "numberOfBathRooms": 2,
+   "guestToilet": "YES",
+   "parkingSpaceType": "OUTSIDE",
+   "rented": "YES",
+   "rentalIncome": 522,
+   "listed": "YES",
+   "parkingSpacePrice": 1500,
+   "summerResidencePractical": "YES",
+   "price":
+   {
+       "value": 250000,
+       "currency": "EUR",
+       "marketingType": "PURCHASE",
+       "priceIntervalType": "ONE_TIME_CHARGE"
+   },
+   "livingSpace": 140,
+   "plotArea": 500,
+   "numberOfRooms": 4,
+   "energyPerformanceCertificate": "true",
+   "courtage":
+   {
+       "hasCourtage": "YES",
+       "courtage": "Provisionshöhe ",
+       "courtageNote": "Provisionshinweis"
+   }
+}

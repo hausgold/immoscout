@@ -1,0 +1,135 @@
+{
+  "@id":"68422021",
+  "externalId":"68422021",
+  "title":"Test-IS24: Wohnung Kauf - 2017-10-18 14:02:05 252 (trustworthy)",
+  "creationDate":"2017-10-18T14:02:05.354+02:00",
+  "lastModificationDate":"2017-10-18T14:02:05.630+02:00",
+  "address":{
+    "street":"Andreasstraße",
+    "houseNumber":"10",
+    "postcode":"10243",
+    "city":"Berlin",
+    "wgs84Coordinate":{
+      "latitude":52.51261,
+      "longitude":13.43144
+    },
+    "geoHierarchy":{
+      "continent":{
+        "geoCodeId":1,
+        "fullGeoCodeId":"1"
+      },
+      "country":{
+        "geoCodeId":276,
+        "fullGeoCodeId":"1276"
+      },
+      "region":{
+        "geoCodeId":3,
+        "fullGeoCodeId":"1276003"
+      },
+      "city":{
+        "geoCodeId":1,
+        "fullGeoCodeId":"1276003001"
+      },
+      "quarter":{
+        "geoCodeId":17,
+        "fullGeoCodeId":"1276003001017"
+      },
+      "neighbourhood":{
+        "geoCodeId":11000000002348
+      }
+    }
+
+  },
+  "realEstateState":"INACTIVE",
+  "otherNote":"Test",
+  "attachments":[
+    {
+      "@xlink.href":"http:\/\/rest.sandbox-immobilienscout24.de\/restapi\/api\/offer\/v1.0\/user\/me\/realestate\/68422021\/attachment"
+    }
+  ],
+  "showAddress":"true",
+  "contact":{
+    "@id":"82295371"
+  },
+  "common.publishChannels":[
+  ],
+  "apartmentType":"NO_INFORMATION",
+  "lift":"false",
+  "cellar":"NOT_APPLICABLE",
+  "handicappedAccessible":"NOT_APPLICABLE",
+  "condition":"NO_INFORMATION",
+  "firingTypes":[
+    {
+      "firingType":"NO_INFORMATION"
+    }
+  ],
+  "energySourcesEnev2014":{
+    "energySourceEnev2014":[
+      "WOOD_CHIPS",
+      "LIQUID_GAS",
+      "COAL_COKE",
+      "COAL",
+      "HEAT_SUPPLY",
+      "COMBINED_HEAT_AND_POWER_RENEWABLE_ENERGY",
+      "DISTRICT_HEATING",
+      "ENVIRONMENTAL_THERMAL_ENERGY",
+      "WOOD",
+      "SOUR_GAS",
+      "STEAM_DISTRICT_HEATING",
+      "WIND_ENERGY",
+      "ACID_GAS",
+      "BIO_ENERGY",
+      "LOCAL_HEATING",
+      "SOLAR_HEATING",
+      "COMBINED_HEAT_AND_POWER_REGENERATIVE_ENERGY",
+      "GEOTHERMAL",
+      "HYDRO_ENERGY",
+      "GAS",
+      "COMBINED_HEAT_AND_POWER_FOSSIL_FUELS",
+      "OIL",
+      "PELLET_HEATING",
+      "COMBINED_HEAT_AND_POWER_BIO_ENERGY",
+      "ELECTRICITY"
+    ]
+  },
+  "energyConsumptionContainsWarmWater":"NOT_APPLICABLE",
+  "guestToilet":"NOT_APPLICABLE",
+  "rented":"NOT_APPLICABLE",
+  "listed":"NOT_APPLICABLE",
+  "summerResidencePractical":"NOT_APPLICABLE",
+  "price":{
+    "value":9.999999999E9,
+    "currency":"EUR",
+    "marketingType":"PURCHASE",
+    "priceIntervalType":"ONE_TIME_CHARGE"
+  },
+  "descriptionNote": "Objektbeschreibung",
+  "furnishingNote": "Ausstattung ",
+  "locationNote": "Lage",
+  "numberOfParkingSpaces": 2,
+  "lastRefurbishment": 2002,
+  "interiorQuality": "SOPHISTICATED",
+  "constructionYear": 1999,
+  "freeFrom": "sofort",
+  "heatingTypeEnev2014": "SELF_CONTAINED_CENTRAL_HEATING",
+  "buildingEnergyRatingType": "ENERGY_REQUIRED",
+  "thermalCharacteristic": 174,
+  "numberOfFloors": 1,
+  "usableFloorSpace": 100,
+  "numberOfBedRooms": 2,
+  "numberOfBathRooms": 2,
+  "parkingSpaceType": "OUTSIDE",
+  "rentalIncome": 522,
+  "parkingSpacePrice": 1500,
+  "energyPerformanceCertificate": "true",
+  "livingSpace":2,
+  "numberOfRooms":1,
+  "builtInKitchen":"false",
+  "balcony":"false",
+  "garden":"false",
+  "courtage":{
+    "hasCourtage":"YES",
+    "courtage":"1656? an Provision zu zahlen",
+    "courtageNote":"Freitextfeld Provisionshinweis"
+  }
+}
