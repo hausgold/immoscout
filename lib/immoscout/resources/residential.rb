@@ -19,11 +19,23 @@ module Immoscout
       include Immoscout::Resources::Concerns::WithApiSearchData
       include Immoscout::Resources::Concerns::WithEnergySource
 
+      attr_reader :type_identifier
+
+      def initialize(hash = nil)
+        if hash && hash.count == 1 && hash.keys.first =~ /^realestates./
+          @type_identifier = hash.keys.first.split(".").last
+          super(hash.values.first)
+        else
+          @type_identifier = self.class.name.demodulize.camelize(:lower)
+          super
+        end
+      end
+
       # TODO: move to module/class
       def self.find(id, user_id = :me)
         client = Immoscout::Api::Client.new
         response = client.get("user/#{user_id}/realestate/#{id}")
-        new(response.values.first)
+        new(response)
       end
 
       def self.all(user_id = :me)
