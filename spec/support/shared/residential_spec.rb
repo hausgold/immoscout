@@ -52,4 +52,25 @@ RSpec.shared_examples "a residential property" do
       ).to be_instance_of(Array)
     end
   end
+
+  describe '.find' do
+    it 'works' do
+      expect(described_class.find('68422021')).to be_an_instance_of(described_class)
+    end
+  end
+
+  describe '.all' do
+    it 'works' do
+      expect(described_class.all).to be_an(Array)
+    end
+  end
+
+  describe '#save' do
+    let(:estate) { described_class.find('68422021') }
+
+    it 'works' do
+      estate.title = "Neuer Titel"
+      expect(estate.save).to be
+    end
+  end
 end

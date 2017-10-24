@@ -17,6 +17,25 @@ module Immoscout
       include Immoscout::Resources::Concerns::WithCourtage
       include Immoscout::Resources::Concerns::WithApiSearchData
 
+      # TODO: move to module/class
+      def self.find(id, user_id = :me)
+        client = Immoscout::Api::Client.new
+        response = client.get("user/#{user_id}/realestate/#{id}")
+        new(response.values.first)
+      end
+
+      def self.all(user_id = :me)
+        client = Immoscout::Api::Client.new
+        response = client.get("user/#{user_id}/realestate")
+        objects = response["realestates.realEstates"]["realEstateList"]["realEstateElement"]
+        objects.map { |object| new(object) }
+      end
+
+      def save(user_id = :me)
+        client = Immoscout::Api::Client.new
+        response = client.put("user/#{user_id}/realestate/#{id}", as_json)
+      end
+
       property :id, from: :@id
       property :creation_date, from: :creationDate
       property :last_modification_date, from: :lastModificationDate
@@ -56,9 +75,7 @@ module Immoscout
                from: :energyPerformanceCertificate
 
       class EnergySource < Base
-        property :energy_source_enev2014,
-                 from: :energySourceEnev2014,
-                 coerce: Array[String]
+        property :energy_source_enev2014, from: :energySourceEnev2014
       end
 
       property :energy_sources_enev2014,

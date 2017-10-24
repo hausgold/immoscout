@@ -1,3 +1,9 @@
+# errors
+require_relative 'errors/not_found'
+
+# api client
+require_relative 'api/client'
+
 # root hashie resource
 require_relative 'resources/base'
 

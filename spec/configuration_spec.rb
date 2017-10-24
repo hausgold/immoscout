@@ -5,9 +5,9 @@ require "spec_helper"
 RSpec.describe Immoscout::Configuration do
   let(:instance) { described_class.new }
 
-  it "can set access_token" do
-    expect { instance.access_token = 'token' }.to \
-      change { instance.access_token }.to('token')
+  it "can set oauth_token" do
+    expect { instance.oauth_token = 'token' }.to \
+      change { instance.oauth_token }.to('token')
   end
 
   it "can set use_sandbox" do
