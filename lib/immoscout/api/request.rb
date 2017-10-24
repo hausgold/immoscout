@@ -18,13 +18,11 @@ module Immoscout
       end
 
       def request(method, path, payload = nil)
-        response = connection.send(method, path) do |request|
+        connection.send(method, path) do |request|
           request.headers['Content-Type'] = "application/json;charset=UTF-8"
           request.headers['Accept']       = "application/json"
           request.body                    = payload if payload
         end
-        raise Immoscout::Errors::NotFound unless response.success?
-        response.body
       end
     end
   end

@@ -31,23 +31,28 @@ module Immoscout
         end
       end
 
+      def self.client
+        @@client ||= Immoscout::Api::Client.new
+      end
+
       # TODO: move to module/class
       def self.find(id, user_id = :me)
-        client = Immoscout::Api::Client.new
         response = client.get("user/#{user_id}/realestate/#{id}")
-        new(response)
+        raise Immoscout::Errors::NotFound, "status code #{response.status}" unless response.success?
+        new(response.body)
       end
 
       def self.all(user_id = :me)
-        client = Immoscout::Api::Client.new
         response = client.get("user/#{user_id}/realestate")
-        objects = response["realestates.realEstates"]["realEstateList"]["realEstateElement"]
+        raise Immoscout::Errors::NotFound, "status code #{response.status}" unless response.success?
+        objects = response.body["realestates.realEstates"]["realEstateList"]["realEstateElement"]
         objects.map { |object| new(object) }
       end
 
       def save(user_id = :me)
-        client = Immoscout::Api::Client.new
-        response = client.put("user/#{user_id}/realestate/#{id}", as_json)
+        response = self.class.client.put("user/#{user_id}/realestate/#{id}", as_json)
+        raise Immoscout::Errors::NotFound, "status code #{response.status}" unless response.success?
+        update_attributes!(response.body)
       end
 
       property :id, from: :@id

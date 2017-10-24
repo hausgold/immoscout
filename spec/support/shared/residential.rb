@@ -55,7 +55,8 @@ RSpec.shared_examples "a residential property" do
 
   describe '.find' do
     it 'works' do
-      expect(described_class.find('68422021')).to be_an_instance_of(described_class)
+      expect(described_class.find('68422021')).to \
+        be_an_instance_of(described_class)
     end
   end
 
