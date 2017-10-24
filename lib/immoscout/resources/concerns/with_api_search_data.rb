@@ -1,3 +1,5 @@
+require_relative '../parts/api_search_data'
+
 module Immoscout
   module Resources
     module Concerns
@@ -6,7 +8,7 @@ module Immoscout
 
         included do
           property :api_search_data,
-                   coerce: ApiSearchData,
+                   coerce: Immoscout::Resources::Parts::ApiSearchData,
                    default: {},
                    from: :apiSearchData
         end

@@ -1,3 +1,5 @@
+require_relative '../parts/address'
+
 module Immoscout
   module Resources
     module Concerns
@@ -5,7 +7,9 @@ module Immoscout
         extend ActiveSupport::Concern
 
         included do
-          property :address, coerce: Immoscout::Resources::Address, default: {}
+          property :address,
+                   coerce: Immoscout::Resources::Parts::Address,
+                   default: {}
           property :show_address, from: :showAddress
         end
 

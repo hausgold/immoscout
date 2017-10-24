@@ -1,3 +1,5 @@
+require_relative '../parts/courtage'
+
 module Immoscout
   module Resources
     module Concerns
@@ -6,7 +8,7 @@ module Immoscout
 
         included do
           property :courtage,
-                   coerce: Immoscout::Resources::Courtage,
+                   coerce: Immoscout::Resources::Parts::Courtage,
                    default: {}
         end
 

@@ -6,6 +6,7 @@ require_relative 'concerns/with_contact'
 require_relative 'concerns/with_price'
 require_relative 'concerns/with_courtage'
 require_relative 'concerns/with_api_search_data'
+require_relative 'concerns/with_energy_source'
 
 module Immoscout
   module Resources
@@ -16,6 +17,7 @@ module Immoscout
       include Immoscout::Resources::Concerns::WithPrice
       include Immoscout::Resources::Concerns::WithCourtage
       include Immoscout::Resources::Concerns::WithApiSearchData
+      include Immoscout::Resources::Concerns::WithEnergySource
 
       # TODO: move to module/class
       def self.find(id, user_id = :me)
@@ -73,14 +75,6 @@ module Immoscout
       property :number_of_rooms, from: :numberOfRooms
       property :energy_performance_certificate,
                from: :energyPerformanceCertificate
-
-      class EnergySource < Base
-        property :energy_source_enev2014, from: :energySourceEnev2014
-      end
-
-      property :energy_sources_enev2014,
-               from: :energySourcesEnev2014,
-               coerce: EnergySource
     end
   end
 end

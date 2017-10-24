@@ -1,3 +1,5 @@
+require_relative '../parts/price'
+
 module Immoscout
   module Resources
     module Concerns
@@ -5,7 +7,9 @@ module Immoscout
         extend ActiveSupport::Concern
 
         included do
-          property :price, coerce: Immoscout::Resources::Price, default: {}
+          property :price,
+                   coerce: Immoscout::Resources::Parts::Price,
+                   default: {}
         end
 
         class_methods do
