@@ -25,7 +25,7 @@ http_interactions:
       Expires:
       - Thu, 01 Jan 1970 01:00:00 CET
       L-Is24-Requestrefnum:
-      - c0724b14-b3c0-4cb1-8f30-c3e9c6023d79
+      - 49a64e94-c889-4ed4-ac67-f56f882a519a
       L-Is24-Apiclient:
       - 06778437Key
       L-Is24-Causerid:
@@ -33,13 +33,13 @@ http_interactions:
       L-Is24-Resourceid:
       - '68422021'
       Etag:
-      - '"00f50a5affd559af225227a27dd268a9d"'
+      - '"0a7debd6ea50aafeca349253a902954dd"'
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
       - '1715'
       Date:
-      - Wed, 25 Oct 2017 17:25:50 GMT
+      - Wed, 25 Oct 2017 18:22:44 GMT
       Server:
       - Apache
     body:
@@ -48,8 +48,8 @@ http_interactions:
         eyJyZWFsZXN0YXRlcy5hcGFydG1lbnRCdXkiOnsiQGlkIjoiNjg0MjIwMjEi
         LCJleHRlcm5hbElkIjoiNjg0MjIwMjEiLCJ0aXRsZSI6Ik5ldWVyIFRpdGVs
         IiwiY3JlYXRpb25EYXRlIjoiMjAxNy0xMC0xOFQxNDowMjowNS4zNTQrMDI6
-        MDAiLCJsYXN0TW9kaWZpY2F0aW9uRGF0ZSI6IjIwMTctMTAtMjVUMTg6MzM6
-        MTYuMzYxKzAyOjAwIiwiYWRkcmVzcyI6eyJzdHJlZXQiOiJBbmRyZWFzc3Ry
+        MDAiLCJsYXN0TW9kaWZpY2F0aW9uRGF0ZSI6IjIwMTctMTAtMjVUMjA6MjI6
+        MDQuNjg4KzAyOjAwIiwiYWRkcmVzcyI6eyJzdHJlZXQiOiJBbmRyZWFzc3Ry
         YcOfZSIsImhvdXNlTnVtYmVyIjoiMTAiLCJwb3N0Y29kZSI6IjEwMjQzIiwi
         Y2l0eSI6IkJlcmxpbiIsIndnczg0Q29vcmRpbmF0ZSI6eyJsYXRpdHVkZSI6
         NTIuNTEyNjEsImxvbmdpdHVkZSI6MTMuNDMxNDR9LCJnZW9IaWVyYXJjaHki
@@ -85,7 +85,7 @@ http_interactions:
         ImNvdXJ0YWdlTm90ZSI6IkZyZWl0ZXh0ZmVsZCBQcm92aXNpb25zaGlud2Vp
         cyJ9fX0=
     http_version: 
-  recorded_at: Wed, 25 Oct 2017 17:25:51 GMT
+  recorded_at: Wed, 25 Oct 2017 18:22:45 GMT
 - request:
     method: put
     uri: https://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/user/me/realestate/68422021
@@ -105,7 +105,7 @@ http_interactions:
         ZCI6IjY4NDIyMDIxIiwiZXh0ZXJuYWxJZCI6IjY4NDIyMDIxIiwidGl0bGUi
         OiJOZXVlciBUaXRlbCIsImNyZWF0aW9uRGF0ZSI6IjIwMTctMTAtMThUMTQ6
         MDI6MDUuMzU0KzAyOjAwIiwibGFzdE1vZGlmaWNhdGlvbkRhdGUiOiIyMDE3
-        LTEwLTI1VDE4OjMzOjE2LjM2MSswMjowMCIsIm90aGVyTm90ZSI6IlRlc3Qi
+        LTEwLTI1VDIwOjIyOjA0LjY4OCswMjowMCIsIm90aGVyTm90ZSI6IlRlc3Qi
         LCJzaG93QWRkcmVzcyI6InRydWUiLCJhcGFydG1lbnRUeXBlIjoiTk9fSU5G
         T1JNQVRJT04iLCJsaWZ0IjoiZmFsc2UiLCJjZWxsYXIiOiJOT1RfQVBQTElD
         QUJMRSIsImhhbmRpY2FwcGVkQWNjZXNzaWJsZSI6Ik5PVF9BUFBMSUNBQkxF
@@ -137,7 +137,7 @@ http_interactions:
       Expires:
       - Thu, 01 Jan 1970 01:00:00 CET
       L-Is24-Requestrefnum:
-      - 25df4d84-8730-4e17-ba29-d6ec737d11a1
+      - fdf80b21-4690-4ab7-9b42-891729c50091
       L-Is24-Apiclient:
       - 06778437Key
       L-Is24-Causerid:
@@ -149,7 +149,7 @@ http_interactions:
       Content-Length:
       - '163'
       Date:
-      - Wed, 25 Oct 2017 17:25:50 GMT
+      - Wed, 25 Oct 2017 18:22:49 GMT
       Server:
       - Apache
     body:
@@ -160,5 +160,5 @@ http_interactions:
         Y2UgW3JlYWxlc3RhdGVdIHdpdGggaWQgWzY4NDIyMDIxXSBoYXMgYmVlbiB1
         cGRhdGVkLiIsImlkIjoiNjg0MjIwMjEifX1dfQ==
     http_version: 
-  recorded_at: Wed, 25 Oct 2017 17:25:51 GMT
+  recorded_at: Wed, 25 Oct 2017 18:22:50 GMT
 recorded_with: VCR 3.0.3

@@ -5,52 +5,25 @@ require_relative 'concerns/with_address'
 
 module Immoscout
   module Resources
-    class Contact < Base
+    class Contact < Model
       include Immoscout::Resources::Concerns::Renderable
       include Immoscout::Resources::Concerns::WithAddress
 
-      attr_reader :type_identifier
+      def self.json_root_matcher
+        /^common.realtorContactDetail/
+      end
 
-      def initialize(hash = nil)
-        if hash && hash.count == 1 && hash.keys.first =~ /^common.realtorContactDetail/
-          @type_identifier = hash.keys.first
-          super(hash.values.first)
-        else
-          @type_identifier = self.class.name.demodulize.camelize(:lower)
-          super
+      def self.url_identifier
+        'contact'
+      end
+
+      def self.unpack_collection
+        proc do |body|
+          body.dig(
+            "common.realtorContactDetailsList",
+            "realtorContactDetails"
+          )
         end
-      end
-
-      def self.client
-        @@client ||= Immoscout::Api::Client.new
-      end
-
-      # TODO: move to module/class
-      def self.find(id, user_id = :me)
-        response = client.get("user/#{user_id}/contact/#{id}")
-        raise Immoscout::Errors::NotFound, "#{response.status} with '#{response.body}'" unless response.success?
-        new(response.body)
-      end
-
-      def self.all(user_id = :me)
-        response = client.get("user/#{user_id}/contact")
-        raise Immoscout::Errors::NotFound, "#{response.status} with '#{response.body}'" unless response.success?
-        objects = response.body["common.realtorContactDetailsList"]["realtorContactDetails"]
-        objects.map { |object| new(object) }
-      end
-
-      def save(user_id = :me)
-        response = self.class.client.put("user/#{user_id}/contact/#{id}", as_json)
-        raise Immoscout::Errors::NotFound, "#{response.status} with '#{response.body}'" unless response.success?
-        update_attributes!(response.body)
-      end
-
-      def update(hash, user_id = :me)
-        # TODO: implement me
-      end
-
-      def destroy(user_id = :me)
-        # TODO: implement me
       end
 
       property :@id, from: :id

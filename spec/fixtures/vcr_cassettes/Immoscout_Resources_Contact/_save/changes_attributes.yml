@@ -25,7 +25,7 @@ http_interactions:
       Expires:
       - Thu, 01 Jan 1970 01:00:00 CET
       L-Is24-Requestrefnum:
-      - 908a62df-ad99-42a2-bf3d-627edb5b9c92
+      - 78764dd2-8f96-4bb8-b981-45f6a209709b
       L-Is24-Apiclient:
       - 06778437Key
       L-Is24-Causerid:
@@ -37,7 +37,7 @@ http_interactions:
       Content-Length:
       - '270'
       Date:
-      - Wed, 25 Oct 2017 17:25:52 GMT
+      - Wed, 25 Oct 2017 18:22:50 GMT
       Server:
       - Apache
     body:
@@ -50,7 +50,7 @@ http_interactions:
         IiwiYnVzaW5lc3NDYXJkQ29udGFjdCI6ImZhbHNlIiwicmVhbEVzdGF0ZVJl
         ZmVyZW5jZUNvdW50Ijo2LCJzaG93T25Qcm9maWxlUGFnZSI6ImZhbHNlIn19
     http_version: 
-  recorded_at: Wed, 25 Oct 2017 17:25:52 GMT
+  recorded_at: Wed, 25 Oct 2017 18:22:51 GMT
 - request:
     method: put
     uri: https://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/user/me/contact/82295371
@@ -82,7 +82,7 @@ http_interactions:
       Expires:
       - Thu, 01 Jan 1970 01:00:00 CET
       L-Is24-Requestrefnum:
-      - 607a6d67-87a6-4c70-8974-1ab194c02341
+      - 3b3fee40-c5d1-408f-8d09-604aef4d7ff5
       L-Is24-Apiclient:
       - 06778437Key
       L-Is24-Causerid:
@@ -94,7 +94,7 @@ http_interactions:
       Content-Length:
       - '145'
       Date:
-      - Wed, 25 Oct 2017 17:25:52 GMT
+      - Wed, 25 Oct 2017 18:22:50 GMT
       Server:
       - Apache
     body:
@@ -105,5 +105,5 @@ http_interactions:
         Y2UgW2NvbnRhY3RdIHdpdGggaWQgWzgyMjk1MzcxXSBoYXMgYmVlbiB1cGRh
         dGVkLiAifX1dfQ==
     http_version: 
-  recorded_at: Wed, 25 Oct 2017 17:25:52 GMT
+  recorded_at: Wed, 25 Oct 2017 18:22:51 GMT
 recorded_with: VCR 3.0.3

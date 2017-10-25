@@ -1,9 +1,11 @@
+require 'singleton'
 require_relative "connection"
 require_relative "request"
 
 module Immoscout
   module Api
     class Client
+      include Singleton
       include Immoscout::Api::Connection
       include Immoscout::Api::Request
 
