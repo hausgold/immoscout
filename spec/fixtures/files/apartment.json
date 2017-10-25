@@ -1,5 +1,5 @@
 {
- "realestates.apartmentBuy":{  
+ "realestates.apartmentBuy":{
     "@id":"68422021",
     "externalId":"68422021",
     "title":"Test-IS24: Wohnung Kauf - 2017-10-18 14:02:05 252 (trustworthy)",
@@ -39,7 +39,11 @@
           "geoCodeId":11000000002348
         }
       }
-
+    },
+    "apiSearchData":{
+        "searchField1": "searchApiField1",
+        "searchField2": "searchApiField2",
+        "searchField3": "searchApiField3"
     },
     "realEstateState":"INACTIVE",
     "otherNote":"Test",
@@ -48,6 +52,10 @@
         "@xlink.href":"http:\/\/rest.sandbox-immobilienscout24.de\/restapi\/api\/offer\/v1.0\/user\/me\/realestate\/68422021\/attachment"
       }
     ],
+    "floor": "382",
+    "assistedLiving": 1,
+    "certificateOfEligibilityNeeded": 1,
+    "serviceCharge": 555.55,
     "showAddress":"true",
     "contact":{
       "@id":"82295371"

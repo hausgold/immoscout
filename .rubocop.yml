@@ -3,3 +3,7 @@ Documentation:
 
 StringLiterals:
   Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*"
