@@ -92,14 +92,14 @@ RSpec.shared_examples "a residential property" do
   end
 
   describe '.find', vcr: true do
-    it 'works' do
+    it 'returns an instance' do
       expect(described_class.find('68422021')).to \
         be_an_instance_of(described_class)
     end
   end
 
   describe '.all', vcr: true do
-    it 'works' do
+    it 'returns an array of instances' do
       expect(described_class.all).to be_an(Array)
     end
   end
@@ -107,7 +107,7 @@ RSpec.shared_examples "a residential property" do
   describe '#save', vcr: true do
     let(:estate) { described_class.find('68422021') }
 
-    it 'works' do
+    it 'changes attributes' do
       estate.title = "Neuer Titel"
       expect(estate.save).to be
       expect(estate.title).to eq "Neuer Titel"
