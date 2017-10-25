@@ -4,6 +4,8 @@ require "bundler/setup"
 require "immoscout"
 require "rspec/json_expectations"
 require "pry"
+require "vcr"
+require "webmock"
 
 Dir["./spec/support/**/*.rb"].sort.each { |f| require f }
 
@@ -20,7 +22,17 @@ RSpec.configure do |config|
   config.include RSpec::JsonExpectations::Matchers
   config.include FileFixture
 
-  config.before(:each) do
+  config.before do
     Immoscout.reset_configuration!
+  end
+
+  config.before(vcr: true) do
+    Immoscout.configure do |immoscout_config|
+      immoscout_config.consumer_key = 'value'
+      immoscout_config.consumer_secret = 'value'
+      immoscout_config.oauth_token = 'value'
+      immoscout_config.oauth_token_secret = 'value'
+      immoscout_config.use_sandbox = true
+    end
   end
 end

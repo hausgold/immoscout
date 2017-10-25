@@ -3,13 +3,13 @@
 module Immoscout
   class Configuration
     include ActiveSupport::Configurable
-    config_accessor(:consumer_key)
-    config_accessor(:consumer_secret)
+    config_accessor(:consumer_key) { ENV["IMMOSCOUT_CONSUMER_KEY"] }
+    config_accessor(:consumer_secret) { ENV["IMMOSCOUT_CONSUMER_SECRET"] }
 
-    config_accessor(:oauth_token)
-    config_accessor(:oauth_token_secret)
+    config_accessor(:oauth_token) { ENV["IMMOSCOUT_OAUTH_TOKEN"] }
+    config_accessor(:oauth_token_secret) { ENV["IMMOSCOUT_OAUTH_TOKEN_SECRET"] }
 
-    config_accessor(:use_sandbox) { true }
+    config_accessor(:use_sandbox) { false }
 
     config_accessor(:api_version) { "v1.0" }
 
