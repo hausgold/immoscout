@@ -7,7 +7,7 @@ require 'hashie'
 
 require "immoscout/version"
 require 'immoscout/configuration'
-require 'immoscout/resources'
+require 'immoscout/models'
 
 module Immoscout
   class << self

@@ -1,6 +1,6 @@
 # Immoscout
 
-TODO: write summary
+This gem provides an API wrapper for the [Immobilienscout24](www.immobilienscout24.de) REST API.
 
 ## Installation
 
@@ -20,7 +20,41 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Configuration
+
+```ruby
+Immoscout.configure do |config|
+  config.consumer_key = "key"
+  config.consumer_secret = "secret"
+  config.oauth_token = "token"
+  config.oauth_token_secret = "token_secret"
+  config.use_sandbox = true # default: false
+end
+```
+
+### Models
+
+Currently there is only full support for the models `ApartmentBuy`, `HouseBuy` and `Contact` - other will be included in future releases.
+
+#### ApartmentBuy & HouseBuy
+
+```ruby
+apartment = Immoscout::Models::ApartmentBuy.find('837283')
+
+apartment.address
+# => #<Immoscout::Models::Parts::Address city="Berlin" house_number="10" postcode="10243" street="Andreasstraße" ...>
+apartment.address.street
+# => 'Orig street name'
+
+apartment.address.street = "Changed street"
+apartment.save
+
+house = Immoscout::Models::HouseBuy.find('9473634')
+house.destroy
+
+Immoscout::Models::HouseBuy.all
+# => [#<Immoscout::Models::HouseBuy, #<Immoscout::Models::HouseBuy, ...]
+```
 
 ## Development
 
@@ -30,7 +64,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/immoscout. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/hausgold/immoscout. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
