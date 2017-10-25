@@ -1,0 +1,36 @@
+{
+  "common.realtorContactDetail" : {
+    "@id" : "57573183",
+    "salutation" : "MALE",
+    "email" : "test@test.de",
+    "firstname" : "Max",
+    "lastname" : "Mustermann",
+    "phoneNumberCountryCode" : "+49",
+    "phoneNumberAreaCode" : "30",
+    "phoneNumberSubscriber" : "243010000",
+    "cellPhoneNumberCountryCode" : "+49" ,
+    "cellPhoneNumberAreaCode" : "1520",
+    "cellPhoneNumberSubscriber": "1111111" ,
+    "faxNumberCountryCode" : "+49" ,
+    "faxNumberAreaCode" : "1520",
+    "faxNumberSubscriber": "1111111" ,
+    "address" : {
+      "street" : "Andreasstr.",
+      "houseNumber" : "10",
+      "postcode" : "10243",
+      "city" : "Berlin"
+    },
+    "countryCode" : "DEU",
+    "title" : "Master",
+    "homepageUrl" : "http://www.immobilienscout24.de" ,
+    "position":"position oder taetigkeit im unternehmen",
+    "officeHours" : "Von  11:30 bis 12:00, dabei eine halbe Stunde Pause, field is no more used or visible in the is24 website" ,
+    "defaultContact" : true,
+    "localPartnerContact" : true,
+    "businessCardContact" : true,
+    "realEstateReferenceCount" : 1,
+    "externalId" : "a-001",
+    "showOnProfilePage":"true",
+    "additionName": "HuiBuh"
+ }
+}

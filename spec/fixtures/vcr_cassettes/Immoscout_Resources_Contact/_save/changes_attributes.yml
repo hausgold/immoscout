@@ -1,0 +1,109 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/user/me/contact/82295371
+    body:
+      encoding: US-ASCII
+      base64_string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Content-Type:
+      - application/json;charset=UTF-8
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Cache-Control:
+      - private
+      Expires:
+      - Thu, 01 Jan 1970 01:00:00 CET
+      L-Is24-Requestrefnum:
+      - 908a62df-ad99-42a2-bf3d-627edb5b9c92
+      L-Is24-Apiclient:
+      - 06778437Key
+      L-Is24-Causerid:
+      - '107268859'
+      L-Is24-Resourceid:
+      - '82295371'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '270'
+      Date:
+      - Wed, 25 Oct 2017 17:25:52 GMT
+      Server:
+      - Apache
+    body:
+      encoding: UTF-8
+      base64_string: |
+        eyJjb21tb24ucmVhbHRvckNvbnRhY3REZXRhaWwiOnsiQGlkIjoiODIyOTUz
+        NzEiLCJlbWFpbCI6Im15bmVtYWlsQGV4YW1wbGUuY29tIiwic2FsdXRhdGlv
+        biI6Ik5PX1NBTFVUQVRJT04iLCJsYXN0bmFtZSI6ImR1bW15IiwiZGVmYXVs
+        dENvbnRhY3QiOiJ0cnVlIiwibG9jYWxQYXJ0bmVyQ29udGFjdCI6ImZhbHNl
+        IiwiYnVzaW5lc3NDYXJkQ29udGFjdCI6ImZhbHNlIiwicmVhbEVzdGF0ZVJl
+        ZmVyZW5jZUNvdW50Ijo2LCJzaG93T25Qcm9maWxlUGFnZSI6ImZhbHNlIn19
+    http_version: 
+  recorded_at: Wed, 25 Oct 2017 17:25:52 GMT
+- request:
+    method: put
+    uri: https://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/user/me/contact/82295371
+    body:
+      encoding: UTF-8
+      base64_string: |
+        eyJjb21tb24ucmVhbHRvckNvbnRhY3REZXRhaWwiOnsiQGlkIjoiODIyOTUz
+        NzEiLCJlbWFpbCI6Im15bmVtYWlsQGV4YW1wbGUuY29tIiwic2FsdXRhdGlv
+        biI6Ik5PX1NBTFVUQVRJT04iLCJsYXN0bmFtZSI6ImR1bW15IiwiZGVmYXVs
+        dENvbnRhY3QiOiJ0cnVlIiwibG9jYWxQYXJ0bmVyQ29udGFjdCI6ImZhbHNl
+        IiwiYnVzaW5lc3NDYXJkQ29udGFjdCI6ImZhbHNlIiwicmVhbEVzdGF0ZVJl
+        ZmVyZW5jZUNvdW50Ijo2LCJzaG93T25Qcm9maWxlUGFnZSI6ImZhbHNlIn19
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Content-Type:
+      - application/json;charset=UTF-8
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Cache-Control:
+      - private
+      Expires:
+      - Thu, 01 Jan 1970 01:00:00 CET
+      L-Is24-Requestrefnum:
+      - 607a6d67-87a6-4c70-8974-1ab194c02341
+      L-Is24-Apiclient:
+      - 06778437Key
+      L-Is24-Causerid:
+      - '107268859'
+      L-Is24-Resourceid:
+      - '82295371'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '145'
+      Date:
+      - Wed, 25 Oct 2017 17:25:52 GMT
+      Server:
+      - Apache
+    body:
+      encoding: UTF-8
+      base64_string: |
+        eyJjb21tb24ubWVzc2FnZXMiOlt7Im1lc3NhZ2UiOnsibWVzc2FnZUNvZGUi
+        OiJNRVNTQUdFX1JFU09VUkNFX1VQREFURUQiLCJtZXNzYWdlIjoiUmVzb3Vy
+        Y2UgW2NvbnRhY3RdIHdpdGggaWQgWzgyMjk1MzcxXSBoYXMgYmVlbiB1cGRh
+        dGVkLiAifX1dfQ==
+    http_version: 
+  recorded_at: Wed, 25 Oct 2017 17:25:52 GMT
+recorded_with: VCR 3.0.3

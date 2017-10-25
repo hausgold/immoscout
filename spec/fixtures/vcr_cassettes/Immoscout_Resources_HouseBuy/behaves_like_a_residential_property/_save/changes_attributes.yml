@@ -25,7 +25,7 @@ http_interactions:
       Expires:
       - Thu, 01 Jan 1970 01:00:00 CET
       L-Is24-Requestrefnum:
-      - 0f6b06a0-4a63-4278-a5f3-0f8ee5a9c92f
+      - 61ba6f1f-4e3e-497a-87f8-b4b0e5537e62
       L-Is24-Apiclient:
       - 06778437Key
       L-Is24-Causerid:
@@ -33,13 +33,13 @@ http_interactions:
       L-Is24-Resourceid:
       - '68422021'
       Etag:
-      - '"05427e8616d9a158bd34a13c8113a8c9a"'
+      - '"06b471e2ed393c2b23300e5ab705e3d20"'
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
       - '1715'
       Date:
-      - Wed, 25 Oct 2017 09:00:58 GMT
+      - Wed, 25 Oct 2017 17:25:53 GMT
       Server:
       - Apache
     body:
@@ -48,8 +48,8 @@ http_interactions:
         eyJyZWFsZXN0YXRlcy5hcGFydG1lbnRCdXkiOnsiQGlkIjoiNjg0MjIwMjEi
         LCJleHRlcm5hbElkIjoiNjg0MjIwMjEiLCJ0aXRsZSI6Ik5ldWVyIFRpdGVs
         IiwiY3JlYXRpb25EYXRlIjoiMjAxNy0xMC0xOFQxNDowMjowNS4zNTQrMDI6
-        MDAiLCJsYXN0TW9kaWZpY2F0aW9uRGF0ZSI6IjIwMTctMTAtMjVUMTE6MDA6
-        NTcuMTU2KzAyOjAwIiwiYWRkcmVzcyI6eyJzdHJlZXQiOiJBbmRyZWFzc3Ry
+        MDAiLCJsYXN0TW9kaWZpY2F0aW9uRGF0ZSI6IjIwMTctMTAtMjVUMTk6MjU6
+        NTEuNjM0KzAyOjAwIiwiYWRkcmVzcyI6eyJzdHJlZXQiOiJBbmRyZWFzc3Ry
         YcOfZSIsImhvdXNlTnVtYmVyIjoiMTAiLCJwb3N0Y29kZSI6IjEwMjQzIiwi
         Y2l0eSI6IkJlcmxpbiIsIndnczg0Q29vcmRpbmF0ZSI6eyJsYXRpdHVkZSI6
         NTIuNTEyNjEsImxvbmdpdHVkZSI6MTMuNDMxNDR9LCJnZW9IaWVyYXJjaHki
@@ -85,7 +85,7 @@ http_interactions:
         ImNvdXJ0YWdlTm90ZSI6IkZyZWl0ZXh0ZmVsZCBQcm92aXNpb25zaGlud2Vp
         cyJ9fX0=
     http_version: 
-  recorded_at: Wed, 25 Oct 2017 09:00:58 GMT
+  recorded_at: Wed, 25 Oct 2017 17:25:53 GMT
 - request:
     method: put
     uri: https://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/user/me/realestate/68422021
@@ -101,21 +101,20 @@ http_interactions:
         cGUiOiJQVVJDSEFTRSIsInByaWNlSW50ZXJ2YWxUeXBlIjoiT05FX1RJTUVf
         Q0hBUkdFIn0sImNvdXJ0YWdlIjp7Imhhc0NvdXJ0YWdlIjoiWUVTIiwiY291
         cnRhZ2UiOiIxNjU2PyBhbiBQcm92aXNpb24genUgemFobGVuIiwiY291cnRh
-        Z2VOb3RlIjoiRnJlaXRleHRmZWxkIFByb3Zpc2lvbnNoaW53ZWlzIn0sImFw
-        aVNlYXJjaERhdGEiOnt9LCJpZCI6IjY4NDIyMDIxIiwiZXh0ZXJuYWxJZCI6
-        IjY4NDIyMDIxIiwidGl0bGUiOiJOZXVlciBUaXRlbCIsImNyZWF0aW9uRGF0
-        ZSI6IjIwMTctMTAtMThUMTQ6MDI6MDUuMzU0KzAyOjAwIiwibGFzdE1vZGlm
-        aWNhdGlvbkRhdGUiOiIyMDE3LTEwLTI1VDExOjAwOjU3LjE1NiswMjowMCIs
-        Im90aGVyTm90ZSI6IlRlc3QiLCJzaG93QWRkcmVzcyI6InRydWUiLCJjZWxs
-        YXIiOiJOT1RfQVBQTElDQUJMRSIsImhhbmRpY2FwcGVkQWNjZXNzaWJsZSI6
-        Ik5PVF9BUFBMSUNBQkxFIiwiY29uZGl0aW9uIjoiTk9fSU5GT1JNQVRJT04i
-        LCJlbmVyZ3lTb3VyY2VzRW5ldjIwMTQiOnsiZW5lcmd5U291cmNlRW5ldjIw
-        MTQiOiJOT19JTkZPUk1BVElPTiJ9LCJlbmVyZ3lDb25zdW1wdGlvbkNvbnRh
-        aW5zV2FybVdhdGVyIjoiTk9UX0FQUExJQ0FCTEUiLCJndWVzdFRvaWxldCI6
-        Ik5PVF9BUFBMSUNBQkxFIiwicmVudGVkIjoiTk9UX0FQUExJQ0FCTEUiLCJs
-        aXN0ZWQiOiJOT1RfQVBQTElDQUJMRSIsInN1bW1lclJlc2lkZW5jZVByYWN0
-        aWNhbCI6Ik5PVF9BUFBMSUNBQkxFIiwibGl2aW5nU3BhY2UiOjIsIm51bWJl
-        ck9mUm9vbXMiOjF9fQ==
+        Z2VOb3RlIjoiRnJlaXRleHRmZWxkIFByb3Zpc2lvbnNoaW53ZWlzIn0sIkBp
+        ZCI6IjY4NDIyMDIxIiwiZXh0ZXJuYWxJZCI6IjY4NDIyMDIxIiwidGl0bGUi
+        OiJOZXVlciBUaXRlbCIsImNyZWF0aW9uRGF0ZSI6IjIwMTctMTAtMThUMTQ6
+        MDI6MDUuMzU0KzAyOjAwIiwibGFzdE1vZGlmaWNhdGlvbkRhdGUiOiIyMDE3
+        LTEwLTI1VDE5OjI1OjUxLjYzNCswMjowMCIsIm90aGVyTm90ZSI6IlRlc3Qi
+        LCJzaG93QWRkcmVzcyI6InRydWUiLCJjZWxsYXIiOiJOT1RfQVBQTElDQUJM
+        RSIsImhhbmRpY2FwcGVkQWNjZXNzaWJsZSI6Ik5PVF9BUFBMSUNBQkxFIiwi
+        Y29uZGl0aW9uIjoiTk9fSU5GT1JNQVRJT04iLCJlbmVyZ3lTb3VyY2VzRW5l
+        djIwMTQiOnsiZW5lcmd5U291cmNlRW5ldjIwMTQiOiJOT19JTkZPUk1BVElP
+        TiJ9LCJlbmVyZ3lDb25zdW1wdGlvbkNvbnRhaW5zV2FybVdhdGVyIjoiTk9U
+        X0FQUExJQ0FCTEUiLCJndWVzdFRvaWxldCI6Ik5PVF9BUFBMSUNBQkxFIiwi
+        cmVudGVkIjoiTk9UX0FQUExJQ0FCTEUiLCJsaXN0ZWQiOiJOT1RfQVBQTElD
+        QUJMRSIsInN1bW1lclJlc2lkZW5jZVByYWN0aWNhbCI6Ik5PVF9BUFBMSUNB
+        QkxFIiwibGl2aW5nU3BhY2UiOjIsIm51bWJlck9mUm9vbXMiOjF9fQ==
     headers:
       User-Agent:
       - Faraday v0.13.1
@@ -135,7 +134,7 @@ http_interactions:
       Expires:
       - Thu, 01 Jan 1970 01:00:00 CET
       L-Is24-Requestrefnum:
-      - bb3668f1-83a3-480a-8db5-b6d280c57280
+      - ca8f4fce-3d8c-42c7-92f5-e3bf4af550a0
       L-Is24-Apiclient:
       - 06778437Key
       L-Is24-Causerid:
@@ -147,7 +146,7 @@ http_interactions:
       Content-Length:
       - '163'
       Date:
-      - Wed, 25 Oct 2017 09:00:58 GMT
+      - Wed, 25 Oct 2017 17:25:53 GMT
       Server:
       - Apache
     body:
@@ -158,5 +157,5 @@ http_interactions:
         Y2UgW3JlYWxlc3RhdGVdIHdpdGggaWQgWzY4NDIyMDIxXSBoYXMgYmVlbiB1
         cGRhdGVkLiIsImlkIjoiNjg0MjIwMjEifX1dfQ==
     http_version: 
-  recorded_at: Wed, 25 Oct 2017 09:00:59 GMT
+  recorded_at: Wed, 25 Oct 2017 17:25:53 GMT
 recorded_with: VCR 3.0.3

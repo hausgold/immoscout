@@ -7,11 +7,11 @@ module Immoscout
         included do
           def as_json
             {
-              "realestates.#{type_identifier}" => \
+              type_identifier => \
                 deep_transform_keys do |key|
                   key.camelize :lower
                 end
-            }
+            }.delete_empty
           end
           alias_method :to_hash, :as_json
           alias_method :to_h, :as_json

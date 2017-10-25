@@ -23,7 +23,7 @@ module Immoscout
 
       def initialize(hash = nil)
         if hash && hash.count == 1 && hash.keys.first =~ /^realestates./
-          @type_identifier = hash.keys.first.split(".").last
+          @type_identifier = hash.keys.first
           super(hash.values.first)
         else
           @type_identifier = self.class.name.demodulize.camelize(:lower)
@@ -63,7 +63,8 @@ module Immoscout
         # TODO: implement me
       end
 
-      property :id, from: :@id
+      property :@id, from: :id
+      alias_method :id, :@id
       property :creation_date, from: :creationDate
       property :last_modification_date, from: :lastModificationDate
       property :title
@@ -100,6 +101,7 @@ module Immoscout
       property :number_of_rooms, from: :numberOfRooms
       property :energy_performance_certificate,
                from: :energyPerformanceCertificate
+      property :show_address, from: :showAddress
     end
   end
 end

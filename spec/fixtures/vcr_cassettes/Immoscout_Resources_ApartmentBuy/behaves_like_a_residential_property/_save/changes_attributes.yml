@@ -25,7 +25,7 @@ http_interactions:
       Expires:
       - Thu, 01 Jan 1970 01:00:00 CET
       L-Is24-Requestrefnum:
-      - 1503a0d5-3af9-4fca-8e89-13c25250daa6
+      - c0724b14-b3c0-4cb1-8f30-c3e9c6023d79
       L-Is24-Apiclient:
       - 06778437Key
       L-Is24-Causerid:
@@ -33,13 +33,13 @@ http_interactions:
       L-Is24-Resourceid:
       - '68422021'
       Etag:
-      - '"00a5a0e4a3c0e3ef93c6ac44ff19da324"'
+      - '"00f50a5affd559af225227a27dd268a9d"'
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
       - '1715'
       Date:
-      - Wed, 25 Oct 2017 09:00:55 GMT
+      - Wed, 25 Oct 2017 17:25:50 GMT
       Server:
       - Apache
     body:
@@ -48,8 +48,8 @@ http_interactions:
         eyJyZWFsZXN0YXRlcy5hcGFydG1lbnRCdXkiOnsiQGlkIjoiNjg0MjIwMjEi
         LCJleHRlcm5hbElkIjoiNjg0MjIwMjEiLCJ0aXRsZSI6Ik5ldWVyIFRpdGVs
         IiwiY3JlYXRpb25EYXRlIjoiMjAxNy0xMC0xOFQxNDowMjowNS4zNTQrMDI6
-        MDAiLCJsYXN0TW9kaWZpY2F0aW9uRGF0ZSI6IjIwMTctMTAtMjVUMTA6NTQ6
-        MzMuNTE1KzAyOjAwIiwiYWRkcmVzcyI6eyJzdHJlZXQiOiJBbmRyZWFzc3Ry
+        MDAiLCJsYXN0TW9kaWZpY2F0aW9uRGF0ZSI6IjIwMTctMTAtMjVUMTg6MzM6
+        MTYuMzYxKzAyOjAwIiwiYWRkcmVzcyI6eyJzdHJlZXQiOiJBbmRyZWFzc3Ry
         YcOfZSIsImhvdXNlTnVtYmVyIjoiMTAiLCJwb3N0Y29kZSI6IjEwMjQzIiwi
         Y2l0eSI6IkJlcmxpbiIsIndnczg0Q29vcmRpbmF0ZSI6eyJsYXRpdHVkZSI6
         NTIuNTEyNjEsImxvbmdpdHVkZSI6MTMuNDMxNDR9LCJnZW9IaWVyYXJjaHki
@@ -85,7 +85,7 @@ http_interactions:
         ImNvdXJ0YWdlTm90ZSI6IkZyZWl0ZXh0ZmVsZCBQcm92aXNpb25zaGlud2Vp
         cyJ9fX0=
     http_version: 
-  recorded_at: Wed, 25 Oct 2017 09:00:56 GMT
+  recorded_at: Wed, 25 Oct 2017 17:25:51 GMT
 - request:
     method: put
     uri: https://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/user/me/realestate/68422021
@@ -101,23 +101,23 @@ http_interactions:
         cGUiOiJQVVJDSEFTRSIsInByaWNlSW50ZXJ2YWxUeXBlIjoiT05FX1RJTUVf
         Q0hBUkdFIn0sImNvdXJ0YWdlIjp7Imhhc0NvdXJ0YWdlIjoiWUVTIiwiY291
         cnRhZ2UiOiIxNjU2PyBhbiBQcm92aXNpb24genUgemFobGVuIiwiY291cnRh
-        Z2VOb3RlIjoiRnJlaXRleHRmZWxkIFByb3Zpc2lvbnNoaW53ZWlzIn0sImFw
-        aVNlYXJjaERhdGEiOnt9LCJpZCI6IjY4NDIyMDIxIiwiZXh0ZXJuYWxJZCI6
-        IjY4NDIyMDIxIiwidGl0bGUiOiJOZXVlciBUaXRlbCIsImNyZWF0aW9uRGF0
-        ZSI6IjIwMTctMTAtMThUMTQ6MDI6MDUuMzU0KzAyOjAwIiwibGFzdE1vZGlm
-        aWNhdGlvbkRhdGUiOiIyMDE3LTEwLTI1VDEwOjU0OjMzLjUxNSswMjowMCIs
-        Im90aGVyTm90ZSI6IlRlc3QiLCJzaG93QWRkcmVzcyI6InRydWUiLCJhcGFy
-        dG1lbnRUeXBlIjoiTk9fSU5GT1JNQVRJT04iLCJsaWZ0IjoiZmFsc2UiLCJj
-        ZWxsYXIiOiJOT1RfQVBQTElDQUJMRSIsImhhbmRpY2FwcGVkQWNjZXNzaWJs
-        ZSI6Ik5PVF9BUFBMSUNBQkxFIiwiY29uZGl0aW9uIjoiTk9fSU5GT1JNQVRJ
-        T04iLCJlbmVyZ3lTb3VyY2VzRW5ldjIwMTQiOnsiZW5lcmd5U291cmNlRW5l
-        djIwMTQiOiJOT19JTkZPUk1BVElPTiJ9LCJlbmVyZ3lDb25zdW1wdGlvbkNv
-        bnRhaW5zV2FybVdhdGVyIjoiTk9UX0FQUExJQ0FCTEUiLCJndWVzdFRvaWxl
-        dCI6Ik5PVF9BUFBMSUNBQkxFIiwicmVudGVkIjoiTk9UX0FQUExJQ0FCTEUi
-        LCJsaXN0ZWQiOiJOT1RfQVBQTElDQUJMRSIsInN1bW1lclJlc2lkZW5jZVBy
-        YWN0aWNhbCI6Ik5PVF9BUFBMSUNBQkxFIiwibGl2aW5nU3BhY2UiOjIsIm51
-        bWJlck9mUm9vbXMiOjEsImJ1aWx0SW5LaXRjaGVuIjoiZmFsc2UiLCJiYWxj
-        b255IjoiZmFsc2UiLCJnYXJkZW4iOiJmYWxzZSJ9fQ==
+        Z2VOb3RlIjoiRnJlaXRleHRmZWxkIFByb3Zpc2lvbnNoaW53ZWlzIn0sIkBp
+        ZCI6IjY4NDIyMDIxIiwiZXh0ZXJuYWxJZCI6IjY4NDIyMDIxIiwidGl0bGUi
+        OiJOZXVlciBUaXRlbCIsImNyZWF0aW9uRGF0ZSI6IjIwMTctMTAtMThUMTQ6
+        MDI6MDUuMzU0KzAyOjAwIiwibGFzdE1vZGlmaWNhdGlvbkRhdGUiOiIyMDE3
+        LTEwLTI1VDE4OjMzOjE2LjM2MSswMjowMCIsIm90aGVyTm90ZSI6IlRlc3Qi
+        LCJzaG93QWRkcmVzcyI6InRydWUiLCJhcGFydG1lbnRUeXBlIjoiTk9fSU5G
+        T1JNQVRJT04iLCJsaWZ0IjoiZmFsc2UiLCJjZWxsYXIiOiJOT1RfQVBQTElD
+        QUJMRSIsImhhbmRpY2FwcGVkQWNjZXNzaWJsZSI6Ik5PVF9BUFBMSUNBQkxF
+        IiwiY29uZGl0aW9uIjoiTk9fSU5GT1JNQVRJT04iLCJlbmVyZ3lTb3VyY2Vz
+        RW5ldjIwMTQiOnsiZW5lcmd5U291cmNlRW5ldjIwMTQiOiJOT19JTkZPUk1B
+        VElPTiJ9LCJlbmVyZ3lDb25zdW1wdGlvbkNvbnRhaW5zV2FybVdhdGVyIjoi
+        Tk9UX0FQUExJQ0FCTEUiLCJndWVzdFRvaWxldCI6Ik5PVF9BUFBMSUNBQkxF
+        IiwicmVudGVkIjoiTk9UX0FQUExJQ0FCTEUiLCJsaXN0ZWQiOiJOT1RfQVBQ
+        TElDQUJMRSIsInN1bW1lclJlc2lkZW5jZVByYWN0aWNhbCI6Ik5PVF9BUFBM
+        SUNBQkxFIiwibGl2aW5nU3BhY2UiOjIsIm51bWJlck9mUm9vbXMiOjEsImJ1
+        aWx0SW5LaXRjaGVuIjoiZmFsc2UiLCJiYWxjb255IjoiZmFsc2UiLCJnYXJk
+        ZW4iOiJmYWxzZSJ9fQ==
     headers:
       User-Agent:
       - Faraday v0.13.1
@@ -137,7 +137,7 @@ http_interactions:
       Expires:
       - Thu, 01 Jan 1970 01:00:00 CET
       L-Is24-Requestrefnum:
-      - c8885c20-6ded-40cf-8b92-f9d966c8f653
+      - 25df4d84-8730-4e17-ba29-d6ec737d11a1
       L-Is24-Apiclient:
       - 06778437Key
       L-Is24-Causerid:
@@ -149,7 +149,7 @@ http_interactions:
       Content-Length:
       - '163'
       Date:
-      - Wed, 25 Oct 2017 09:00:56 GMT
+      - Wed, 25 Oct 2017 17:25:50 GMT
       Server:
       - Apache
     body:
@@ -160,5 +160,5 @@ http_interactions:
         Y2UgW3JlYWxlc3RhdGVdIHdpdGggaWQgWzY4NDIyMDIxXSBoYXMgYmVlbiB1
         cGRhdGVkLiIsImlkIjoiNjg0MjIwMjEifX1dfQ==
     http_version: 
-  recorded_at: Wed, 25 Oct 2017 09:00:57 GMT
+  recorded_at: Wed, 25 Oct 2017 17:25:51 GMT
 recorded_with: VCR 3.0.3

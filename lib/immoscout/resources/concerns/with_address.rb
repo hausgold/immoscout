@@ -10,7 +10,6 @@ module Immoscout
           property :address,
                    coerce: Immoscout::Resources::Parts::Address,
                    default: {}
-          property :show_address, from: :showAddress
         end
 
         class_methods do

@@ -1,3 +1,5 @@
+require_relative 'core_ext/hash'
+
 # errors
 require_relative 'errors/not_found'
 
@@ -9,3 +11,4 @@ require_relative 'resources/base'
 require_relative 'resources/residential'
 require_relative 'resources/house_buy'
 require_relative 'resources/apartment_buy'
+require_relative 'resources/contact'
