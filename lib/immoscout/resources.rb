@@ -7,5 +7,5 @@ require_relative 'api/client'
 # renderable resources
 require_relative 'resources/base'
 require_relative 'resources/residential'
-require_relative 'resources/house'
-require_relative 'resources/apartment'
+require_relative 'resources/house_buy'
+require_relative 'resources/apartment_buy'

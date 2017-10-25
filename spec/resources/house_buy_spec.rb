@@ -9,7 +9,7 @@ HOUSE_ACCESSORS = %w[
   plot_area
 ].freeze
 
-RSpec.describe Immoscout::Resources::House do
+RSpec.describe Immoscout::Resources::HouseBuy do
   let(:json) { JSON.parse(file_fixture("house.json").read) }
   let(:instance) { described_class.new(json) }
 

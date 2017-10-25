@@ -2,7 +2,7 @@
 
 module Immoscout
   module Resources
-    class Apartment < Residential
+    class ApartmentBuy < Residential
       property :apartment_type, from: :apartmentType
       property :floor
       property :lift

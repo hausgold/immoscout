@@ -14,7 +14,7 @@ APARTMENT_ACCESSORS = %w[
   service_charge
 ].freeze
 
-RSpec.describe Immoscout::Resources::Apartment do
+RSpec.describe Immoscout::Resources::ApartmentBuy do
   let(:json) { JSON.parse(file_fixture("apartment.json").read) }
   let(:instance) { described_class.new(json) }
 
