@@ -19,4 +19,8 @@ RSpec.configure do |config|
   end
   config.include RSpec::JsonExpectations::Matchers
   config.include FileFixture
+
+  config.before(:each) do
+    Immoscout.reset_configuration!
+  end
 end

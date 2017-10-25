@@ -21,4 +21,10 @@ module Immoscout
   def self.configure
     yield(configuration)
   end
+
+  private
+
+  def self.reset_configuration!
+    self.configuration = Configuration.new
+  end
 end
