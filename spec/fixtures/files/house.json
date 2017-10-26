@@ -112,9 +112,7 @@
          "energySourceEnev2014":
          [
              "SOLAR_HEATING",
-             "WIND_ENERGY",
-             "GEOTHERMAL",
-             "COMBINED_HEAT_AND_POWER_BIO_ENERGY"
+             "GEOTHERMAL"
          ]
      },
      "buildingEnergyRatingType": "ENERGY_REQUIRED",

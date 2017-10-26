@@ -15,6 +15,12 @@ module Immoscout
                from: :certificateOfEligibilityNeeded
       property :garden
       property :service_charge, from: :serviceCharge
+
+      def self.identifies?(hash)
+        (
+          hash.count == 1 && hash.keys.first =~ /^realestates.apartmentBuy/
+        ) || hash["@xsi.type"] == "offerlistelement:OfferApartmentBuy"
+      end
     end
   end
 end

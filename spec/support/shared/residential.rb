@@ -105,12 +105,27 @@ RSpec.shared_examples "a residential property" do
   end
 
   describe '#save', vcr: true do
-    let(:estate) { described_class.find(resource_id) }
+    context 'not persisted' do
+      let(:estate) { described_class.new(json) }
 
-    it 'changes attributes' do
-      estate.title = "Neuer Titel"
-      expect(estate.save).to be
-      expect(estate.title).to eq "Neuer Titel"
+      it 'set attributes' do
+        estate.delete("@id") # remove ids and mimic not persisted object
+        estate.delete("external_id")
+        estate.contact.id = '82295371' # link existent contact
+        estate.title = "Neuer Immo Titel"
+        expect(estate.save).to be
+        expect(estate.title).to eq "Neuer Immo Titel"
+      end
+    end
+
+    context 'persisted' do
+      let(:estate) { described_class.find(resource_id) }
+
+      it 'changes attributes' do
+        estate.title = "Neuer Titel"
+        expect(estate.save).to be
+        expect(estate.title).to eq "Neuer Titel"
+      end
     end
   end
 

@@ -9,21 +9,23 @@ module Immoscout
       include Immoscout::Models::Concerns::Renderable
       include Immoscout::Models::Concerns::WithAddress
 
-      def self.json_root_matcher
-        /^common.realtorContactDetail/
-      end
-
       def self.url_identifier
         'contact'
       end
 
-      def self.unpack_collection
-        proc do |body|
-          body.dig(
-            "common.realtorContactDetailsList",
-            "realtorContactDetails"
-          )
-        end
+      def self.unpack_collection(hash)
+        hash.dig(
+          "common.realtorContactDetailsList",
+          "realtorContactDetails"
+        )
+      end
+
+      def self.json_root_identifier
+        "common.realtorContactDetail"
+      end
+
+      def self.identifies?(hash)
+        hash.count == 1 && hash.keys.first == json_root_identifier
       end
 
       property :@id, from: :id

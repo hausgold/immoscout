@@ -7,7 +7,7 @@ module Immoscout
         included do
           def as_json
             {
-              type_identifier => \
+              self.class.json_root_identifier => \
                 deep_transform_keys do |key|
                   key.camelize :lower
                 end

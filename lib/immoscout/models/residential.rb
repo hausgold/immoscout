@@ -21,22 +21,20 @@ module Immoscout
       include Immoscout::Models::Concerns::WithApiSearchData
       include Immoscout::Models::Concerns::WithEnergySource
 
-      def self.json_root_matcher
-        /^realestates./
-      end
-
       def self.url_identifier
         'realestate'
       end
 
-      def self.unpack_collection
-        proc do |body|
-          body.dig(
-            "realestates.realEstates",
-            "realEstateList",
-            "realEstateElement"
-          )
-        end
+      def self.unpack_collection(hash)
+        hash.dig(
+          "realestates.realEstates",
+          "realEstateList",
+          "realEstateElement"
+        )
+      end
+
+      def self.json_root_identifier
+        "realestates.#{name.demodulize.camelize(:lower)}"
       end
 
       property :@id, from: :id

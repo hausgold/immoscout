@@ -7,10 +7,6 @@ module Immoscout
     class Model < Base
       attr_reader :type_identifier
 
-      def self.json_root_matcher
-        raise NotImplmentedError
-      end
-
       def self.url_identifier
         raise NotImplmentedError
       end
@@ -19,13 +15,20 @@ module Immoscout
         raise NotImplmentedError
       end
 
+      def self.identifies?
+        raise NotImplmentedError
+      end
+
+      def self.unpack(hash)
+        raise ArgumentError unless identifies?(hash)
+        hash.count == 1 ? hash.values.first : hash
+      end
+
       def initialize(hash = nil)
         klass = self.class
-        if hash && hash.count == 1 && hash.keys.first =~ klass.json_root_matcher
-          @type_identifier = hash.keys.first
-          super(hash.values.first)
+        if hash && klass.identifies?(hash)
+          super(klass.unpack(hash))
         else
-          @type_identifier = klass.name.demodulize.camelize(:lower)
           super
         end
       end
@@ -34,7 +37,6 @@ module Immoscout
         response = Immoscout::Api::Client.instance.get(
           "user/#{user_id}/#{url_identifier}/#{id}"
         )
-
         handle_response(response)
         new(response.body)
       end
@@ -43,25 +45,50 @@ module Immoscout
         response = Immoscout::Api::Client.instance.get(
           "user/#{user_id}/#{url_identifier}"
         )
-
         handle_response(response)
-        objects = unpack_collection.call(response.body)
+        objects = unpack_collection(response.body)
+        objects.select! { |json| identifies?(json) }
         objects.map { |object| new(object) }
+      end
+
+      def self.first(user_id = :me)
+        all(user_id).first
+      end
+
+      def self.last(user_id = :me)
+        all(user_id).last
       end
 
       def save(user_id = :me)
         klass = self.class
-        response = Immoscout::Api::Client.instance.put(
-          "user/#{user_id}/#{klass.url_identifier}/#{id}",
-          as_json
-        )
+        url_identifier = klass.url_identifier
+        response = \
+          if id
+            Immoscout::Api::Client.instance.put(
+              "user/#{user_id}/#{url_identifier}/#{id}",
+              as_json
+            )
+          else
+            Immoscout::Api::Client.instance.post(
+              "user/#{user_id}/#{url_identifier}",
+              as_json
+            )
+          end
 
         klass.handle_response(response)
         update_attributes!(response.body)
       end
 
       def update(hash, user_id = :me)
-        # TODO: implement me
+        update_attributes!(hash)
+        save(user_id)
+        self
+      end
+
+      def self.create(hash, user_id = :me)
+        instance = new(hash)
+        instance.save(user_id)
+        instance
       end
 
       def destroy(user_id = :me)
@@ -69,7 +96,6 @@ module Immoscout
         response = Immoscout::Api::Client.instance.delete(
           "user/#{user_id}/#{klass.url_identifier}/#{id}"
         )
-
         klass.handle_response(response)
         self
       end
