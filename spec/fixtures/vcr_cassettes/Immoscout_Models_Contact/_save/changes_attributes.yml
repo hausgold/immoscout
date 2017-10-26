@@ -25,7 +25,7 @@ http_interactions:
       Expires:
       - Thu, 01 Jan 1970 01:00:00 CET
       L-Is24-Requestrefnum:
-      - db5f2e7b-ffea-499d-a8d0-6f6b03ee2f1e
+      - d2148435-ff27-42cb-a8bd-cb19fea8c41a
       L-Is24-Apiclient:
       - 06778437Key
       L-Is24-Causerid:
@@ -37,7 +37,7 @@ http_interactions:
       Content-Length:
       - '270'
       Date:
-      - Wed, 25 Oct 2017 20:49:53 GMT
+      - Thu, 26 Oct 2017 08:13:11 GMT
       Server:
       - Apache
     body:
@@ -48,9 +48,9 @@ http_interactions:
         biI6Ik5PX1NBTFVUQVRJT04iLCJsYXN0bmFtZSI6ImR1bW15IiwiZGVmYXVs
         dENvbnRhY3QiOiJ0cnVlIiwibG9jYWxQYXJ0bmVyQ29udGFjdCI6ImZhbHNl
         IiwiYnVzaW5lc3NDYXJkQ29udGFjdCI6ImZhbHNlIiwicmVhbEVzdGF0ZVJl
-        ZmVyZW5jZUNvdW50Ijo2LCJzaG93T25Qcm9maWxlUGFnZSI6ImZhbHNlIn19
+        ZmVyZW5jZUNvdW50Ijo0LCJzaG93T25Qcm9maWxlUGFnZSI6ImZhbHNlIn19
     http_version: 
-  recorded_at: Wed, 25 Oct 2017 20:49:53 GMT
+  recorded_at: Thu, 26 Oct 2017 08:13:12 GMT
 - request:
     method: put
     uri: https://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/user/me/contact/82295371
@@ -62,7 +62,7 @@ http_interactions:
         biI6Ik5PX1NBTFVUQVRJT04iLCJsYXN0bmFtZSI6ImR1bW15IiwiZGVmYXVs
         dENvbnRhY3QiOiJ0cnVlIiwibG9jYWxQYXJ0bmVyQ29udGFjdCI6ImZhbHNl
         IiwiYnVzaW5lc3NDYXJkQ29udGFjdCI6ImZhbHNlIiwicmVhbEVzdGF0ZVJl
-        ZmVyZW5jZUNvdW50Ijo2LCJzaG93T25Qcm9maWxlUGFnZSI6ImZhbHNlIn19
+        ZmVyZW5jZUNvdW50Ijo0LCJzaG93T25Qcm9maWxlUGFnZSI6ImZhbHNlIn19
     headers:
       User-Agent:
       - Faraday v0.13.1
@@ -82,7 +82,7 @@ http_interactions:
       Expires:
       - Thu, 01 Jan 1970 01:00:00 CET
       L-Is24-Requestrefnum:
-      - e02f8488-5283-4633-8411-9d4c28d089a6
+      - a78f08cf-fe37-4cb8-b77e-b46168d950de
       L-Is24-Apiclient:
       - 06778437Key
       L-Is24-Causerid:
@@ -94,7 +94,7 @@ http_interactions:
       Content-Length:
       - '145'
       Date:
-      - Wed, 25 Oct 2017 20:49:53 GMT
+      - Thu, 26 Oct 2017 08:13:12 GMT
       Server:
       - Apache
     body:
@@ -105,5 +105,5 @@ http_interactions:
         Y2UgW2NvbnRhY3RdIHdpdGggaWQgWzgyMjk1MzcxXSBoYXMgYmVlbiB1cGRh
         dGVkLiAifX1dfQ==
     http_version: 
-  recorded_at: Wed, 25 Oct 2017 20:49:54 GMT
+  recorded_at: Thu, 26 Oct 2017 08:13:12 GMT
 recorded_with: VCR 3.0.3

@@ -93,7 +93,7 @@ RSpec.shared_examples "a residential property" do
 
   describe '.find', vcr: true do
     it 'returns an instance' do
-      expect(described_class.find('68422021')).to \
+      expect(described_class.find(resource_id)).to \
         be_an_instance_of(described_class)
     end
   end
@@ -105,12 +105,20 @@ RSpec.shared_examples "a residential property" do
   end
 
   describe '#save', vcr: true do
-    let(:estate) { described_class.find('68422021') }
+    let(:estate) { described_class.find(resource_id) }
 
     it 'changes attributes' do
       estate.title = "Neuer Titel"
       expect(estate.save).to be
       expect(estate.title).to eq "Neuer Titel"
+    end
+  end
+
+  describe '#destroy', vcr: true do
+    let(:estate) { described_class.find(resource_id) }
+
+    it 'returns the deleted object' do
+      expect(estate.destroy).to be
     end
   end
 end

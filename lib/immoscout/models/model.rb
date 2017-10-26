@@ -65,7 +65,13 @@ module Immoscout
       end
 
       def destroy(user_id = :me)
-        # TODO: implement me
+        klass = self.class
+        response = Immoscout::Api::Client.instance.delete(
+          "user/#{user_id}/#{klass.url_identifier}/#{id}"
+        )
+
+        klass.handle_response(response)
+        self
       end
 
       def self.handle_response(response)
