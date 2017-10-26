@@ -1,6 +1,6 @@
 # Immoscout
 
-This gem provides an API wrapper for the [Immobilienscout24](www.immobilienscout24.de) REST API.
+This gem provides an API wrapper for the [Immobilienscout24 REST API](https://api.immobilienscout24.de/our-apis/import-export.html).
 
 ## Installation
 
@@ -34,7 +34,7 @@ end
 
 ### Models
 
-Currently there is only full support for the models `ApartmentBuy`, `HouseBuy` and `Contact` - other will be included in future releases.
+Currently there is full support for the models `ApartmentBuy`, `HouseBuy` and `Contact` - others will be included in future releases.
 
 #### ApartmentBuy & HouseBuy
 
