@@ -13,4 +13,21 @@ VCR.configure do |config|
     env.response.headers.delete('Set-Cookie')
     env.request.headers.delete('Authorization')
   end
+
+  config.around_http_request do |request|
+    tape_sha = Digest::SHA1.hexdigest [
+      request.method,
+      request.uri,
+      request.headers.to_s,
+      request.body.to_s
+    ].join('')
+    tape_name = URI(request.uri)
+                .path
+                .split("/")
+                .delete_if(&:empty?)
+                .unshift(request.method)
+                .join("_")
+                .gsub(/\W/, "_")
+    VCR.use_cassette("#{tape_name}_#{tape_sha}", &request)
+  end
 end

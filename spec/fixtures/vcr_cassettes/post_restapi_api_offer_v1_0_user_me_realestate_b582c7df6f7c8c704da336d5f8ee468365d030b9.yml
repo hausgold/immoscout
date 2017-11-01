@@ -1,0 +1,88 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/user/me/realestate
+    body:
+      encoding: UTF-8
+      base64_string: |
+        eyJyZWFsZXN0YXRlcy5ob3VzZUJ1eSI6eyJhZGRyZXNzIjp7Indnczg0Q29v
+        cmRpbmF0ZSI6eyJsYXRpdHVkZSI6NTIuNTEyNDUsImxvbmdpdHVkZSI6MTMu
+        NDMxMzR9LCJzdHJlZXQiOiJhbmRyZWFzc3RyIiwiaG91c2VOdW1iZXIiOiIx
+        MCIsInBvc3Rjb2RlIjoiMTAyNDMiLCJjaXR5IjoiYmVybGluIn0sImNvbnRh
+        Y3QiOnsiQGlkIjoiODIyOTUzNzEifSwicHJpY2UiOnsidmFsdWUiOjI1MDAw
+        MCwiY3VycmVuY3kiOiJFVVIiLCJtYXJrZXRpbmdUeXBlIjoiUFVSQ0hBU0Ui
+        LCJwcmljZUludGVydmFsVHlwZSI6Ik9ORV9USU1FX0NIQVJHRSJ9LCJjb3Vy
+        dGFnZSI6eyJoYXNDb3VydGFnZSI6IllFUyIsImNvdXJ0YWdlIjoiUHJvdmlz
+        aW9uc2jDtmhlICIsImNvdXJ0YWdlTm90ZSI6IlByb3Zpc2lvbnNoaW53ZWlz
+        In0sImFwaVNlYXJjaERhdGEiOnsic2VhcmNoRmllbGQxIjoic2VhcmNoQXBp
+        RmllbGQxIiwic2VhcmNoRmllbGQyIjoic2VhcmNoQXBpRmllbGQyIiwic2Vh
+        cmNoRmllbGQzIjoic2VhcmNoQXBpRmllbGQzIn0sInRpdGxlIjoiTmV1ZXIg
+        SW1tbyBUaXRlbCIsImNyZWF0aW9uRGF0ZSI6IjIwMTQtMDgtMTJUMTE6MjY6
+        MTQuMDAwKzAyOjAwIiwibGFzdE1vZGlmaWNhdGlvbkRhdGUiOiIyMDE0LTA4
+        LTEyVDExOjMwOjM3LjAwMCswMjowMCIsImRlc2NyaXB0aW9uTm90ZSI6Ik9i
+        amVrdGJlc2NocmVpYnVuZyIsImZ1cm5pc2hpbmdOb3RlIjoiQXVzc3RhdHR1
+        bmcgIiwibG9jYXRpb25Ob3RlIjoiTGFnZSIsIm90aGVyTm90ZSI6IlNvbnN0
+        aWdlcyAiLCJzaG93QWRkcmVzcyI6InRydWUiLCJsb2RnZXJGbGF0IjoiWUVT
+        IiwiY29uc3RydWN0aW9uUGhhc2UiOiJQUk9KRUNURUQiLCJidWlsZGluZ1R5
+        cGUiOiJTSU5HTEVfRkFNSUxZX0hPVVNFIiwiY2VsbGFyIjoiWUVTIiwiaGFu
+        ZGljYXBwZWRBY2Nlc3NpYmxlIjoiWUVTIiwibnVtYmVyT2ZQYXJraW5nU3Bh
+        Y2VzIjoyLCJjb25kaXRpb24iOiJGSVJTVF9USU1FX1VTRV9BRlRFUl9SRUZV
+        UkJJU0hNRU5UIiwibGFzdFJlZnVyYmlzaG1lbnQiOjIwMDIsImludGVyaW9y
+        UXVhbGl0eSI6IlNPUEhJU1RJQ0FURUQiLCJjb25zdHJ1Y3Rpb25ZZWFyIjox
+        OTk5LCJmcmVlRnJvbSI6InNvZm9ydCIsImhlYXRpbmdUeXBlRW5ldjIwMTQi
+        OiJTRUxGX0NPTlRBSU5FRF9DRU5UUkFMX0hFQVRJTkciLCJlbmVyZ3lTb3Vy
+        Y2VzRW5ldjIwMTQiOnsiZW5lcmd5U291cmNlRW5ldjIwMTQiOlsiU09MQVJf
+        SEVBVElORyIsIkdFT1RIRVJNQUwiXX0sImJ1aWxkaW5nRW5lcmd5UmF0aW5n
+        VHlwZSI6IkVORVJHWV9SRVFVSVJFRCIsInRoZXJtYWxDaGFyYWN0ZXJpc3Rp
+        YyI6MTc0LCJlbmVyZ3lDb25zdW1wdGlvbkNvbnRhaW5zV2FybVdhdGVyIjoi
+        Tk9UX0FQUExJQ0FCTEUiLCJudW1iZXJPZkZsb29ycyI6MSwidXNhYmxlRmxv
+        b3JTcGFjZSI6MTAwLCJudW1iZXJPZkJlZFJvb21zIjoyLCJudW1iZXJPZkJh
+        dGhSb29tcyI6MiwiZ3Vlc3RUb2lsZXQiOiJZRVMiLCJwYXJraW5nU3BhY2VU
+        eXBlIjoiT1VUU0lERSIsInJlbnRlZCI6IllFUyIsInJlbnRhbEluY29tZSI6
+        NTIyLCJsaXN0ZWQiOiJZRVMiLCJwYXJraW5nU3BhY2VQcmljZSI6MTUwMCwi
+        c3VtbWVyUmVzaWRlbmNlUHJhY3RpY2FsIjoiWUVTIiwibGl2aW5nU3BhY2Ui
+        OjE0MCwicGxvdEFyZWEiOjUwMCwibnVtYmVyT2ZSb29tcyI6NCwiZW5lcmd5
+        UGVyZm9ybWFuY2VDZXJ0aWZpY2F0ZSI6InRydWUifX0=
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Content-Type:
+      - application/json;charset=UTF-8
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: ''
+    headers:
+      L-Is24-Requestrefnum:
+      - 4b0c608c-829e-4093-b37d-1b3e6e46cf7d
+      L-Is24-Apiclient:
+      - 06778437Key
+      L-Is24-Causerid:
+      - '107268859'
+      L-Is24-Resourceid:
+      - "-"
+      Location:
+      - http://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/user/me/realestate/68492871
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '163'
+      Date:
+      - Wed, 01 Nov 2017 10:35:39 GMT
+      Server:
+      - Apache
+    body:
+      encoding: UTF-8
+      base64_string: |
+        eyJjb21tb24ubWVzc2FnZXMiOlt7Im1lc3NhZ2UiOnsibWVzc2FnZUNvZGUi
+        OiJNRVNTQUdFX1JFU09VUkNFX0NSRUFURUQiLCJtZXNzYWdlIjoiUmVzb3Vy
+        Y2UgW3JlYWxlc3RhdGVdIHdpdGggaWQgWzY4NDkyODcxXSBoYXMgYmVlbiBj
+        cmVhdGVkLiIsImlkIjoiNjg0OTI4NzEifX1dfQ==
+    http_version: 
+  recorded_at: Wed, 01 Nov 2017 10:35:40 GMT
+recorded_with: VCR 3.0.3
