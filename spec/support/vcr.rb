@@ -18,7 +18,7 @@ VCR.configure do |config|
     tape_sha = Digest::SHA1.hexdigest [
       request.method,
       request.uri,
-      request.headers.to_s,
+      request.headers.except("Authorization").to_s,
       request.body.to_s
     ].join('')
     tape_name = URI(request.uri)

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: put
-    uri: https://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/user/me/realestate/68492869
+    uri: https://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/user/me/realestate/68492873
     body:
       encoding: UTF-8
       base64_string: |
@@ -17,9 +17,9 @@ http_interactions:
         aW9uc2jDtmhlICIsImNvdXJ0YWdlTm90ZSI6IlByb3Zpc2lvbnNoaW53ZWlz
         In0sImFwaVNlYXJjaERhdGEiOnsic2VhcmNoRmllbGQxIjoic2VhcmNoQXBp
         RmllbGQxIiwic2VhcmNoRmllbGQyIjoic2VhcmNoQXBpRmllbGQyIiwic2Vh
-        cmNoRmllbGQzIjoic2VhcmNoQXBpRmllbGQzIn0sIkBpZCI6IjY4NDkyODY5
-        IiwiZXh0ZXJuYWxJZCI6IjY4NDkyODY5IiwidGl0bGUiOiJOZXVlciBUaXRl
-        bCIsImNyZWF0aW9uRGF0ZSI6IjIwMTctMTEtMDFUMTE6MzE6MzcuMzY4KzAx
+        cmNoRmllbGQzIjoic2VhcmNoQXBpRmllbGQzIn0sIkBpZCI6IjY4NDkyODcz
+        IiwiZXh0ZXJuYWxJZCI6IjY4NDkyODczIiwidGl0bGUiOiJOZXVlciBUaXRl
+        bCIsImNyZWF0aW9uRGF0ZSI6IjIwMTctMTEtMDFUMTE6MzY6NTkuNTAwKzAx
         OjAwIiwiZGVzY3JpcHRpb25Ob3RlIjoiT2JqZWt0YmVzY2hyZWlidW5nIiwi
         ZnVybmlzaGluZ05vdGUiOiJBdXNzdGF0dHVuZyAiLCJsb2NhdGlvbk5vdGUi
         OiJMYWdlIiwib3RoZXJOb3RlIjoiU29uc3RpZ2VzICIsInNob3dBZGRyZXNz
@@ -63,19 +63,19 @@ http_interactions:
       Expires:
       - Thu, 01 Jan 1970 01:00:00 CET
       L-Is24-Requestrefnum:
-      - 2700cc4e-c04f-41d8-81c3-8bc3dcdb44b6
+      - 220b6f04-67f9-42b4-a48d-acb10e76990b
       L-Is24-Apiclient:
       - 06778437Key
       L-Is24-Causerid:
       - '107268859'
       L-Is24-Resourceid:
-      - '68492869'
+      - '68492873'
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
       - '163'
       Date:
-      - Wed, 01 Nov 2017 10:35:40 GMT
+      - Wed, 01 Nov 2017 10:52:37 GMT
       Server:
       - Apache
     body:
@@ -83,8 +83,8 @@ http_interactions:
       base64_string: |
         eyJjb21tb24ubWVzc2FnZXMiOlt7Im1lc3NhZ2UiOnsibWVzc2FnZUNvZGUi
         OiJNRVNTQUdFX1JFU09VUkNFX1VQREFURUQiLCJtZXNzYWdlIjoiUmVzb3Vy
-        Y2UgW3JlYWxlc3RhdGVdIHdpdGggaWQgWzY4NDkyODY5XSBoYXMgYmVlbiB1
-        cGRhdGVkLiIsImlkIjoiNjg0OTI4NjkifX1dfQ==
+        Y2UgW3JlYWxlc3RhdGVdIHdpdGggaWQgWzY4NDkyODczXSBoYXMgYmVlbiB1
+        cGRhdGVkLiIsImlkIjoiNjg0OTI4NzMifX1dfQ==
     http_version: 
-  recorded_at: Wed, 01 Nov 2017 10:35:40 GMT
+  recorded_at: Wed, 01 Nov 2017 10:52:37 GMT
 recorded_with: VCR 3.0.3

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/user/me/realestate/68492869
+    uri: https://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/user/me/realestate/68492873
     body:
       encoding: US-ASCII
       base64_string: ''
@@ -25,15 +25,15 @@ http_interactions:
       Expires:
       - Thu, 01 Jan 1970 01:00:00 CET
       L-Is24-Requestrefnum:
-      - 93d64298-5130-44f0-9876-a029fbe1ef78
+      - 786eb5ce-9b3b-420a-ae49-57261bb6cc7e
       L-Is24-Apiclient:
       - 06778437Key
       L-Is24-Causerid:
       - '107268859'
       L-Is24-Resourceid:
-      - '68492869'
+      - '68492873'
       Etag:
-      - '"0ae4625e3f29b000b09ead38910505b5b"'
+      - '"073f9c818f298b7f43eb5cec478e45e5a"'
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -41,15 +41,15 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Wed, 01 Nov 2017 10:35:39 GMT
+      - Wed, 01 Nov 2017 10:52:37 GMT
       Server:
       - Apache
     body:
       encoding: ASCII-8BIT
       base64_string: |
-        eyJyZWFsZXN0YXRlcy5ob3VzZUJ1eSI6eyJAaWQiOiI2ODQ5Mjg2OSIsImV4
-        dGVybmFsSWQiOiI2ODQ5Mjg2OSIsInRpdGxlIjoiTmV1ZXIgSW1tbyBUaXRl
-        bCIsImNyZWF0aW9uRGF0ZSI6IjIwMTctMTEtMDFUMTE6MzE6MzcuMzY4KzAx
+        eyJyZWFsZXN0YXRlcy5ob3VzZUJ1eSI6eyJAaWQiOiI2ODQ5Mjg3MyIsImV4
+        dGVybmFsSWQiOiI2ODQ5Mjg3MyIsInRpdGxlIjoiTmV1ZXIgSW1tbyBUaXRl
+        bCIsImNyZWF0aW9uRGF0ZSI6IjIwMTctMTEtMDFUMTE6MzY6NTkuNTAwKzAx
         OjAwIiwiYWRkcmVzcyI6eyJzdHJlZXQiOiJhbmRyZWFzc3RyIiwiaG91c2VO
         dW1iZXIiOiIxMCIsInBvc3Rjb2RlIjoiMTAyNDMiLCJjaXR5IjoiYmVybGlu
         Iiwid2dzODRDb29yZGluYXRlIjp7ImxhdGl0dWRlIjo1Mi41MTI0NSwibG9u
@@ -69,7 +69,7 @@ http_interactions:
         ZXJOb3RlIjoiU29uc3RpZ2VzICIsImF0dGFjaG1lbnRzIjpbeyJAeGxpbmsu
         aHJlZiI6Imh0dHA6XC9cL3Jlc3Quc2FuZGJveC1pbW1vYmlsaWVuc2NvdXQy
         NC5kZVwvcmVzdGFwaVwvYXBpXC9vZmZlclwvdjEuMFwvdXNlclwvbWVcL3Jl
-        YWxlc3RhdGVcLzY4NDkyODY5XC9hdHRhY2htZW50In1dLCJzaG93QWRkcmVz
+        YWxlc3RhdGVcLzY4NDkyODczXC9hdHRhY2htZW50In1dLCJzaG93QWRkcmVz
         cyI6InRydWUiLCJjb250YWN0Ijp7IkBpZCI6IjgyMjk1MzcxIn0sImNvbW1v
         bi5wdWJsaXNoQ2hhbm5lbHMiOltdLCJsb2RnZXJGbGF0IjoiWUVTIiwiY29u
         c3RydWN0aW9uUGhhc2UiOiJQUk9KRUNURUQiLCJidWlsZGluZ1R5cGUiOiJT
@@ -100,5 +100,5 @@ http_interactions:
         UyIsImNvdXJ0YWdlIjoiUHJvdmlzaW9uc2jDtmhlICIsImNvdXJ0YWdlTm90
         ZSI6IlByb3Zpc2lvbnNoaW53ZWlzIn19fQ==
     http_version: 
-  recorded_at: Wed, 01 Nov 2017 10:35:40 GMT
+  recorded_at: Wed, 01 Nov 2017 10:52:37 GMT
 recorded_with: VCR 3.0.3
