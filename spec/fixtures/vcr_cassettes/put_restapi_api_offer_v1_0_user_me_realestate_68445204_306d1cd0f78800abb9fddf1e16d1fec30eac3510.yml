@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/user/me/realestate/68445204
+    body:
+      encoding: UTF-8
+      base64_string: |
+        eyJyZWFsZXN0YXRlcy5hcGFydG1lbnRCdXkiOnsiQGlkIjoiNjg0NDUyMDQi
+        LCJhZGRyZXNzIjp7InN0cmVldCI6IkFuZHJlYXNzdHJhw59lIiwiaG91c2VO
+        dW1iZXIiOiIxMCIsInBvc3Rjb2RlIjoiMTAyNDMiLCJjaXR5IjoiQmVybGlu
+        Iiwid2dzODRDb29yZGluYXRlIjp7ImxhdGl0dWRlIjo1Mi41MTI2MSwibG9u
+        Z2l0dWRlIjoxMy40MzE0NH19LCJjcmVhdGlvbkRhdGUiOiIyMDE3LTEwLTIw
+        VDE1OjQzOjU3LjIzMyswMjowMCIsInByaWNlIjp7InZhbHVlIjoxMDAsImN1
+        cnJlbmN5IjoiRVVSIiwibWFya2V0aW5nVHlwZSI6IlBVUkNIQVNFIiwicHJp
+        Y2VJbnRlcnZhbFR5cGUiOiJPTkVfVElNRV9DSEFSR0UifSwiY291cnRhZ2Ui
+        OnsiaGFzQ291cnRhZ2UiOiJZRVMiLCJjb3VydGFnZSI6IjE2NTY/IGFuIFBy
+        b3Zpc2lvbiB6dSB6YWhsZW4iLCJjb3VydGFnZU5vdGUiOiJGcmVpdGV4dGZl
+        bGQgUHJvdmlzaW9uc2hpbndlaXMifSwiZW5lcmd5U291cmNlc0VuZXYyMDE0
+        Ijp7ImVuZXJneVNvdXJjZUVuZXYyMDE0IjoiTk9fSU5GT1JNQVRJT04ifSwi
+        Y29udGFjdCI6eyJAaWQiOiI4MjUxMTMwMCJ9LCJsYXN0TW9kaWZpY2F0aW9u
+        RGF0ZSI6IjIwMTctMTEtMDNUMTU6MDA6NTEuMDE5KzAxOjAwIiwidGl0bGUi
+        OiJOZXVlciBUaXRlbCIsImV4dGVybmFsSWQiOiI2ODQ0NTIwNCIsIm90aGVy
+        Tm90ZSI6IlRlc3QiLCJjZWxsYXIiOiJOT1RfQVBQTElDQUJMRSIsImhhbmRp
+        Y2FwcGVkQWNjZXNzaWJsZSI6Ik5PVF9BUFBMSUNBQkxFIiwiY29uZGl0aW9u
+        IjoiTk9fSU5GT1JNQVRJT04iLCJlbmVyZ3lDb25zdW1wdGlvbkNvbnRhaW5z
+        V2FybVdhdGVyIjoiTk9UX0FQUExJQ0FCTEUiLCJndWVzdFRvaWxldCI6Ik5P
+        VF9BUFBMSUNBQkxFIiwicmVudGVkIjoiTk9UX0FQUExJQ0FCTEUiLCJsaXN0
+        ZWQiOiJOT1RfQVBQTElDQUJMRSIsInN1bW1lclJlc2lkZW5jZVByYWN0aWNh
+        bCI6Ik5PVF9BUFBMSUNBQkxFIiwibGl2aW5nU3BhY2UiOjIsIm51bWJlck9m
+        Um9vbXMiOjEsInNob3dBZGRyZXNzIjoidHJ1ZSIsImFwYXJ0bWVudFR5cGUi
+        OiJOT19JTkZPUk1BVElPTiIsImxpZnQiOiJmYWxzZSIsImJ1aWx0SW5LaXRj
+        aGVuIjoiZmFsc2UiLCJiYWxjb255IjoiZmFsc2UiLCJnYXJkZW4iOiJmYWxz
+        ZSJ9fQ==
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Content-Type:
+      - application/json;charset=UTF-8
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Cache-Control:
+      - private
+      Expires:
+      - Thu, 01 Jan 1970 01:00:00 CET
+      L-Is24-Requestrefnum:
+      - 6d8ee16f-b217-4f47-a7e7-65afd79e1a09
+      L-Is24-Apiclient:
+      - 06778437Key
+      L-Is24-Causerid:
+      - '107268859'
+      L-Is24-Resourceid:
+      - '68445204'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '163'
+      Date:
+      - Fri, 03 Nov 2017 20:34:38 GMT
+      Server:
+      - Apache
+    body:
+      encoding: UTF-8
+      base64_string: |
+        eyJjb21tb24ubWVzc2FnZXMiOlt7Im1lc3NhZ2UiOnsibWVzc2FnZUNvZGUi
+        OiJNRVNTQUdFX1JFU09VUkNFX1VQREFURUQiLCJtZXNzYWdlIjoiUmVzb3Vy
+        Y2UgW3JlYWxlc3RhdGVdIHdpdGggaWQgWzY4NDQ1MjA0XSBoYXMgYmVlbiB1
+        cGRhdGVkLiIsImlkIjoiNjg0NDUyMDQifX1dfQ==
+    http_version: 
+  recorded_at: Fri, 03 Nov 2017 20:34:38 GMT
+recorded_with: VCR 3.0.3

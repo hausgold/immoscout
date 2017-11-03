@@ -51,9 +51,7 @@ module Immoscout
         )
         handle_response(response)
         objects = unpack_collection(response.body)
-        # objects.select! { |json| identifies?(json) } if is_a?(
-        #   Immoscout::Models::Residential
-        # )
+        objects.select! { |json| identifies?(json) } 
         objects.map { |object| new(object) }
       end
 

@@ -19,22 +19,26 @@ module Immoscout
       include Immoscout::Models::Concerns::Propertiable
 
       property :id, alias: :@id
-      property :address, coerce: Immoscout::Models::Parts::Address
-      property :creation_date
-      property :price, coerce: Immoscout::Models::Parts::Price
-      property :courtage, coerce: Immoscout::Models::Parts::Courtage
-      property :energy_sources_enev2014,
-               coerce: Immoscout::Models::Parts::EnergySource
-      property :contact, coerce: Immoscout::Models::Parts::Contact
-      property :last_modification_date
-      property :title
       property :external_id
+      property :title
+      property :creation_date
+      property :last_modification_date
+      property :address, coerce: Immoscout::Models::Parts::Address
+      property :api_search_data, coerce: Immoscout::Models::Parts::ApiSearchData
+      property :real_estate_state
       property :description_note
       property :furnishing_note
       property :location_note
       property :other_note
+      property :show_address
+      property :contact, coerce: Immoscout::Models::Parts::Contact
+      property :building_type
+
+      property :price, coerce: Immoscout::Models::Parts::Price
+      property :courtage, coerce: Immoscout::Models::Parts::Courtage
+      property :energy_sources_enev2014,
+               coerce: Immoscout::Models::Parts::EnergySource
       property :cellar
-      property :api_search_data, coerce: Immoscout::Models::Parts::ApiSearchData
       property :handicapped_accessible
       property :number_of_parking_spaces
       property :condition
@@ -60,8 +64,6 @@ module Immoscout
       property :living_space
       property :number_of_rooms
       property :energy_performance_certificate
-      property :show_address
-      property :building_type
       property :lodger_flat
       property :construction_phase
       property :plot_area

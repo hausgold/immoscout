@@ -112,15 +112,10 @@ RSpec.shared_examples "a residential property" do
 
   describe '#save', vcr: true do
     context 'not persisted' do
-      let(:estate) { described_class.new(json) }
+      let(:estate) { described_class.new(create_hash) }
 
       it 'set attributes' do
-        estate.id = nil # remove ids and mimic not persisted object
-        estate.external_id = nil
-        estate.contact.id = '82295371' # link existent contact
-        estate.title = "Neuer Immo Titel"
         expect(estate.save).to be
-        expect(estate.title).to eq "Neuer Immo Titel"
       end
     end
 

@@ -20,7 +20,29 @@ RSpec.describe Immoscout::Models::ApartmentBuy do
 
   it_behaves_like "a residential property" do
     let(:json) { JSON.parse(file_fixture("apartment.json").read) }
-    let(:resource_id) { "68492872" }
+    let(:resource_id) { "68445204" }
+
+    let(:create_hash) do
+      {
+        title: "test title",
+        address: {
+          street: "Berliner straße",
+          house_number: 10,
+          postcode: "10243",
+          city: "Berlin"
+        },
+        apartment_type: "NO_INFORMATION",
+        plot_area: 10_000,
+        living_space: 100,
+        number_of_rooms: 4,
+        price: {
+          currency: "EUR",
+          marketing_type: "PURCHASE",
+          price_interval_type: "ONE_TIME_CHARGE",
+          value: 400_000
+        }
+      }
+    end
   end
 
   describe '#new' do
