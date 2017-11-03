@@ -1,15 +1,19 @@
 # frozen_string_literal: true
 
 require_relative '../base'
+require_relative '../concerns/propertiable'
+require_relative '../concerns/renderable'
 
 module Immoscout
   module Models
     module Parts
       class Price < Base
+        include Immoscout::Models::Concerns::Renderable
+        include Immoscout::Models::Concerns::Propertiable
         property :value
         property :currency
-        property :marketing_type, from: :marketingType
-        property :price_interval_type, from: :priceIntervalType
+        property :marketing_type
+        property :price_interval_type
       end
     end
   end

@@ -99,8 +99,14 @@ RSpec.shared_examples "a residential property" do
   end
 
   describe '.all', vcr: true do
-    it 'returns an array of instances' do
-      expect(described_class.all).to be_an(Array)
+    let(:result) { described_class.all }
+
+    it 'returns an array' do
+      expect(result).to be_an(Array)
+    end
+
+    it 'returns instances of contact' do
+      expect(result.all? { |c| c.is_a? described_class }).to be
     end
   end
 
@@ -109,8 +115,8 @@ RSpec.shared_examples "a residential property" do
       let(:estate) { described_class.new(json) }
 
       it 'set attributes' do
-        estate.delete("@id") # remove ids and mimic not persisted object
-        estate.delete("external_id")
+        estate.id = nil # remove ids and mimic not persisted object
+        estate.external_id = nil
         estate.contact.id = '82295371' # link existent contact
         estate.title = "Neuer Immo Titel"
         expect(estate.save).to be

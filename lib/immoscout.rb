@@ -3,7 +3,6 @@
 require 'active_support/concern'
 require 'active_support/configurable'
 require 'active_support/core_ext/hash'
-require 'hashie'
 
 require "immoscout/version"
 require 'immoscout/configuration'

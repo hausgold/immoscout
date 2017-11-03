@@ -1,13 +1,14 @@
 # frozen_string_literal: true
 
 require_relative 'concerns/renderable'
-require_relative 'concerns/with_address'
+require_relative 'concerns/propertiable'
+require_relative 'parts/address'
 
 module Immoscout
   module Models
     class Contact < Model
       include Immoscout::Models::Concerns::Renderable
-      include Immoscout::Models::Concerns::WithAddress
+      include Immoscout::Models::Concerns::Propertiable
 
       def self.url_identifier
         'contact'
@@ -20,42 +21,42 @@ module Immoscout
         )
       end
 
-      def self.json_root_identifier
+      def self.json_wrapper
         "common.realtorContactDetail"
       end
 
       def self.identifies?(hash)
-        hash.count == 1 && hash.keys.first == json_root_identifier
+        hash.count == 1 && hash.keys.first == json_wrapper
       end
 
-      property :@id, from: :id
-      alias_method :id, :@id
+      property :id, alias: :@id
       property :email
       property :salutation
-      property :title
-      property :country_code, from: :countryCode
       property :firstname
       property :lastname
-      property :addition_name, from: :additionName
-      property :fax_number_country_code, from: :faxNumberCountryCode
-      property :fax_number_area_code, from: :faxNumberAreaCode
-      property :fax_number_subscriber, from: :faxNumberSubscriber
-      property :phone_number_country_code, from: :phoneNumberCountryCode
-      property :phone_number_area_code, from: :phoneNumberAreaCode
-      property :phone_number_subscriber, from: :phoneNumberSubscriber
-      property :cell_phone_number_country_code,
-               from: :cellPhoneNumberCountryCode
-      property :cell_phone_number_area_code, from: :cellPhoneNumberAreaCode
-      property :cell_phone_number_subscriber, from: :cellPhoneNumberSubscriber
-      property :homepage_url, from: :homepageUrl
+      property :fax_number_country_code
+      property :fax_number_area_code
+      property :fax_number_subscriber
+      property :phone_number_country_code
+      property :phone_number_area_code
+      property :phone_number_subscriber
+      property :cell_phone_number_country_code
+      property :cell_phone_number_area_code
+      property :cell_phone_number_subscriber
+      property :address, coerce: Immoscout::Models::Parts::Address
+      property :country_code
+      property :title
+      property :addition_name
+      property :company
+      property :homepage_url
       property :position
-      property :office_hours, from: :officeHours
-      property :default_contact, from: :defaultContact
-      property :local_partner_contact, from: :localPartnerContact
-      property :business_card_contact, from: :businessCardContact
-      property :real_estate_reference_count, from: :realEstateReferenceCount
-      property :external_id, from: :externalId
-      property :show_on_profile_page, from: :showOnProfilePage
+      property :office_hours
+      property :default_contact
+      property :local_partner_contact
+      property :business_card_contact
+      property :real_estate_reference_count
+      property :external_id
+      property :show_on_profile_page
     end
   end
 end

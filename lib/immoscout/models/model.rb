@@ -5,8 +5,6 @@ require_relative 'base'
 module Immoscout
   module Models
     class Model < Base
-      attr_reader :type_identifier
-
       def self.url_identifier
         raise NotImplmentedError
       end
@@ -24,13 +22,19 @@ module Immoscout
         hash.count == 1 ? hash.values.first : hash
       end
 
-      def initialize(hash = nil)
+      def initialize(hash = {})
         klass = self.class
-        if hash && klass.identifies?(hash)
+        if klass.identifies?(hash)
           super(klass.unpack(hash))
         else
           super
         end
+      end
+
+      def as_json
+        {
+          self.class.json_wrapper => super
+        }
       end
 
       def self.find(id, user_id = :me)
@@ -47,7 +51,9 @@ module Immoscout
         )
         handle_response(response)
         objects = unpack_collection(response.body)
-        objects.select! { |json| identifies?(json) }
+        # objects.select! { |json| identifies?(json) } if is_a?(
+        #   Immoscout::Models::Residential
+        # )
         objects.map { |object| new(object) }
       end
 
@@ -63,7 +69,7 @@ module Immoscout
         klass = self.class
         url_identifier = klass.url_identifier
         response = \
-          if id
+          if try(:id)
             Immoscout::Api::Client.instance.put(
               "user/#{user_id}/#{url_identifier}/#{id}",
               as_json
@@ -76,11 +82,10 @@ module Immoscout
           end
 
         klass.handle_response(response)
-        update_attributes!(response.body)
+        self
       end
 
       def update(hash, user_id = :me)
-        update_attributes!(hash)
         save(user_id)
         self
       end

@@ -2,19 +2,20 @@
 
 require_relative '../base'
 require_relative '../parts/coordinate'
+require_relative '../concerns/propertiable'
+require_relative '../concerns/renderable'
 
 module Immoscout
   module Models
     module Parts
       class Address < Base
+        include Immoscout::Models::Concerns::Renderable
+        include Immoscout::Models::Concerns::Propertiable
         property :street
-        property :house_number, from: :houseNumber
+        property :house_number
         property :postcode
         property :city
-        property :wgs84_coordinate,
-                 from: :wgs84Coordinate,
-                 coerce: Immoscout::Models::Parts::Coordinate,
-                 default: {}
+        property :wgs84_coordinate, coerce: Immoscout::Models::Parts::Coordinate
       end
     end
   end

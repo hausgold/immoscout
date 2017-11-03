@@ -1,12 +1,16 @@
 # frozen_string_literal: true
 
 require_relative '../base'
+require_relative '../concerns/propertiable'
+require_relative '../concerns/renderable'
 
 module Immoscout
   module Models
     module Parts
       class EnergySource < Base
-        property :energy_source_enev2014, from: :energySourceEnev2014
+        include Immoscout::Models::Concerns::Renderable
+        include Immoscout::Models::Concerns::Propertiable
+        property :energy_source_enev2014
       end
     end
   end
