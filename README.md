@@ -38,6 +38,17 @@ end
 
 Currently supported: `ApartmentBuy`, `HouseBuy`
 
+##### Overview supported actions
+* ModelClass.find(ID)
+* ModelClass.all
+* ModelClass.first
+* ModelClass.last
+* ModelClass.new(hash)
+* ModelClass.new_raw(remote_hash_or_json)
+* ModelClass.create(hash)
+* instance.save
+* instance.destroy
+
 ##### Initialize
 ```ruby
 # initialize with hash
@@ -83,6 +94,17 @@ house.destroy
 
 #### Contact
 
+##### Overview supported actions
+* ModelClass.find(ID)
+* ModelClass.all
+* ModelClass.first
+* ModelClass.last
+* ModelClass.new(hash)
+* ModelClass.new_raw(remote_hash_or_json)
+* ModelClass.create(hash)
+* instance.save
+* instance.destroy
+
 ```ruby
 contact = Immoscout::Models::Contact.new firstname: "John", lastname: "Doe"
 # => #<Immoscout::Models::Contact:0x0055c9fb889878 @firstname="John", @lastname="Doe">
@@ -94,8 +116,15 @@ contact.save
 
 #### Publish
 
+##### Overview supported actions
+* ModelClass.new(hash)
+* ModelClass.new_raw(remote_hash_or_json)
+* instance.save
+* instance.destroy
+
 ```ruby
-publish = Immoscout::Models::Publish.new real_estate: {id: "ID"}, publish_channel: {id: 10_000}
+# NOTE: publish_channel#id = 10000 => publish on immobilienscout24
+publish = Immoscout::Models::Publish.new real_estate: { id: "ID" }, publish_channel: {id: 10_000}
 # => #<Immoscout::Models::Publish:0x0055c9faea1fb8>
 
 publish.destroy
