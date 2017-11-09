@@ -34,26 +34,72 @@ end
 
 ### Models
 
-Currently there is full support for the models `ApartmentBuy`, `HouseBuy` and `Contact` - others will be included in future releases.
+#### Real Estates
 
-#### ApartmentBuy & HouseBuy
+Currently supported: `ApartmentBuy`, `HouseBuy`
 
+##### Initialize
 ```ruby
-apartment = Immoscout::Models::ApartmentBuy.find('837283')
+# initialize with hash
+house = Immoscout::Models::HouseBuy.new(title: "test", address: {street: "thestreet"})
+# => #<Immoscout::Models::HouseBuy:0x0055c9fbbc6ea0 @address=#<Immoscout::Models::Parts::Address:0x0055c9fbbc6888 @street="thestreet">, @title="test">
 
-apartment.address
-# => #<Immoscout::Models::Parts::Address city="Berlin" house_number="10" postcode="10243" street="Andreasstraße" ...>
+# initialize with attribute writers
+house = Immoscout::Models::HouseBuy.new
+# => #<Immoscout::Models::HouseBuy:0x0055d31f734838>
+house.title = "another title"
+# => "another title"
+
+# access nested attributes
+house.build_address
+# => #<Immoscout::Models::Parts::Address:0x0055c9fbc77d18>
+house.address.street = "another street"
+
+# lookup all allowed first-level attributes
+house.attributes
+# => [:address, :api_search_data, :building_energy_rating_type, ...]
+house.address.attributes
+# => [:city, :house_number, :postcode, :street, ...]
+```
+
+##### Find
+```ruby
+apartment = Immoscout::Models::ApartmentBuy.find('ID')
+# => #<Immoscout::Models::ApartmentBuy:0x0055c9fbfa0648>
 apartment.address.street
 # => 'Orig street name'
-
+```
+##### Create & Update & Destroy
+```ruby
+apartment = Immoscout::Models::ApartmentBuy.find('ID')
 apartment.address.street = "Changed street"
 apartment.save
+# => #<Immoscout::Models::ApartmentBuy:0x0055c9fbfa0648>
 
 house = Immoscout::Models::HouseBuy.find('9473634')
 house.destroy
+# => #<Immoscout::Models::HouseBuy:0x0055d31f734838>
+```
 
-Immoscout::Models::HouseBuy.all
-# => [#<Immoscout::Models::HouseBuy, #<Immoscout::Models::HouseBuy, ...]
+#### Contact
+
+```ruby
+contact = Immoscout::Models::Contact.new firstname: "John", lastname: "Doe"
+# => #<Immoscout::Models::Contact:0x0055c9fb889878 @firstname="John", @lastname="Doe">
+contact.email = "john.doe@example.com"
+contact.salutation = "MALE"
+contact.save
+# => #<Immoscout::Models::Contact:0x0055c9fb889878 @email="john.doe@example.com", @firstname="John", @lastname="Doe", @salutation="MALE">
+```
+
+#### Publish
+
+```ruby
+publish = Immoscout::Models::Publish.new real_estate: {id: "ID"}, publish_channel: {id: 10_000}
+# => #<Immoscout::Models::Publish:0x0055c9faea1fb8>
+
+publish.destroy
+# => #<Immoscout::Models::Publish:0x0055c9faea1fb8>
 ```
 
 ## Development
