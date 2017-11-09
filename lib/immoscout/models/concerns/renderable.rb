@@ -25,7 +25,7 @@ module Immoscout
           def to_h
             self.class.properties.each_with_object({}) do |(key, value), memo|
               property = value.fetch(:alias, key)
-              rendered = send(key)
+              rendered = send(key) || value.fetch(:default, nil)
               memo[property] = rendered.try(:as_json) || rendered
               memo
             end
