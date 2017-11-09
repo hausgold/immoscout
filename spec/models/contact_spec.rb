@@ -36,7 +36,7 @@ RSpec.describe Immoscout::Models::Contact do
   let(:instance) { described_class.new_raw(json) }
   let(:resource_id) { '82295371' }
 
-  describe '#new' do
+  describe '.new_raw' do
     context 'with hash argument' do
       let(:subject) { described_class.new_raw(json) }
 

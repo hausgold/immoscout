@@ -37,57 +37,56 @@ RESIDENTIAL_ACCESSORS = %w[
 ].freeze
 
 RSpec.shared_examples "a residential property" do
-  describe '#new' do
-    context 'without arguments' do
-      it "returns residential object" do
-        expect(described_class.new).to be_instance_of described_class
+  describe '.new' do
+    it "returns residential object" do
+      expect(described_class.new).to be_instance_of described_class
+    end
+  end
+
+  describe '.new_raw' do
+    let(:subject) { described_class.new_raw(json) }
+
+    RESIDENTIAL_ACCESSORS.each do |attribute|
+      it "assigns #{attribute}" do
+        expect(subject.send(attribute)).to be
       end
     end
 
-    context 'with hash argument' do
-      let(:subject) { described_class.new_raw(json) }
-      RESIDENTIAL_ACCESSORS.each do |attribute|
-        it "assigns #{attribute}" do
-          expect(subject.send(attribute)).to be
-        end
-      end
+    it 'assigns address parts' do
+      expect(subject.address.street).to be
+      expect(subject.address.house_number).to be
+      expect(subject.address.postcode).to be
+      expect(subject.address.city).to be
+      expect(subject.show_address).to be
+    end
 
-      it 'assigns address parts' do
-        expect(subject.address.street).to be
-        expect(subject.address.house_number).to be
-        expect(subject.address.postcode).to be
-        expect(subject.address.city).to be
-        expect(subject.show_address).to be
-      end
+    it 'assigns contact parts' do
+      expect(subject.contact.id).to be
+    end
 
-      it 'assigns contact parts' do
-        expect(subject.contact.id).to be
-      end
+    it 'assigns price parts' do
+      expect(subject.price.value).to be
+      expect(subject.price.currency).to be
+      expect(subject.price.marketing_type).to be
+      expect(subject.price.price_interval_type).to be
+    end
 
-      it 'assigns price parts' do
-        expect(subject.price.value).to be
-        expect(subject.price.currency).to be
-        expect(subject.price.marketing_type).to be
-        expect(subject.price.price_interval_type).to be
-      end
+    it 'assigns courtage parts' do
+      expect(subject.courtage.has_courtage).to be
+      expect(subject.courtage.courtage).to be
+      expect(subject.courtage.courtage_note).to be
+    end
 
-      it 'assigns courtage parts' do
-        expect(subject.courtage.has_courtage).to be
-        expect(subject.courtage.courtage).to be
-        expect(subject.courtage.courtage_note).to be
-      end
+    it 'assigns api search data parts' do
+      expect(subject.api_search_data.search_field1).to be
+      expect(subject.api_search_data.search_field2).to be
+      expect(subject.api_search_data.search_field3).to be
+    end
 
-      it 'assigns api search data parts' do
-        expect(subject.api_search_data.search_field1).to be
-        expect(subject.api_search_data.search_field2).to be
-        expect(subject.api_search_data.search_field3).to be
-      end
-
-      it 'assigns energy source parts' do
-        expect(
-          subject.energy_sources_enev2014.energy_source_enev2014
-        ).to be_instance_of(Array)
-      end
+    it 'assigns energy source parts' do
+      expect(
+        subject.energy_sources_enev2014.energy_source_enev2014
+      ).to be_instance_of(Array)
     end
   end
 

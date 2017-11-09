@@ -1,0 +1,10 @@
+{
+  "common.publishObject": {
+    "realEstate": {
+      "@id": "58850320"
+    },
+    "publishChannel": {
+      "@id": "10000"
+    }
+  }
+}

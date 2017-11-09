@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/publish
+    body:
+      encoding: UTF-8
+      base64_string: |
+        eyJjb21tb24ucHVibGlzaE9iamVjdCI6eyJyZWFsRXN0YXRlIjp7IkBpZCI6
+        IjY4NDkyODc3In0sInB1Ymxpc2hDaGFubmVsIjp7IkBpZCI6MTAwMDB9fX0=
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Content-Type:
+      - application/json;charset=UTF-8
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: ''
+    headers:
+      L-Is24-Requestrefnum:
+      - 22c88a27-6a49-447d-b10c-a320622c33b4
+      L-Is24-Apiclient:
+      - 06778437Key
+      L-Is24-Causerid:
+      - '107268859'
+      L-Is24-Resourceid:
+      - "-"
+      Location:
+      - http://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/publish/68492877_10000
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '172'
+      Date:
+      - Thu, 09 Nov 2017 14:40:53 GMT
+      Server:
+      - Apache
+    body:
+      encoding: UTF-8
+      base64_string: |
+        eyJjb21tb24ubWVzc2FnZXMiOlt7Im1lc3NhZ2UiOnsibWVzc2FnZUNvZGUi
+        OiJNRVNTQUdFX1JFU09VUkNFX0NSRUFURUQiLCJtZXNzYWdlIjoiUmVzb3Vy
+        Y2UgW3B1Ymxpc2hdIHdpdGggaWQgWzY4NDkyODc3XzEwMDAwXSBoYXMgYmVl
+        biBjcmVhdGVkLiIsImlkIjoiNjg0OTI4NzdfMTAwMDAifX1dfQ==
+    http_version: 
+  recorded_at: Thu, 09 Nov 2017 14:40:54 GMT
+recorded_with: VCR 3.0.3

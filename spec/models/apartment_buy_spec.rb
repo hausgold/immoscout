@@ -45,7 +45,7 @@ RSpec.describe Immoscout::Models::ApartmentBuy do
     end
   end
 
-  describe '#new' do
+  describe '.new_raw' do
     context 'with hash argument' do
       let(:subject) { described_class.new_raw(json) }
 

@@ -16,8 +16,11 @@ RSpec.configure do |config|
       File.expand_path(d)
     end - USED_CASSETTES.to_a
     if cassettes.any?
-      puts "Found #{cassettes.count} unused vcr cassettes, cleaning up..."
-      cassettes.map { |f| File.delete(f) }
+      puts "Found #{cassettes.count} unused vcr cassettes"
+      if ENV.fetch("CLEAN_VCR", false)
+        puts "cleaning up..."
+        cassettes.map { |f| File.delete(f) }
+      end
     end
   end
 end
