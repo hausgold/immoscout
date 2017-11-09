@@ -23,6 +23,10 @@ module Immoscout
             end
           end
 
+          def attributes
+            self.class.properties.keys.sort
+          end
+
           # :reek:BooleanParameter - standard stuff, reek!
           def respond_to_missing?(method_name, include_private = false)
             method_name.to_s.start_with?('build_') || super
