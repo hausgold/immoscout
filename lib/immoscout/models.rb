@@ -1,7 +1,7 @@
 require_relative 'core_ext/hash'
 
 # errors
-require_relative 'errors/not_found'
+require_relative 'errors/failed'
 
 # api client
 require_relative 'api/client'

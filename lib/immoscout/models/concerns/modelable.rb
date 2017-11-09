@@ -11,6 +11,14 @@ module Immoscout
           cattr_reader :api, instance_accessor: false do
             Immoscout::Api::Client.instance
           end
+
+          def api
+            self.class.api
+          end
+
+          def handle_response(response)
+            self.class.handle_response(response)
+          end
         end
 
         class_methods do
@@ -24,7 +32,7 @@ module Immoscout
 
           def handle_response(response)
             return response if response.success?
-            raise Immoscout::Errors::NotFound, response.body
+            raise Immoscout::Errors::Failed, response
           end
         end
       end

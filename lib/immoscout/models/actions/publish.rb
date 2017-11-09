@@ -11,18 +11,16 @@ module Immoscout
           include Immoscout::Models::Concerns::Modelable
 
           def save
-            klass = self.class
-            response = klass.api.post("publish", as_json)
-            klass.handle_response(response)
+            response = api.post("publish", as_json)
+            handle_response(response)
             self
           end
 
           def destroy
-            klass = self.class
-            response = klass.api.delete(
+            response = api.delete(
               "publish/#{real_estate.id}_#{publish_channel.id}"
             )
-            klass.handle_response(response)
+            handle_response(response)
             self
           end
         end

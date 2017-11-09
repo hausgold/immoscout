@@ -19,8 +19,6 @@ module Immoscout
           end
 
           def save(user_id = :me)
-            klass = self.class
-            api   = klass.api
             response = \
               if try(:id)
                 api.put("user/#{user_id}/realestate/#{id}", as_json)
@@ -28,14 +26,13 @@ module Immoscout
                 api.post("user/#{user_id}/realestate", as_json)
               end
 
-            klass.handle_response(response)
+            handle_response(response)
             self
           end
 
           def destroy(user_id = :me)
-            klass = self.class
-            response = klass.api.delete("user/#{user_id}/realestate/#{id}")
-            klass.handle_response(response)
+            response = api.delete("user/#{user_id}/realestate/#{id}")
+            handle_response(response)
             self
           end
         end
