@@ -5,9 +5,7 @@ require_relative 'base'
 module Immoscout
   module Models
     class Model < Base
-      def self.url_identifier
-        raise NotImplmentedError
-      end
+      cattr_accessor :json_wrapper, :url_identifier
 
       def self.unpack_collection
         raise NotImplmentedError
@@ -51,7 +49,7 @@ module Immoscout
         )
         handle_response(response)
         objects = unpack_collection(response.body)
-        objects.select! { |json| identifies?(json) } 
+        objects.select! { |json| identifies?(json) }
         objects.map { |object| new(object) }
       end
 

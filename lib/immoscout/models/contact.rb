@@ -10,19 +10,14 @@ module Immoscout
       include Immoscout::Models::Concerns::Renderable
       include Immoscout::Models::Concerns::Propertiable
 
-      def self.url_identifier
-        'contact'
-      end
+      self.url_identifier = 'contact'
+      self.json_wrapper   = "common.realtorContactDetail"
 
       def self.unpack_collection(hash)
         hash.dig(
           "common.realtorContactDetailsList",
           "realtorContactDetails"
         )
-      end
-
-      def self.json_wrapper
-        "common.realtorContactDetail"
       end
 
       def self.identifies?(hash)

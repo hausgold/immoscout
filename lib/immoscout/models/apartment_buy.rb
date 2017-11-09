@@ -18,6 +18,9 @@ module Immoscout
       include Immoscout::Models::Concerns::Renderable
       include Immoscout::Models::Concerns::Propertiable
 
+      self.url_identifier = 'realestate'
+      self.json_wrapper   = "realestates.apartmentBuy"
+
       property :id, alias: :@id
       property :address, coerce: Immoscout::Models::Parts::Address
       property :creation_date
@@ -72,20 +75,12 @@ module Immoscout
       property :garden
       property :service_charge
 
-      def self.url_identifier
-        'realestate'
-      end
-
       def self.unpack_collection(hash)
         hash.dig(
           "realestates.realEstates",
           "realEstateList",
           "realEstateElement"
         )
-      end
-
-      def self.json_wrapper
-        "realestates.apartmentBuy"
       end
 
       def self.identifies?(hash)
