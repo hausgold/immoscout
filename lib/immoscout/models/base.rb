@@ -11,6 +11,7 @@ module Immoscout
           .each do |key, value|
           property = self.class.find_property(key)
           unless property
+            # TODO: add optional logger
             # puts "ignore #{key} property..."
             next
           end

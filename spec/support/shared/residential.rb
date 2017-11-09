@@ -45,7 +45,7 @@ RSpec.shared_examples "a residential property" do
     end
 
     context 'with hash argument' do
-      let(:subject) { described_class.new(json) }
+      let(:subject) { described_class.new_raw(json) }
       RESIDENTIAL_ACCESSORS.each do |attribute|
         it "assigns #{attribute}" do
           expect(subject.send(attribute)).to be

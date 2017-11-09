@@ -3,6 +3,8 @@
 require_relative 'concerns/renderable'
 require_relative 'concerns/propertiable'
 
+require_relative 'actions/real_estate'
+
 require_relative 'parts/api_search_data'
 require_relative 'parts/address'
 require_relative 'parts/contact'
@@ -10,16 +12,14 @@ require_relative 'parts/price'
 require_relative 'parts/courtage'
 require_relative 'parts/energy_source'
 
-require_relative 'model'
-
 module Immoscout
   module Models
-    class HouseBuy < Model
+    class HouseBuy < Base
       include Immoscout::Models::Concerns::Renderable
       include Immoscout::Models::Concerns::Propertiable
+      include Immoscout::Models::Actions::RealEstate
 
-      self.url_identifier = 'realestate'
-      self.json_wrapper   = "realestates.houseBuy"
+      self.json_wrapper = "realestates.houseBuy"
 
       property :id, alias: :@id
       property :external_id
@@ -70,20 +70,6 @@ module Immoscout
       property :lodger_flat
       property :construction_phase
       property :plot_area
-
-      def self.unpack_collection(hash)
-        hash.dig(
-          "realestates.realEstates",
-          "realEstateList",
-          "realEstateElement"
-        )
-      end
-
-      def self.identifies?(hash)
-        (
-          hash.count == 1 && hash.keys.first =~ /^realestates.houseBuy/
-        ) || hash["@xsi.type"] == "offerlistelement:OfferHouseBuy"
-      end
     end
   end
 end

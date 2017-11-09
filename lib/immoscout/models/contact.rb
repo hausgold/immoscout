@@ -2,27 +2,19 @@
 
 require_relative 'concerns/renderable'
 require_relative 'concerns/propertiable'
+
+require_relative 'actions/contact'
+
 require_relative 'parts/address'
 
 module Immoscout
   module Models
-    class Contact < Model
+    class Contact < Base
       include Immoscout::Models::Concerns::Renderable
       include Immoscout::Models::Concerns::Propertiable
+      include Immoscout::Models::Actions::Contact
 
-      self.url_identifier = 'contact'
-      self.json_wrapper   = "common.realtorContactDetail"
-
-      def self.unpack_collection(hash)
-        hash.dig(
-          "common.realtorContactDetailsList",
-          "realtorContactDetails"
-        )
-      end
-
-      def self.identifies?(hash)
-        hash.count == 1 && hash.keys.first == json_wrapper
-      end
+      self.json_wrapper = "common.realtorContactDetail"
 
       property :id, alias: :@id
       property :email

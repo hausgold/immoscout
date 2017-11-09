@@ -1,2 +1,4 @@
 IrresponsibleModule:
   enabled: false
+ControlParameter:
+  enabled: false
