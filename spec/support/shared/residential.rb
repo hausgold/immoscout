@@ -104,8 +104,16 @@ RSpec.shared_examples "a residential property" do
       expect(result).to be_an(Array)
     end
 
-    it 'returns instances of contact' do
+    it 'returns instances' do
       expect(result.all? { |c| c.is_a? described_class }).to be
+    end
+  end
+
+  describe '.create', vcr: true do
+    it 'returns instance' do
+      expect(
+        described_class.create(create_hash)
+      ).to be_instance_of(described_class)
     end
   end
 
@@ -113,7 +121,7 @@ RSpec.shared_examples "a residential property" do
     context 'not persisted' do
       let(:estate) { described_class.new(create_hash) }
 
-      it 'set attributes' do
+      it 'returns instance' do
         expect(estate.save).to be
       end
     end

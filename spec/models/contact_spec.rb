@@ -67,6 +67,22 @@ RSpec.describe Immoscout::Models::Contact do
     end
   end
 
+  describe '.create', vcr: true do
+    let(:hash) do
+      {
+        email: "hans.meiser@example.com",
+        firstname: "Hans",
+        lastname: "Meiser"
+      }
+    end
+
+    it 'returns instance' do
+      expect(
+        described_class.create(hash)
+      ).to be_instance_of(described_class)
+    end
+  end
+
   describe '#save', vcr: true do
     context 'not persisted' do
       let(:contact) { described_class.new }
