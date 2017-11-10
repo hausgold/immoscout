@@ -2,9 +2,7 @@
 
 require_relative 'concerns/renderable'
 require_relative 'concerns/propertiable'
-
 require_relative 'actions/publish'
-
 require_relative 'parts/real_estate'
 require_relative 'parts/publish_channel'
 

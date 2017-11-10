@@ -2,9 +2,7 @@
 
 require_relative 'concerns/renderable'
 require_relative 'concerns/propertiable'
-
 require_relative 'actions/real_estate'
-
 require_relative 'parts/api_search_data'
 require_relative 'parts/address'
 require_relative 'parts/contact'
