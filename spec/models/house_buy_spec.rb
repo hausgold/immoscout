@@ -10,7 +10,8 @@ HOUSE_ACCESSORS = %w[
 ].freeze
 
 RSpec.describe Immoscout::Models::HouseBuy do
-  let(:json) { JSON.parse(file_fixture("house.json").read) }
+  let(:json) { file_fixture("house.json").read }
+  let(:parsed_json) { JSON.parse(json) }
   let(:instance) { described_class.new_raw(json) }
 
   it_behaves_like "a residential property" do
@@ -41,6 +42,16 @@ RSpec.describe Immoscout::Models::HouseBuy do
 
   describe '.new_raw' do
     context 'with hash argument' do
+      let(:subject) { described_class.new_raw(parsed_json) }
+
+      HOUSE_ACCESSORS.each do |attribute|
+        it "assigns #{attribute}" do
+          expect(subject.send(attribute)).to be
+        end
+      end
+    end
+
+    context 'with json argument' do
       let(:subject) { described_class.new_raw(json) }
 
       HOUSE_ACCESSORS.each do |attribute|

@@ -32,12 +32,23 @@ CONTACT_ACCESSORS = %w[
 ].freeze
 
 RSpec.describe Immoscout::Models::Contact do
-  let(:json) { JSON.parse(file_fixture("contact.json").read) }
+  let(:json) { file_fixture("contact.json").read }
+  let(:parsed_json) { JSON.parse(json) }
   let(:instance) { described_class.new_raw(json) }
   let(:resource_id) { '82295371' }
 
   describe '.new_raw' do
     context 'with hash argument' do
+      let(:subject) { described_class.new_raw(parsed_json) }
+
+      CONTACT_ACCESSORS.each do |attribute|
+        it "assigns #{attribute}" do
+          expect(subject.send(attribute)).to be
+        end
+      end
+    end
+
+    context 'with json argument' do
       let(:subject) { described_class.new_raw(json) }
 
       CONTACT_ACCESSORS.each do |attribute|
