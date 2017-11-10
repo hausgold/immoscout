@@ -39,15 +39,15 @@ end
 Currently supported: `ApartmentBuy`, `HouseBuy`
 
 ##### Overview supported actions
-* ModelClass.find(ID)
-* ModelClass.all
-* ModelClass.first
-* ModelClass.last
-* ModelClass.new(hash)
-* ModelClass.new_raw(remote_hash_or_json)
-* ModelClass.create(hash)
-* instance.save
-* instance.destroy
+* .find(ID)
+* .all
+* .first
+* .last
+* .new(hash)
+* .new_raw(remote_hash_or_json)
+* .create(hash)
+* #save
+* #destroy
 
 ##### Initialize
 ```ruby
@@ -95,15 +95,15 @@ house.destroy
 #### Contact
 
 ##### Overview supported actions
-* ModelClass.find(ID)
-* ModelClass.all
-* ModelClass.first
-* ModelClass.last
-* ModelClass.new(hash)
-* ModelClass.new_raw(remote_hash_or_json)
-* ModelClass.create(hash)
-* instance.save
-* instance.destroy
+* .find(ID)
+* .all
+* .first
+* .last
+* .new(hash)
+* .new_raw(remote_hash_or_json)
+* .create(hash)
+* #save
+* #destroy
 
 ```ruby
 contact = Immoscout::Models::Contact.new firstname: "John", lastname: "Doe"
@@ -117,10 +117,10 @@ contact.save
 #### Publish
 
 ##### Overview supported actions
-* ModelClass.new(hash)
-* ModelClass.new_raw(remote_hash_or_json)
-* instance.save
-* instance.destroy
+* .new(hash)
+* .new_raw(remote_hash_or_json)
+* #save
+* #destroy
 
 ```ruby
 # NOTE: publish_channel#id = 10000 => publish on immobilienscout24
