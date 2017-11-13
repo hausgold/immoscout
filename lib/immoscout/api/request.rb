@@ -1,27 +1,31 @@
 module Immoscout
   module Api
     module Request
-      def get(path, payload = nil)
+      def get(path, payload = nil, multipart = nil)
         request(:get, path, payload)
       end
 
-      def post(path, payload = nil)
-        request(:post, path, payload)
+      def post(path, payload = nil, multipart = nil)
+        request(:post, path, payload, multipart)
       end
 
-      def put(path, payload = nil)
-        request(:put, path, payload)
+      def put(path, payload = nil, multipart = nil)
+        request(:put, path, payload, multipart)
       end
 
-      def delete(path, payload = nil)
-        request(:delete, path, payload)
+      def delete(path, payload = nil, multipart = nil)
+        request(:delete, path, payload, multipart)
       end
 
-      def request(method, path, payload = nil)
-        connection.send(method, path) do |request|
-          request.headers['Content-Type'] = "application/json;charset=UTF-8"
+      def request(method, path, payload = nil, multipart = nil)
+        connection.send(method, path, multipart) do |request|
+          if multipart
+            request.headers['Content-Type'] = "multipart/form-data"
+          else
+            request.body                    = payload if payload
+            request.headers['Content-Type'] = "application/json;charset=UTF-8"
+          end
           request.headers['Accept']       = "application/json"
-          request.body                    = payload if payload
         end
       end
     end
