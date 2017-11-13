@@ -17,7 +17,11 @@ module Immoscout
           end
           coerce_klass = property.fetch(:coerce, nil)
           if coerce_klass
-            send("#{key}=", coerce_klass.new(value))
+            if property.fetch(:array, false)
+              send("#{key}=", value.map { |elem| coerce_klass.new(elem) })
+            else
+              send("#{key}=", coerce_klass.new(value))
+            end
           else
             send("#{key}=", value)
           end
