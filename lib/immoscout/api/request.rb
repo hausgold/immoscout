@@ -2,7 +2,7 @@ module Immoscout
   module Api
     module Request
       def get(path, payload = nil, multipart = nil)
-        request(:get, path, payload)
+        request(:get, path, payload, multipart)
       end
 
       def post(path, payload = nil, multipart = nil)
@@ -25,7 +25,7 @@ module Immoscout
             request.body                    = payload if payload
             request.headers['Content-Type'] = "application/json;charset=UTF-8"
           end
-          request.headers['Accept']       = "application/json"
+          request.headers['Accept'] = "application/json"
         end
       end
     end

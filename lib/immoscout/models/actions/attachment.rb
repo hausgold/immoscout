@@ -10,6 +10,14 @@ module Immoscout
         included do
           include Immoscout::Models::Concerns::Modelable
 
+          EXTENSION_CONTENT_TYPE_MAPPING = {
+            ".jpg"  => "image/jpeg",
+            ".jpeg" => "image/jpeg",
+            ".gif"  => "image/gif",
+            ".png"  => "image/png",
+            ".pdf"  => "application/pdf"
+          }.freeze
+
           self.unpack_collection = proc do |hash|
             hash
               .fetch("common.attachments")
@@ -17,20 +25,18 @@ module Immoscout
               .fetch("attachment")
           end
 
-
-          def save(real_estate_id, file, user_id = :me)
+          def save(user_id = :me)
+            attachable_id = attachable.try(:id) || attachable
             response = api.post(
-              "user/#{user_id}/realestate/#{real_estate_id}/attachment",
+              "user/#{user_id}/realestate/#{attachable_id}/attachment",
               nil,
-              {
-                attachment: Faraday::UploadIO.new(file, "image/png", "png.png"),
-                metadata: {title: title},
-              },
+              attachment: Faraday::UploadIO.new(file, content_type, file_name),
+              metadata: as_json
             )
             handle_response(response)
             self
           end
-          #
+          
           # def destroy
           #   response = api.delete(
           #     "publish/#{real_estate.id}_#{publish_channel.id}"
@@ -38,6 +44,20 @@ module Immoscout
           #   handle_response(response)
           #   self
           # end
+
+          private
+
+          def file_extension
+            File.extname(file_name)
+          end
+
+          def file_name
+            File.basename(file)
+          end
+
+          def content_type
+            EXTENSION_CONTENT_TYPE_MAPPING.fetch file_extension.downcase
+          end
         end
 
         class_methods do
