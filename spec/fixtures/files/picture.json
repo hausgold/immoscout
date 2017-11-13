@@ -1,0 +1,51 @@
+{
+  "common.attachment": {
+    "@xsi.type": "common:Picture",
+    "@publishDate": "2012-06-20T10:25:10.052+02:00",
+    "@creation": "2012-06-20T10:25:10.052+02:00",
+    "@modification": "2012-06-20T10:25:10.052+02:00",
+    "@id": "695671599",
+    "@xlink.href": "http://rest.immobilienscout24.de/restapi/api/offer/v1.0/user/999999/realestate/65053939/attachment/695671599/695671599",
+    "title": "title",
+    "externalId":"bild mit checksum",
+    "externalCheckSum":"123abc",
+    "floorplan": "false",
+    "titlePicture": "true",
+    "urls": [
+      {
+        "url": [
+          {
+          "@scale":"SCALE_540x540",
+          "@href":"http:\/\/picture.immobilienscout24.de\/pic\/orig04\/N\/211\/828\/675\/211828675-0.jpg\/ORIG\/resize\/540x540%3E\/format\/jpg?1881056898",
+
+          },
+          {
+          "@scale": "SCALE_210x210",
+          "@href":"http:\/\/picture.immobilienscout24.de\/pic\/orig04\/N\/211\/828\/675\/211828675-0.jpg\/ORIG\/resize\/210x210%3E\/format\/jpg?1881056898",
+
+          },
+          {
+          "@scale": "SCALE_400x300",
+          "@href":"http:\/\/picture.immobilienscout24.de\/pic\/orig04\/N\/211\/828\/675\/211828675-0.jpg\/ORIG\/resize\/400x300%3E\/format\/jpg?1881056898",
+
+          },
+          {
+          "@scale": "SCALE_118x118",
+          "@href":"http:\/\/picture.immobilienscout24.de\/pic\/orig04\/N\/211\/828\/675\/211828675-0.jpg\/ORIG\/resize\/118x118%3E\/extent\/118x118\/format\/jpg?1881056898",
+
+          },
+          {
+          "@scale": "SCALE_60x60",
+          "@href":"http:\/\/picture.immobilienscout24.de\/pic\/orig04\/N\/211\/828\/675\/211828675-0.jpg\/ORIG\/resize\/60x60%3E\/extent\/60x60\/format\/jpg?1881056898",
+
+          },
+          {
+          "@scale": "SCALE_73x73",
+          "@href":"http:\/\/picture.immobilienscout24.de\/pic\/orig04\/N\/211\/828\/675\/211828675-0.jpg\/ORIG\/legacy_thumbnail\/73x73\/format\/jpg?1881056898",
+
+          }
+        ]
+      }
+    ]
+  }
+}

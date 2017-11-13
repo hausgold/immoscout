@@ -1,0 +1,15 @@
+{
+  "common.attachment": {
+    "@xsi.type": "common:PDFDocument",
+    "@publishDate": "2012-06-20T10:25:10.052+02:00",
+    "@creation": "2012-06-20T10:25:10.052+02:00",
+    "@modification": "2012-06-20T10:25:10.052+02:00",
+    "@id": "695671599",
+    "@xlink.href": "http://rest.immobilienscout24.de/restapi/api/offer/v1.0/user/999999/realestate/65053939/attachment/695671599/695671599",
+    "title": "title",
+    "externalId":"bild mit checksum",
+    "externalCheckSum":"123abc",
+    "floorplan": "false",
+    "url": "https://oma-tuv-buckets-documents-1wecxt3ltio8i.s3.amazonaws.com/c70dcbef-0acf-4872-b496-02a06dbb3d17-672635400.pdf"
+  }
+}
