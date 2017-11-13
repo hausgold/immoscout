@@ -13,8 +13,9 @@ module Immoscout
             consumer_key: config.consumer_key,
             consumer_secret: config.consumer_secret
           )
-          builder.request :json
+          builder.request  :multipart
           builder.request  :url_encoded
+          builder.request  :json
           builder.response :follow_redirects
           builder.response :json, content_type: /\bjson$/
           builder.adapter :net_http

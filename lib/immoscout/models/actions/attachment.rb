@@ -17,11 +17,19 @@ module Immoscout
               .fetch("attachment")
           end
 
-          # def save
-          #   response = api.post("publish", as_json)
-          #   handle_response(response)
-          #   self
-          # end
+
+          def save(real_estate_id, file, user_id = :me)
+            response = api.post(
+              "user/#{user_id}/realestate/#{real_estate_id}/attachment",
+              nil,
+              {
+                attachment: Faraday::UploadIO.new(file, "image/png", "png.png"),
+                metadata: {title: title},
+              },
+            )
+            handle_response(response)
+            self
+          end
           #
           # def destroy
           #   response = api.delete(
