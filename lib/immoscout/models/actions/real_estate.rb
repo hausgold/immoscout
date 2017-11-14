@@ -35,6 +35,24 @@ module Immoscout
             handle_response(response)
             self
           end
+
+          def publish(channel = 10_000)
+            publisher = Immoscout::Models::Publish.new(
+              real_estate: { id: id },
+              publish_channel: { id: channel }
+            )
+            publisher.save
+            publisher
+          end
+
+          def unpublish(channel = 10_000)
+            publisher = Immoscout::Models::Publish.new(
+              real_estate: { id: id },
+              publish_channel: { id: channel }
+            )
+            publisher.destroy
+            publisher
+          end
         end
 
         class_methods do

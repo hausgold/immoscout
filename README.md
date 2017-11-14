@@ -48,6 +48,7 @@ Currently supported: `ApartmentBuy`, `HouseBuy`
 * .create(hash)
 * #save
 * #destroy
+* #publish
 
 ##### Initialize
 ```ruby
@@ -92,6 +93,16 @@ house.destroy
 # => #<Immoscout::Models::HouseBuy:0x0055d31f734838>
 ```
 
+##### Publish & Unpublish
+```ruby
+apartment = Immoscout::Models::ApartmentBuy.find('ID')
+# => #<Immoscout::Models::ApartmentBuy:0x0055c9fbfa0648>
+apartment.publish
+# => #<Immoscout::Models::Publish:0x0085a2fbfa0688>
+apartment.unpublish
+# => #<Immoscout::Models::Publish:0x00831b2fbfc1234>
+```
+
 #### Contact
 
 ##### Overview supported actions
@@ -116,6 +127,8 @@ contact.save
 
 #### Publish
 
+If you don't like the `#publish` and `#unpublish` methods defined for realestate models, you can create the `Publish` instance yourself.
+
 ##### Overview supported actions
 * .new(hash)
 * .new_raw(remote_hash_or_json)
@@ -125,9 +138,10 @@ contact.save
 ```ruby
 # NOTE: publish_channel#id = 10000 => publish on immobilienscout24
 publish = Immoscout::Models::Publish.new real_estate: { id: "ID" }, publish_channel: {id: 10_000}
-# => #<Immoscout::Models::Publish:0x0055c9faea1fb8>
 
-publish.destroy
+publish.save # published!
+# => #<Immoscout::Models::Publish:0x0055c9faea1fb8>
+publish.destroy # unpublished!
 # => #<Immoscout::Models::Publish:0x0055c9faea1fb8>
 ```
 
