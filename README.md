@@ -145,6 +145,23 @@ publish.destroy # unpublished!
 # => #<Immoscout::Models::Publish:0x0055c9faea1fb8>
 ```
 
+#### Attachment (Picture & Document)
+
+##### Overview supported actions
+* .new(hash)
+* .new_raw(remote_hash_or_json)
+* #save
+* #destroy
+
+```ruby
+picture = Immoscout::Models::Picture.new title: "Badezimmer", title_picture: true, floor_plan: false
+picture.file = File.open("the/path/to/the/file.jpg") #
+picture.attachable = Immoscout::Models::HouseBuy.last # you can also be just the ID
+
+picture.save # attachment upload!
+# => #<Immoscout::Models::Picture:0x0055c9faea1fb8>
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
