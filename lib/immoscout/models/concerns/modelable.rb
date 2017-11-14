@@ -26,7 +26,7 @@ module Immoscout
             hash.values.first
           end
 
-          def new_raw(raw_hash)
+          def from_raw(raw_hash)
             hash = raw_hash.is_a?(String) ? JSON.parse(raw_hash) : raw_hash
             new(unpack(hash))
           end

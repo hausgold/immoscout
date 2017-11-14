@@ -44,7 +44,7 @@ Currently supported: `ApartmentBuy`, `HouseBuy`
 * .first
 * .last
 * .new(hash)
-* .new_raw(remote_hash_or_json)
+* .from_raw(remote_hash_or_json)
 * .create(hash)
 * #save
 * #destroy
@@ -111,7 +111,7 @@ apartment.unpublish
 * .first
 * .last
 * .new(hash)
-* .new_raw(remote_hash_or_json)
+* .from_raw(remote_hash_or_json)
 * .create(hash)
 * #save
 * #destroy
@@ -131,7 +131,7 @@ If you don't like the `#publish` and `#unpublish` methods defined for realestate
 
 ##### Overview supported actions
 * .new(hash)
-* .new_raw(remote_hash_or_json)
+* .from_raw(remote_hash_or_json)
 * #save
 * #destroy
 
@@ -149,7 +149,7 @@ publish.destroy # unpublished!
 
 ##### Overview supported actions
 * .new(hash)
-* .new_raw(remote_hash_or_json)
+* .from_raw(remote_hash_or_json)
 * #save
 * #destroy
 

@@ -40,7 +40,7 @@ module Immoscout
           def find(id, user_id = :me)
             response = api.get("user/#{user_id}/contact/#{id}")
             handle_response(response)
-            new_raw(response.body)
+            from_raw(response.body)
           end
 
           def all(user_id = :me)

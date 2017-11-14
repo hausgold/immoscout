@@ -34,12 +34,12 @@ CONTACT_ACCESSORS = %w[
 RSpec.describe Immoscout::Models::Contact do
   let(:json) { file_fixture("contact.json").read }
   let(:parsed_json) { JSON.parse(json) }
-  let(:instance) { described_class.new_raw(json) }
+  let(:instance) { described_class.from_raw(json) }
   let(:resource_id) { '82295371' }
 
-  describe '.new_raw' do
+  describe '.from_raw' do
     context 'with hash argument' do
-      let(:subject) { described_class.new_raw(parsed_json) }
+      let(:subject) { described_class.from_raw(parsed_json) }
 
       CONTACT_ACCESSORS.each do |attribute|
         it "assigns #{attribute}" do
@@ -49,7 +49,7 @@ RSpec.describe Immoscout::Models::Contact do
     end
 
     context 'with json argument' do
-      let(:subject) { described_class.new_raw(json) }
+      let(:subject) { described_class.from_raw(json) }
 
       CONTACT_ACCESSORS.each do |attribute|
         it "assigns #{attribute}" do

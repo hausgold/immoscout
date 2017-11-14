@@ -43,8 +43,8 @@ RSpec.shared_examples "a residential property" do
     end
   end
 
-  describe '.new_raw' do
-    let(:subject) { described_class.new_raw(json) }
+  describe '.from_raw' do
+    let(:subject) { described_class.from_raw(json) }
 
     RESIDENTIAL_ACCESSORS.each do |attribute|
       it "assigns #{attribute}" do
