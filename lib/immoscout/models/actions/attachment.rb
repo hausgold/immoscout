@@ -36,7 +36,7 @@ module Immoscout
             handle_response(response)
             self
           end
-          
+
           # def destroy
           #   response = api.delete(
           #     "publish/#{real_estate.id}_#{publish_channel.id}"

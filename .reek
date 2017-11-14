@@ -2,3 +2,5 @@ IrresponsibleModule:
   enabled: false
 ControlParameter:
   enabled: false
+TooManyStatements:
+  max: 15

@@ -3,28 +3,44 @@
 module Immoscout
   module Models
     class Base
+      attr_reader :base
+
       def initialize(hash = {})
-        hash
+        @base = hash
+        set_properties
+      end
+
+      private
+
+      def prepared_hash
+        base
           .deep_stringify_keys
           .deep_transform_keys(&:underscore)
           .deep_symbolize_keys
-          .each do |key, value|
+      end
+
+      def set_properties
+        prepared_hash.each do |key, value|
           property = self.class.find_property(key)
           unless property
             # TODO: add optional logger
             # puts "ignore #{key} property..."
             next
           end
-          coerce_klass = property.fetch(:coerce, nil)
-          if coerce_klass
-            if property.fetch(:array, false)
-              send("#{key}=", value.map { |elem| coerce_klass.new(elem) })
-            else
-              send("#{key}=", coerce_klass.new(value))
-            end
+          set_property(property, key, value)
+        end
+      end
+
+      def set_property(property, key, value)
+        coerce_klass = property.fetch(:coerce, nil)
+        if coerce_klass
+          if property.fetch(:array, false)
+            send("#{key}=", value.map { |elem| coerce_klass.new(elem) })
           else
-            send("#{key}=", value)
+            send("#{key}=", coerce_klass.new(value))
           end
+        else
+          send("#{key}=", value)
         end
       end
     end

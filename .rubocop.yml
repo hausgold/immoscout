@@ -7,3 +7,7 @@ StringLiterals:
 Metrics/BlockLength:
   Exclude:
     - "spec/**/*"
+
+AllCops:
+  Exclude:
+    - "immoscout.gemspec"
