@@ -7,6 +7,8 @@ StringLiterals:
 Metrics/BlockLength:
   Exclude:
     - "spec/**/*"
+  ExcludedMethods:
+    - included
 
 AllCops:
   Exclude:
