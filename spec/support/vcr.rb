@@ -18,8 +18,15 @@ VCR.configure do |config|
     tape_sha = Digest::SHA1.hexdigest [
       request.method,
       request.uri,
-      request.headers.except("Authorization").to_s,
-      request.body.to_s
+      if request.body.include?("RubyMultipartPost")
+        request.headers.except("Authorization", "Content-Type").to_s
+      else
+        request.headers.except("Authorization").to_s
+      end,
+      request.body.to_s.gsub(
+        /RubyMultipartPost-\w{32}/,
+        "RubyMultipartPost-#{'1' * 32}"
+      )
     ].join('')
     tape_name = URI(request.uri)
                 .path

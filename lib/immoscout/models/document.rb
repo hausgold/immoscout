@@ -11,6 +11,8 @@ module Immoscout
       include Immoscout::Models::Concerns::Propertiable
       include Immoscout::Models::Actions::Attachment
 
+      attr_accessor :attachable, :file
+
       self.json_wrapper = "common.attachment"
 
       property :id, alias: :@id
