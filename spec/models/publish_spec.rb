@@ -3,8 +3,28 @@
 require "spec_helper"
 
 RSpec.describe Immoscout::Models::Publish do
-  let(:json) { JSON.parse(file_fixture("publish.json").read) }
-  let(:instance) { described_class.from_raw(json) }
+  let(:json) { file_fixture("publish.json").read }
+  let(:parsed_json) { JSON.parse(json) }
+
+  describe '#new' do
+    context 'with hash argument' do
+      let(:hash) do
+        {
+          real_estate: { id: "id" }, publish_channel: { id: 10_000 }
+        }
+      end
+
+      let(:subject) { described_class.new(hash) }
+
+      it 'assigns real_estate id' do
+        expect(subject.real_estate.id).to eq "id"
+      end
+
+      it 'assigns publish_channel id' do
+        expect(subject.publish_channel.id).to eq 10_000
+      end
+    end
+  end
 
   describe '#from_raw' do
     context 'with hash argument' do
