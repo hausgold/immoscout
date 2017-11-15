@@ -53,6 +53,28 @@ module Immoscout
             publisher.destroy
             publisher
           end
+
+          def place(type, user_id = :me)
+            check_placement_type(type)
+            response = api.post("user/#{user_id}/realestate/#{id}/#{type}")
+            handle_response(response)
+            self
+          end
+
+          def unplace(type, user_id = :me)
+            check_placement_type(type)
+            response = api.delete("user/#{user_id}/realestate/#{id}/#{type}")
+            handle_response(response)
+            self
+          end
+
+          private
+
+          def check_placement_type(type)
+            raise ArgumentError, "Unknown placement type '#{type}'" unless %w[
+              topplacement premiumplacement showcaseplacement
+            ].include?(type.to_s)
+          end
         end
 
         class_methods do

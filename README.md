@@ -49,6 +49,9 @@ Currently supported: `ApartmentBuy`, `HouseBuy`
 * #save
 * #destroy
 * #publish
+* #unpublish
+* #place(placement_type)
+* #unplace(placement_type)
 
 ##### Initialize
 ```ruby
@@ -101,6 +104,18 @@ apartment.publish
 # => #<Immoscout::Models::Publish:0x0085a2fbfa0688>
 apartment.unpublish
 # => #<Immoscout::Models::Publish:0x00831b2fbfc1234>
+```
+
+##### Ontop-Placement
+```ruby
+# allowed placement types: showcaseplacement, premiumplacement, topplacement
+apartment = Immoscout::Models::ApartmentBuy.find('ID')
+# add premiumplacement
+apartment.place(:premiumplacement)
+# => #<Immoscout::Models::ApartmentBuy:0x0055c9fbfa0648>
+# remove premiumplacement
+apartment.unplace(:premiumplacement)
+# => #<Immoscout::Models::ApartmentBuy:0x0055c9fbfa0648>
 ```
 
 #### Contact
