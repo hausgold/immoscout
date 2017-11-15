@@ -10,14 +10,6 @@ module Immoscout
         included do
           include Immoscout::Models::Concerns::Modelable
 
-          EXTENSION_CONTENT_TYPE_MAPPING = {
-            ".jpg"  => "image/jpeg",
-            ".jpeg" => "image/jpeg",
-            ".gif"  => "image/gif",
-            ".png"  => "image/png",
-            ".pdf"  => "application/pdf"
-          }.freeze
-
           self.unpack_collection = proc do |hash|
             hash
               .fetch("common.attachments")
@@ -56,11 +48,21 @@ module Immoscout
           end
 
           def content_type
-            EXTENSION_CONTENT_TYPE_MAPPING.fetch file_extension.downcase
+            self.class.content_type_from_extension file_extension.downcase
           end
         end
 
         class_methods do
+          def content_type_from_extension(ext)
+            {
+              ".jpg"  => "image/jpeg",
+              ".jpeg" => "image/jpeg",
+              ".gif"  => "image/gif",
+              ".png"  => "image/png",
+              ".pdf"  => "application/pdf"
+            }.fetch(ext)
+          end
+
           def all(real_estate_id, user_id = :me)
             response = api.get(
               "user/#{user_id}/realestate/#{real_estate_id}/attachment"
