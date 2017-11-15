@@ -19,6 +19,8 @@ DOCUMENT_ACCESSORS = %w[
 RSpec.describe Immoscout::Models::Document do
   let(:json) { file_fixture("document.json").read }
   let(:parsed_json) { JSON.parse(json) }
+  let(:attachable_id) { "68492877" }
+  let(:resource_id) { '672642911' }
 
   describe '#new' do
     context 'with hash argument' do
@@ -51,12 +53,25 @@ RSpec.describe Immoscout::Models::Document do
   describe '#save', vcr: true do
     let(:document) { described_class.new title: "Grundriss" }
     let(:file) { file_fixture("pdf.pdf") }
-    let(:attachable) { "68492877" }
 
     it 'set attributes' do
       document.file = file
-      document.attachable = attachable
+      document.attachable = attachable_id
+      expect(document.id).to be_nil
       expect(document.save).to be
+      expect(document.id).to be
+    end
+  end
+
+  describe '#destroy', vcr: true do
+    let(:document) { described_class.new(id: resource_id) }
+
+    before do
+      document.attachable = attachable_id
+    end
+
+    it 'returns the deleted object' do
+      expect(document.destroy).to be
     end
   end
 end

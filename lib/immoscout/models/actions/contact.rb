@@ -19,13 +19,14 @@ module Immoscout
 
           def save
             response = \
-              if try(:id)
+              if id
                 api.put("user/#{api.user_name}/contact/#{id}", as_json)
               else
                 api.post("user/#{api.user_name}/contact", as_json)
               end
 
             handle_response(response)
+            self.id = id_from_response(response) unless id
             self
           end
 

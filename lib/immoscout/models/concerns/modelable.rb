@@ -19,6 +19,10 @@ module Immoscout
           def handle_response(response)
             self.class.handle_response(response)
           end
+
+          def id_from_response(response)
+            self.class.id_from_response(response)
+          end
         end
 
         class_methods do
@@ -34,6 +38,14 @@ module Immoscout
           def handle_response(response)
             return response if response.success?
             raise Immoscout::Errors::Failed, response
+          end
+
+          def id_from_response(response)
+            response
+              .body
+              .fetch("common.messages")
+              .first
+              .dig("message", "id")
           end
         end
       end

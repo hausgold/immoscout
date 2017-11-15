@@ -81,7 +81,7 @@ module Immoscout
       # house specific properties
       property :lodger_flat
       property :construction_phase
-      property :plot_area      
+      property :plot_area
     end
   end
 end

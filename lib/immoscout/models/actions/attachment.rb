@@ -26,16 +26,18 @@ module Immoscout
               metadata: as_json
             )
             handle_response(response)
+            self.id = id_from_response(response)
             self
           end
 
-          # def destroy
-          #   response = api.delete(
-          #     "publish/#{real_estate.id}_#{publish_channel.id}"
-          #   )
-          #   handle_response(response)
-          #   self
-          # end
+          def destroy
+            attachable_id = attachable.try(:id) || attachable
+            response = api.delete(
+              "user/#{api.user_name}/realestate/#{attachable_id}/attachment/#{id}",
+            )
+            handle_response(response)
+            self
+          end
 
           private
 

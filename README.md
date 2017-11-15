@@ -176,6 +176,9 @@ picture.attachable = Immoscout::Models::HouseBuy.last # you can also be just the
 
 picture.save # attachment upload!
 # => #<Immoscout::Models::Picture:0x0055c9faea1fb8>
+
+picture.destroy # attachment destroy!
+# => #<Immoscout::Models::Picture:0x0055c9faea1fb8>
 ```
 
 ## Development
