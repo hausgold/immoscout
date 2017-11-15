@@ -7,11 +7,11 @@ require_relative '../concerns/renderable'
 module Immoscout
   module Models
     module Parts
-      class Contact < Base
+      class GeoCode < Base
         include Immoscout::Models::Concerns::Renderable
         include Immoscout::Models::Concerns::Propertiable
-        property :id, alias: :@id
-        property :external_id, alias: :@external_id
+        property :geo_code_id
+        property :full_geo_code_id
       end
     end
   end

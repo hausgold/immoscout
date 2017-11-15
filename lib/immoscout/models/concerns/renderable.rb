@@ -24,9 +24,20 @@ module Immoscout
 
           def to_h
             self.class.properties.each_with_object({}) do |(key, value), memo|
+              # skip if it's readonly and should not be exposed in #as_json
+              return memo if value.fetch(:readonly, false)
+              # use :alias instead of key as json-key
               property = value.fetch(:alias, key)
+              # use :default if present AND value is nil
               rendered = send(key) || value.fetch(:default, nil)
-              memo[property] = rendered.try(:as_json) || rendered
+              memo[property] = \
+                if rendered.is_a?(Array)
+                  rendered.map do |elem|
+                    elem.try(:as_json) || elem
+                  end
+                else
+                  rendered.try(:as_json) || rendered
+                end
               memo
             end
           end

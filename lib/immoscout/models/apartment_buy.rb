@@ -20,22 +20,36 @@ module Immoscout
       self.json_wrapper = "realestates.apartmentBuy"
 
       property :id, alias: :@id
-      property :address, coerce: Immoscout::Models::Parts::Address
-      property :creation_date
-      property :price, coerce: Immoscout::Models::Parts::Price
-      property :courtage, coerce: Immoscout::Models::Parts::Courtage
-      property :energy_sources_enev2014,
-               coerce: Immoscout::Models::Parts::EnergySource
-      property :contact, coerce: Immoscout::Models::Parts::Contact
-      property :last_modification_date
-      property :title
       property :external_id
+      property :title
+      property :creation_date
+      property :last_modification_date
+      property :type, alias: :'@xsi.type'
+      property :href, alias: :'@xlink.href'
+      property :publish_date, alias: :@publish_date
+      property :creation, alias: :@creation
+      property :modification, alias: :@modification
+      property :group_number
+      property :real_estate_project_id
+      property :address, coerce: Immoscout::Models::Parts::Address
+      property :api_search_data, coerce: Immoscout::Models::Parts::ApiSearchData
+      property :real_estate_state
       property :description_note
       property :furnishing_note
       property :location_note
       property :other_note
+      property :show_address
+      property :contact, coerce: Immoscout::Models::Parts::Contact
+      property :apartment_type
+      property :price, coerce: Immoscout::Models::Parts::Price
+      property :courtage, coerce: Immoscout::Models::Parts::Courtage
+      property :energy_sources_enev2014,
+               coerce: Immoscout::Models::Parts::EnergySource
+      property :energy_certificate,
+               coerce: Immoscout::Models::Parts::EnergyCertificate
+      property :firing_types,
+               coerce: Immoscout::Models::Parts::FiringType, array: true
       property :cellar
-      property :api_search_data, coerce: Immoscout::Models::Parts::ApiSearchData
       property :handicapped_accessible
       property :number_of_parking_spaces
       property :condition
@@ -43,6 +57,7 @@ module Immoscout
       property :interior_quality
       property :construction_year
       property :free_from
+      property :heating_type
       property :heating_type_enev2014
       property :building_energy_rating_type
       property :thermal_characteristic
@@ -61,9 +76,7 @@ module Immoscout
       property :living_space
       property :number_of_rooms
       property :energy_performance_certificate
-      property :show_address
-
-      property :apartment_type
+      # apartment specific properties
       property :floor
       property :lift
       property :assisted_living

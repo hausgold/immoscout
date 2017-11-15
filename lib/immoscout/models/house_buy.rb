@@ -9,6 +9,8 @@ require_relative 'parts/contact'
 require_relative 'parts/price'
 require_relative 'parts/courtage'
 require_relative 'parts/energy_source'
+require_relative 'parts/energy_certificate'
+require_relative 'parts/firing_type'
 
 module Immoscout
   module Models
@@ -24,6 +26,13 @@ module Immoscout
       property :title
       property :creation_date
       property :last_modification_date
+      property :type, alias: :'@xsi.type'
+      property :href, alias: :'@xlink.href'
+      property :publish_date, alias: :@publish_date
+      property :creation, alias: :@creation
+      property :modification, alias: :@modification
+      property :group_number
+      property :real_estate_project_id
       property :address, coerce: Immoscout::Models::Parts::Address
       property :api_search_data, coerce: Immoscout::Models::Parts::ApiSearchData
       property :real_estate_state
@@ -34,11 +43,14 @@ module Immoscout
       property :show_address
       property :contact, coerce: Immoscout::Models::Parts::Contact
       property :building_type
-
       property :price, coerce: Immoscout::Models::Parts::Price
       property :courtage, coerce: Immoscout::Models::Parts::Courtage
       property :energy_sources_enev2014,
                coerce: Immoscout::Models::Parts::EnergySource
+      property :energy_certificate,
+               coerce: Immoscout::Models::Parts::EnergyCertificate
+      property :firing_types,
+               coerce: Immoscout::Models::Parts::FiringType, array: true
       property :cellar
       property :handicapped_accessible
       property :number_of_parking_spaces
@@ -47,6 +59,7 @@ module Immoscout
       property :interior_quality
       property :construction_year
       property :free_from
+      property :heating_type
       property :heating_type_enev2014
       property :building_energy_rating_type
       property :thermal_characteristic
@@ -65,6 +78,7 @@ module Immoscout
       property :living_space
       property :number_of_rooms
       property :energy_performance_certificate
+      # house specific properties
       property :lodger_flat
       property :construction_phase
       property :plot_area

@@ -7,11 +7,12 @@ require_relative '../concerns/renderable'
 module Immoscout
   module Models
     module Parts
-      class Contact < Base
+      class EnergyCertificate < Base
         include Immoscout::Models::Concerns::Renderable
         include Immoscout::Models::Concerns::Propertiable
-        property :id, alias: :@id
-        property :external_id, alias: :@external_id
+        property :energy_certificate_availability
+        property :energy_certificate_creation_date
+        property :energy_efficiency_class
       end
     end
   end
