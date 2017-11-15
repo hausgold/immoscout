@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/user/me/realestate/68549438
+    body:
+      encoding: UTF-8
+      base64_string: |
+        eyJyZWFsZXN0YXRlcy5hcGFydG1lbnRCdXkiOnsiQGlkIjoiNjg1NDk0Mzgi
+        LCJleHRlcm5hbElkIjoiMTIzIiwidGl0bGUiOiJOZXVlciBUaXRlbCIsImNy
+        ZWF0aW9uRGF0ZSI6IjIwMTctMTEtMTVUMTU6NDA6MDEuNDkxKzAxOjAwIiwi
+        bGFzdE1vZGlmaWNhdGlvbkRhdGUiOiIyMDE3LTExLTE1VDE1OjQwOjEyLjAx
+        NCswMTowMCIsImdyb3VwTnVtYmVyIjoxMjMxMjMsImFkZHJlc3MiOnsic3Ry
+        ZWV0IjoiUm9zZW5zdHJhw59lIiwiaG91c2VOdW1iZXIiOiIxMiIsInBvc3Rj
+        b2RlIjoiMjM1NTIiLCJjaXR5IjoiTMO8YmVjayIsIndnczg0Q29vcmRpbmF0
+        ZSI6eyJsYXRpdHVkZSI6NTMuODcxOTIsImxvbmdpdHVkZSI6MTAuNjkxNjR9
+        fSwicmVhbEVzdGF0ZVN0YXRlIjoiSU5BQ1RJVkUiLCJkZXNjcmlwdGlvbk5v
+        dGUiOiJxd2UiLCJmdXJuaXNoaW5nTm90ZSI6InF3ZSIsImxvY2F0aW9uTm90
+        ZSI6InF3ZSIsIm90aGVyTm90ZSI6InF3ZSIsInNob3dBZGRyZXNzIjoiZmFs
+        c2UiLCJjb250YWN0Ijp7IkBpZCI6IjgyNTExMzAwIiwiQGV4dGVybmFsSWQi
+        OiJhLTAwMSJ9LCJhcGFydG1lbnRUeXBlIjoiR1JPVU5EX0ZMT09SIiwicHJp
+        Y2UiOnsidmFsdWUiOjExMTExLCJjdXJyZW5jeSI6IkVVUiIsIm1hcmtldGlu
+        Z1R5cGUiOiJQVVJDSEFTRSIsInByaWNlSW50ZXJ2YWxUeXBlIjoiT05FX1RJ
+        TUVfQ0hBUkdFIn0sImNvdXJ0YWdlIjp7Imhhc0NvdXJ0YWdlIjoiWUVTIiwi
+        Y291cnRhZ2UiOiIxMjMyMyIsImNvdXJ0YWdlTm90ZSI6InF3ZXdlIn0sImVu
+        ZXJneVNvdXJjZXNFbmV2MjAxNCI6eyJlbmVyZ3lTb3VyY2VFbmV2MjAxNCI6
+        IlBFTExFVF9IRUFUSU5HIn0sImVuZXJneUNlcnRpZmljYXRlIjp7ImVuZXJn
+        eUNlcnRpZmljYXRlQXZhaWxhYmlsaXR5IjoiTk9UX0FWQUlMQUJMRV9ZRVQi
+        fSwiZmlyaW5nVHlwZXMiOlt7ImZpcmluZ1R5cGUiOiJQRUxMRVRfSEVBVElO
+        RyJ9XSwiY2VsbGFyIjoiWUVTIiwiaGFuZGljYXBwZWRBY2Nlc3NpYmxlIjoi
+        WUVTIiwibnVtYmVyT2ZQYXJraW5nU3BhY2VzIjoxLCJjb25kaXRpb24iOiJG
+        SVJTVF9USU1FX1VTRSIsImxhc3RSZWZ1cmJpc2htZW50IjoyMDEzLCJpbnRl
+        cmlvclF1YWxpdHkiOiJOT1JNQUwiLCJjb25zdHJ1Y3Rpb25ZZWFyIjoyMDE3
+        LCJmcmVlRnJvbSI6ImpldHp0IiwiaGVhdGluZ1R5cGVFbmV2MjAxNCI6IkNP
+        TUJJTkVEX0hFQVRfQU5EX1BPV0VSX1BMQU5UIiwiZW5lcmd5Q29uc3VtcHRp
+        b25Db250YWluc1dhcm1XYXRlciI6Ik5PVF9BUFBMSUNBQkxFIiwibnVtYmVy
+        T2ZGbG9vcnMiOjQsInVzYWJsZUZsb29yU3BhY2UiOjExMSwibnVtYmVyT2ZC
+        ZWRSb29tcyI6MSwibnVtYmVyT2ZCYXRoUm9vbXMiOjEsImd1ZXN0VG9pbGV0
+        IjoiWUVTIiwicGFya2luZ1NwYWNlVHlwZSI6IkdBUkFHRSIsInJlbnRlZCI6
+        IllFUyIsInJlbnRhbEluY29tZSI6MTIzMSwibGlzdGVkIjoiWUVTIiwicGFy
+        a2luZ1NwYWNlUHJpY2UiOjExMSwic3VtbWVyUmVzaWRlbmNlUHJhY3RpY2Fs
+        IjoiTk9UX0FQUExJQ0FCTEUiLCJsaXZpbmdTcGFjZSI6MjIyLCJudW1iZXJP
+        ZlJvb21zIjo1LCJmbG9vciI6MSwibGlmdCI6InRydWUiLCJidWlsdEluS2l0
+        Y2hlbiI6InRydWUiLCJiYWxjb255IjoidHJ1ZSIsImdhcmRlbiI6InRydWUi
+        LCJzZXJ2aWNlQ2hhcmdlIjoxMjN9fQ==
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Content-Type:
+      - application/json;charset=UTF-8
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Cache-Control:
+      - private
+      Expires:
+      - Thu, 01 Jan 1970 01:00:00 CET
+      L-Is24-Requestrefnum:
+      - 024b31ce-81ba-4eb6-b0fd-5d03fc0c6bc3
+      L-Is24-Apiclient:
+      - 06778437Key
+      L-Is24-Causerid:
+      - '107268859'
+      L-Is24-Resourceid:
+      - '68549438'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '163'
+      Date:
+      - Wed, 15 Nov 2017 14:40:50 GMT
+      Server:
+      - Apache
+    body:
+      encoding: UTF-8
+      base64_string: |
+        eyJjb21tb24ubWVzc2FnZXMiOlt7Im1lc3NhZ2UiOnsibWVzc2FnZUNvZGUi
+        OiJNRVNTQUdFX1JFU09VUkNFX1VQREFURUQiLCJtZXNzYWdlIjoiUmVzb3Vy
+        Y2UgW3JlYWxlc3RhdGVdIHdpdGggaWQgWzY4NTQ5NDM4XSBoYXMgYmVlbiB1
+        cGRhdGVkLiIsImlkIjoiNjg1NDk0MzgifX1dfQ==
+    http_version: 
+  recorded_at: Wed, 15 Nov 2017 14:40:50 GMT
+recorded_with: VCR 3.0.3

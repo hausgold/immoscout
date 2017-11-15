@@ -24,7 +24,7 @@ module Immoscout
           property = self.class.find_property(key)
           unless property
             # TODO: add optional logger
-            puts "#{self.class.name} - missing property '#{key}'"
+            # puts "#{self.class.name} - missing property '#{key}'"
             next
           end
           set_property(property, key, value)
