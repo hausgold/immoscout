@@ -1,0 +1,96 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/user/me/realestate/68543069
+    body:
+      encoding: UTF-8
+      base64_string: |
+        eyJyZWFsZXN0YXRlcy5ob3VzZUJ1eSI6eyJAaWQiOiI2ODU0MzA2OSIsImV4
+        dGVybmFsSWQiOiI2ODU0MzA2OSIsInRpdGxlIjoiTmV1ZXIgVGl0ZWwiLCJj
+        cmVhdGlvbkRhdGUiOiIyMDE3LTExLTE0VDE3OjA1OjUxLjUzOSswMTowMCIs
+        Imxhc3RNb2RpZmljYXRpb25EYXRlIjoiMjAxNy0xMS0xNFQxNzoyMToxNy44
+        ODQrMDE6MDAiLCJhZGRyZXNzIjp7InN0cmVldCI6IlNpbmdlcnN0cmHDn2Ui
+        LCJob3VzZU51bWJlciI6Ijc3IiwicG9zdGNvZGUiOiIxMDI0MyIsImNpdHki
+        OiJCZXJsaW4iLCJ3Z3M4NENvb3JkaW5hdGUiOnsibGF0aXR1ZGUiOjUyLjUx
+        NTM5LCJsb25naXR1ZGUiOjEzLjQzMzE4fX0sInJlYWxFc3RhdGVTdGF0ZSI6
+        IklOQUNUSVZFIiwiZGVzY3JpcHRpb25Ob3RlIjoib2JqZWt0YmVzY2hyZWli
+        dW5nIGJsYSIsImZ1cm5pc2hpbmdOb3RlIjoiYXVzc3RhdHR1bmdzYmVzY2hy
+        ZWlidW5nIGJsYSIsImxvY2F0aW9uTm90ZSI6ImxhZ2ViZXNjaHJlaWJ1bmcg
+        YmxhIiwib3RoZXJOb3RlIjoic29uc3RpZ2VzIGJsYSB2b24gSEFVU0dPTEQi
+        LCJzaG93QWRkcmVzcyI6ImZhbHNlIiwiY29udGFjdCI6eyJAaWQiOiI4MjUx
+        MTMwMCIsIkBleHRlcm5hbElkIjoiYS0wMDEifSwiYnVpbGRpbmdUeXBlIjoi
+        U0lOR0xFX0ZBTUlMWV9IT1VTRSIsInByaWNlIjp7InZhbHVlIjoxNTAwMDAs
+        ImN1cnJlbmN5IjoiRVVSIiwibWFya2V0aW5nVHlwZSI6IlBVUkNIQVNFIiwi
+        cHJpY2VJbnRlcnZhbFR5cGUiOiJPTkVfVElNRV9DSEFSR0UifSwiY291cnRh
+        Z2UiOnsiaGFzQ291cnRhZ2UiOiJZRVMiLCJjb3VydGFnZSI6IjE5JSIsImNv
+        dXJ0YWdlTm90ZSI6Im5peCBoaW53ZWlzIn0sImVuZXJneVNvdXJjZXNFbmV2
+        MjAxNCI6eyJlbmVyZ3lTb3VyY2VFbmV2MjAxNCI6WyJQRUxMRVRfSEVBVElO
+        RyIsIkdBUyIsIk9JTCJdfSwiZW5lcmd5Q2VydGlmaWNhdGUiOnsiZW5lcmd5
+        Q2VydGlmaWNhdGVBdmFpbGFiaWxpdHkiOiJBVkFJTEFCTEUiLCJlbmVyZ3lD
+        ZXJ0aWZpY2F0ZUNyZWF0aW9uRGF0ZSI6IkZST01fMDFfTUFZXzIwMTQiLCJl
+        bmVyZ3lFZmZpY2llbmN5Q2xhc3MiOiJBKyJ9LCJmaXJpbmdUeXBlcyI6W3si
+        ZmlyaW5nVHlwZSI6WyJQRUxMRVRfSEVBVElORyIsIkdBUyIsIk9JTCJdfV0s
+        ImNlbGxhciI6IllFUyIsImhhbmRpY2FwcGVkQWNjZXNzaWJsZSI6IllFUyIs
+        Im51bWJlck9mUGFya2luZ1NwYWNlcyI6MSwiY29uZGl0aW9uIjoiRlVMTFlf
+        UkVOT1ZBVEVEIiwiaW50ZXJpb3JRdWFsaXR5IjoiU09QSElTVElDQVRFRCIs
+        ImNvbnN0cnVjdGlvblllYXIiOjIwMTcsImZyZWVGcm9tIjoic29mb3J0Iiwi
+        aGVhdGluZ1R5cGUiOiJTRUxGX0NPTlRBSU5FRF9DRU5UUkFMX0hFQVRJTkci
+        LCJoZWF0aW5nVHlwZUVuZXYyMDE0IjoiU0VMRl9DT05UQUlORURfQ0VOVFJB
+        TF9IRUFUSU5HIiwiYnVpbGRpbmdFbmVyZ3lSYXRpbmdUeXBlIjoiRU5FUkdZ
+        X0NPTlNVTVBUSU9OIiwidGhlcm1hbENoYXJhY3RlcmlzdGljIjoyMDAsImVu
+        ZXJneUNvbnN1bXB0aW9uQ29udGFpbnNXYXJtV2F0ZXIiOiJOT1RfQVBQTElD
+        QUJMRSIsIm51bWJlck9mRmxvb3JzIjoyLCJ1c2FibGVGbG9vclNwYWNlIjo1
+        MCwibnVtYmVyT2ZCZWRSb29tcyI6MywibnVtYmVyT2ZCYXRoUm9vbXMiOjIs
+        Imd1ZXN0VG9pbGV0IjoiWUVTIiwicGFya2luZ1NwYWNlVHlwZSI6IkNBUlBP
+        UlQiLCJyZW50ZWQiOiJZRVMiLCJyZW50YWxJbmNvbWUiOjIwMDAsImxpc3Rl
+        ZCI6IllFUyIsInBhcmtpbmdTcGFjZVByaWNlIjo0MDAwLCJzdW1tZXJSZXNp
+        ZGVuY2VQcmFjdGljYWwiOiJOT1RfQVBQTElDQUJMRSIsImxpdmluZ1NwYWNl
+        IjoxMjAsIm51bWJlck9mUm9vbXMiOjUsImVuZXJneVBlcmZvcm1hbmNlQ2Vy
+        dGlmaWNhdGUiOiJ0cnVlIiwibG9kZ2VyRmxhdCI6Ik5PVF9BUFBMSUNBQkxF
+        IiwiY29uc3RydWN0aW9uUGhhc2UiOiJDT01QTEVURUQiLCJwbG90QXJlYSI6
+        MTAwMH19
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Content-Type:
+      - application/json;charset=UTF-8
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Cache-Control:
+      - private
+      Expires:
+      - Thu, 01 Jan 1970 01:00:00 CET
+      L-Is24-Requestrefnum:
+      - 2122a0fd-e060-4c6c-bce9-0ba46e20374d
+      L-Is24-Apiclient:
+      - 06778437Key
+      L-Is24-Causerid:
+      - '107268859'
+      L-Is24-Resourceid:
+      - '68543069'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '163'
+      Date:
+      - Wed, 15 Nov 2017 14:30:29 GMT
+      Server:
+      - Apache
+    body:
+      encoding: UTF-8
+      base64_string: |
+        eyJjb21tb24ubWVzc2FnZXMiOlt7Im1lc3NhZ2UiOnsibWVzc2FnZUNvZGUi
+        OiJNRVNTQUdFX1JFU09VUkNFX1VQREFURUQiLCJtZXNzYWdlIjoiUmVzb3Vy
+        Y2UgW3JlYWxlc3RhdGVdIHdpdGggaWQgWzY4NTQzMDY5XSBoYXMgYmVlbiB1
+        cGRhdGVkLiIsImlkIjoiNjg1NDMwNjkifX1dfQ==
+    http_version: 
+  recorded_at: Wed, 15 Nov 2017 14:30:30 GMT
+recorded_with: VCR 3.0.3

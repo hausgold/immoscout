@@ -16,7 +16,7 @@ RSpec.describe Immoscout::Models::HouseBuy do
 
   it_behaves_like "a residential property" do
     let(:json) { JSON.parse(file_fixture("house.json").read) }
-    let(:resource_id) { "68481600" }
+    let(:resource_id) { "68543069" }
     let(:create_hash) do
       {
         title: "test title",

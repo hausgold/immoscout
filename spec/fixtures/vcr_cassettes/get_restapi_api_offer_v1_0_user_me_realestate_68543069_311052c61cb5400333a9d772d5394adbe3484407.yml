@@ -1,0 +1,107 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/user/me/realestate/68543069
+    body:
+      encoding: US-ASCII
+      base64_string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Content-Type:
+      - application/json;charset=UTF-8
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Cache-Control:
+      - private
+      Expires:
+      - Thu, 01 Jan 1970 01:00:00 CET
+      L-Is24-Requestrefnum:
+      - 57f32222-66d4-4ffb-8163-9cd8e856143a
+      L-Is24-Apiclient:
+      - 06778437Key
+      L-Is24-Causerid:
+      - '107268859'
+      L-Is24-Resourceid:
+      - '68543069'
+      Etag:
+      - '"0f72e333e02bdfe47696d43f1886912b0"'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 15 Nov 2017 14:30:29 GMT
+      Server:
+      - Apache
+    body:
+      encoding: ASCII-8BIT
+      base64_string: |
+        eyJyZWFsZXN0YXRlcy5ob3VzZUJ1eSI6eyJAaWQiOiI2ODU0MzA2OSIsImV4
+        dGVybmFsSWQiOiI2ODU0MzA2OSIsInRpdGxlIjoiV3VuZGVydm9sbGVzIEhh
+        dXMgbWl0IEdhcnRlbiIsImNyZWF0aW9uRGF0ZSI6IjIwMTctMTEtMTRUMTc6
+        MDU6NTEuNTM5KzAxOjAwIiwibGFzdE1vZGlmaWNhdGlvbkRhdGUiOiIyMDE3
+        LTExLTE0VDE3OjIxOjE3Ljg4NCswMTowMCIsImFkZHJlc3MiOnsic3RyZWV0
+        IjoiU2luZ2Vyc3RyYcOfZSIsImhvdXNlTnVtYmVyIjoiNzciLCJwb3N0Y29k
+        ZSI6IjEwMjQzIiwiY2l0eSI6IkJlcmxpbiIsIndnczg0Q29vcmRpbmF0ZSI6
+        eyJsYXRpdHVkZSI6NTIuNTE1MzksImxvbmdpdHVkZSI6MTMuNDMzMTh9LCJn
+        ZW9IaWVyYXJjaHkiOnsiY29udGluZW50Ijp7Imdlb0NvZGVJZCI6MSwiZnVs
+        bEdlb0NvZGVJZCI6IjEifSwiY291bnRyeSI6eyJnZW9Db2RlSWQiOjI3Niwi
+        ZnVsbEdlb0NvZGVJZCI6IjEyNzYifSwicmVnaW9uIjp7Imdlb0NvZGVJZCI6
+        MywiZnVsbEdlb0NvZGVJZCI6IjEyNzYwMDMifSwiY2l0eSI6eyJnZW9Db2Rl
+        SWQiOjEsImZ1bGxHZW9Db2RlSWQiOiIxMjc2MDAzMDAxIn0sInF1YXJ0ZXIi
+        OnsiZ2VvQ29kZUlkIjoxNywiZnVsbEdlb0NvZGVJZCI6IjEyNzYwMDMwMDEw
+        MTcifSwibmVpZ2hib3VyaG9vZCI6eyJnZW9Db2RlSWQiOjExMDAwMDAwMDAy
+        MzQ1fX19LCJyZWFsRXN0YXRlU3RhdGUiOiJJTkFDVElWRSIsImRlc2NyaXB0
+        aW9uTm90ZSI6Im9iamVrdGJlc2NocmVpYnVuZyBibGEiLCJmdXJuaXNoaW5n
+        Tm90ZSI6ImF1c3N0YXR0dW5nc2Jlc2NocmVpYnVuZyBibGEiLCJsb2NhdGlv
+        bk5vdGUiOiJsYWdlYmVzY2hyZWlidW5nIGJsYSIsIm90aGVyTm90ZSI6InNv
+        bnN0aWdlcyBibGEgdm9uIEhBVVNHT0xEIiwiYXR0YWNobWVudHMiOlt7IkB4
+        bGluay5ocmVmIjoiaHR0cDpcL1wvcmVzdC5zYW5kYm94LWltbW9iaWxpZW5z
+        Y291dDI0LmRlXC9yZXN0YXBpXC9hcGlcL29mZmVyXC92MS4wXC91c2VyXC9t
+        ZVwvcmVhbGVzdGF0ZVwvNjg1NDMwNjlcL2F0dGFjaG1lbnQifV0sInNob3dB
+        ZGRyZXNzIjoiZmFsc2UiLCJjb250YWN0Ijp7IkBpZCI6IjgyNTExMzAwIiwi
+        QGV4dGVybmFsSWQiOiJhLTAwMSJ9LCJjb21tb24ucHVibGlzaENoYW5uZWxz
+        IjpbXSwibG9kZ2VyRmxhdCI6Ik5PVF9BUFBMSUNBQkxFIiwiY29uc3RydWN0
+        aW9uUGhhc2UiOiJDT01QTEVURUQiLCJidWlsZGluZ1R5cGUiOiJTSU5HTEVf
+        RkFNSUxZX0hPVVNFIiwiZW5lcmd5Q2VydGlmaWNhdGUiOnsiZW5lcmd5Q2Vy
+        dGlmaWNhdGVBdmFpbGFiaWxpdHkiOiJBVkFJTEFCTEUiLCJlbmVyZ3lDZXJ0
+        aWZpY2F0ZUNyZWF0aW9uRGF0ZSI6IkZST01fMDFfTUFZXzIwMTQiLCJlbmVy
+        Z3lFZmZpY2llbmN5Q2xhc3MiOiJBKyJ9LCJjZWxsYXIiOiJZRVMiLCJoYW5k
+        aWNhcHBlZEFjY2Vzc2libGUiOiJZRVMiLCJudW1iZXJPZlBhcmtpbmdTcGFj
+        ZXMiOjEsImNvbmRpdGlvbiI6IkZVTExZX1JFTk9WQVRFRCIsImludGVyaW9y
+        UXVhbGl0eSI6IlNPUEhJU1RJQ0FURUQiLCJjb25zdHJ1Y3Rpb25ZZWFyIjoy
+        MDE3LCJmcmVlRnJvbSI6InNvZm9ydCIsImhlYXRpbmdUeXBlIjoiU0VMRl9D
+        T05UQUlORURfQ0VOVFJBTF9IRUFUSU5HIiwiaGVhdGluZ1R5cGVFbmV2MjAx
+        NCI6IlNFTEZfQ09OVEFJTkVEX0NFTlRSQUxfSEVBVElORyIsImZpcmluZ1R5
+        cGVzIjpbeyJmaXJpbmdUeXBlIjpbIlBFTExFVF9IRUFUSU5HIiwiR0FTIiwi
+        T0lMIl19XSwiZW5lcmd5U291cmNlc0VuZXYyMDE0Ijp7ImVuZXJneVNvdXJj
+        ZUVuZXYyMDE0IjpbIlBFTExFVF9IRUFUSU5HIiwiR0FTIiwiT0lMIl19LCJi
+        dWlsZGluZ0VuZXJneVJhdGluZ1R5cGUiOiJFTkVSR1lfQ09OU1VNUFRJT04i
+        LCJ0aGVybWFsQ2hhcmFjdGVyaXN0aWMiOjIwMCwiZW5lcmd5Q29uc3VtcHRp
+        b25Db250YWluc1dhcm1XYXRlciI6Ik5PVF9BUFBMSUNBQkxFIiwibnVtYmVy
+        T2ZGbG9vcnMiOjIsInVzYWJsZUZsb29yU3BhY2UiOjUwLCJudW1iZXJPZkJl
+        ZFJvb21zIjozLCJudW1iZXJPZkJhdGhSb29tcyI6MiwiZ3Vlc3RUb2lsZXQi
+        OiJZRVMiLCJwYXJraW5nU3BhY2VUeXBlIjoiQ0FSUE9SVCIsInJlbnRlZCI6
+        IllFUyIsInJlbnRhbEluY29tZSI6MjAwMCwibGlzdGVkIjoiWUVTIiwicGFy
+        a2luZ1NwYWNlUHJpY2UiOjQwMDAsInN1bW1lclJlc2lkZW5jZVByYWN0aWNh
+        bCI6Ik5PVF9BUFBMSUNBQkxFIiwicHJpY2UiOnsidmFsdWUiOjE1MDAwMCwi
+        Y3VycmVuY3kiOiJFVVIiLCJtYXJrZXRpbmdUeXBlIjoiUFVSQ0hBU0UiLCJw
+        cmljZUludGVydmFsVHlwZSI6Ik9ORV9USU1FX0NIQVJHRSJ9LCJsaXZpbmdT
+        cGFjZSI6MTIwLCJwbG90QXJlYSI6MTAwMCwibnVtYmVyT2ZSb29tcyI6NSwi
+        ZW5lcmd5UGVyZm9ybWFuY2VDZXJ0aWZpY2F0ZSI6InRydWUiLCJjb3VydGFn
+        ZSI6eyJoYXNDb3VydGFnZSI6IllFUyIsImNvdXJ0YWdlIjoiMTklIiwiY291
+        cnRhZ2VOb3RlIjoibml4IGhpbndlaXMifX19
+    http_version: 
+  recorded_at: Wed, 15 Nov 2017 14:30:29 GMT
+recorded_with: VCR 3.0.3

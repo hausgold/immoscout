@@ -138,7 +138,7 @@ RSpec.shared_examples "a residential property" do
   end
 
   describe '#publish', vcr: true do
-    let(:estate) { described_class.find("68498459") }
+    let(:estate) { described_class.find(resource_id) }
 
     it 'returns publish instance' do
       expect(estate.publish).to be_instance_of(Immoscout::Models::Publish)
@@ -146,7 +146,7 @@ RSpec.shared_examples "a residential property" do
   end
 
   describe '#unpublish', vcr: true do
-    let(:estate) { described_class.find("68498459") }
+    let(:estate) { described_class.find(resource_id) }
 
     it 'returns publish instance' do
       expect(estate.unpublish).to be_instance_of(Immoscout::Models::Publish)
