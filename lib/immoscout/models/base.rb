@@ -6,7 +6,7 @@ module Immoscout
       attr_reader :base
 
       def initialize(hash = {})
-        @base = hash
+        define_singleton_method(:base) { hash }
         set_properties
       end
 
@@ -24,7 +24,7 @@ module Immoscout
           property = self.class.find_property(key)
           unless property
             # TODO: add optional logger
-            # puts "ignore #{key} property..."
+            puts "#{self.class.name} - missing property '#{key}'"
             next
           end
           set_property(property, key, value)

@@ -19,12 +19,15 @@ module Immoscout
       property :salutation
       property :firstname
       property :lastname
+      property :fax_number
       property :fax_number_country_code
       property :fax_number_area_code
       property :fax_number_subscriber
+      property :phone_number
       property :phone_number_country_code
       property :phone_number_area_code
       property :phone_number_subscriber
+      property :cell_phone_number
       property :cell_phone_number_country_code
       property :cell_phone_number_area_code
       property :cell_phone_number_subscriber
