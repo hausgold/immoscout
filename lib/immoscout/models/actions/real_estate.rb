@@ -92,7 +92,9 @@ module Immoscout
             response = api.get("user/#{api.user_name}/realestate")
             handle_response(response)
             objects = unpack_collection.call(response.body)
-            objects.map { |object| new(object) }
+            objects
+              .map { |object| new(object) }
+              .select { |object| object.type =~ /#{name.demodulize}/i }
           end
 
           def first
