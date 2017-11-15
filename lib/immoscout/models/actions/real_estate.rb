@@ -18,20 +18,20 @@ module Immoscout
             )
           end
 
-          def save(user_id = :me)
+          def save
             response = \
               if try(:id)
-                api.put("user/#{user_id}/realestate/#{id}", as_json)
+                api.put("user/#{api.user_name}/realestate/#{id}", as_json)
               else
-                api.post("user/#{user_id}/realestate", as_json)
+                api.post("user/#{api.user_name}/realestate", as_json)
               end
 
             handle_response(response)
             self
           end
 
-          def destroy(user_id = :me)
-            response = api.delete("user/#{user_id}/realestate/#{id}")
+          def destroy
+            response = api.delete("user/#{api.user_name}/realestate/#{id}")
             handle_response(response)
             self
           end
@@ -54,16 +54,20 @@ module Immoscout
             publisher
           end
 
-          def place(type, user_id = :me)
+          def place(type)
             check_placement_type(type)
-            response = api.post("user/#{user_id}/realestate/#{id}/#{type}")
+            response = api.post(
+              "user/#{api.user_name}/realestate/#{id}/#{type}"
+            )
             handle_response(response)
             self
           end
 
-          def unplace(type, user_id = :me)
+          def unplace(type)
             check_placement_type(type)
-            response = api.delete("user/#{user_id}/realestate/#{id}/#{type}")
+            response = api.delete(
+              "user/#{api.user_name}/realestate/#{id}/#{type}"
+            )
             handle_response(response)
             self
           end
@@ -78,30 +82,30 @@ module Immoscout
         end
 
         class_methods do
-          def find(id, user_id = :me)
-            response = api.get("user/#{user_id}/realestate/#{id}")
+          def find(id)
+            response = api.get("user/#{api.user_name}/realestate/#{id}")
             handle_response(response)
             from_raw(response.body)
           end
 
-          def all(user_id = :me)
-            response = api.get("user/#{user_id}/realestate")
+          def all
+            response = api.get("user/#{api.user_name}/realestate")
             handle_response(response)
             objects = unpack_collection.call(response.body)
             objects.map { |object| new(object) }
           end
 
-          def first(user_id = :me)
-            all(user_id).first
+          def first
+            all.first
           end
 
-          def last(user_id = :me)
-            all(user_id).last
+          def last
+            all.last
           end
 
-          def create(hash, user_id = :me)
+          def create(hash)
             instance = new(hash)
-            instance.save(user_id)
+            instance.save
             instance
           end
         end

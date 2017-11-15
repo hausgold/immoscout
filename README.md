@@ -1,6 +1,6 @@
 # Immoscout
 
-This gem provides an API wrapper for the [Immobilienscout24 REST API](https://api.immobilienscout24.de/our-apis/import-export.html).
+This gem provides an API wrapper for the [Immobilienscout24 REST API](https://api.immobilienscout24.de/our-apis/import-export.html). It provides the well known _ActiveRecord-like_ model methods.
 
 ## Installation
 
@@ -29,6 +29,7 @@ Immoscout.configure do |config|
   config.oauth_token = "token"
   config.oauth_token_secret = "token_secret"
   config.use_sandbox = true # default: false
+  config.user_name = "immoscout-user-name" # default: 'me'
 end
 ```
 
@@ -39,7 +40,7 @@ end
 Currently supported: `ApartmentBuy`, `HouseBuy`
 
 ##### Overview supported actions
-* .find(ID)
+* .find(id)
 * .all
 * .first
 * .last
@@ -121,7 +122,7 @@ apartment.unplace(:premiumplacement)
 #### Contact
 
 ##### Overview supported actions
-* .find(ID)
+* .find(id)
 * .all
 * .first
 * .last
@@ -142,7 +143,7 @@ contact.save
 
 #### Publish
 
-If you don't like the `#publish` and `#unpublish` methods defined for realestate models, you can create the `Publish` instance yourself.
+If you don't like or can't use the `#publish` and `#unpublish` methods defined for realestate models, you can create the `Publish` instance yourself.
 
 ##### Overview supported actions
 * .new(hash)

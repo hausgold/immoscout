@@ -17,10 +17,10 @@ module Immoscout
               .fetch("attachment")
           end
 
-          def save(user_id = :me)
+          def save
             attachable_id = attachable.try(:id) || attachable
             response = api.post(
-              "user/#{user_id}/realestate/#{attachable_id}/attachment",
+              "user/#{api.user_name}/realestate/#{attachable_id}/attachment",
               nil,
               attachment: Faraday::UploadIO.new(file, content_type, file_name),
               metadata: as_json
@@ -63,9 +63,9 @@ module Immoscout
             }.fetch(ext)
           end
 
-          def all(real_estate_id, user_id = :me)
+          def all(real_estate_id)
             response = api.get(
-              "user/#{user_id}/realestate/#{real_estate_id}/attachment"
+              "user/#{api.user_name}/realestate/#{real_estate_id}/attachment"
             )
             handle_response(response)
             objects = unpack_collection.call(response.body)

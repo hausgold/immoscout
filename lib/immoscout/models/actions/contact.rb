@@ -17,50 +17,50 @@ module Immoscout
             )
           end
 
-          def save(user_id = :me)
+          def save
             response = \
               if try(:id)
-                api.put("user/#{user_id}/contact/#{id}", as_json)
+                api.put("user/#{api.user_name}/contact/#{id}", as_json)
               else
-                api.post("user/#{user_id}/contact", as_json)
+                api.post("user/#{api.user_name}/contact", as_json)
               end
 
             handle_response(response)
             self
           end
 
-          def destroy(user_id = :me)
-            response = api.delete("user/#{user_id}/contact/#{id}")
+          def destroy
+            response = api.delete("user/#{api.user_name}/contact/#{id}")
             handle_response(response)
             self
           end
         end
 
         class_methods do
-          def find(id, user_id = :me)
-            response = api.get("user/#{user_id}/contact/#{id}")
+          def find(id)
+            response = api.get("user/#{api.user_name}/contact/#{id}")
             handle_response(response)
             from_raw(response.body)
           end
 
-          def all(user_id = :me)
-            response = api.get("user/#{user_id}/contact")
+          def all
+            response = api.get("user/#{api.user_name}/contact")
             handle_response(response)
             objects = unpack_collection.call(response.body)
             objects.map { |object| new(object) }
           end
 
-          def first(user_id = :me)
-            all(user_id).first
+          def first
+            all.first
           end
 
-          def last(user_id = :me)
-            all(user_id).last
+          def last
+            all.last
           end
 
-          def create(hash, user_id = :me)
+          def create(hash)
             instance = new(hash)
-            instance.save(user_id)
+            instance.save
             instance
           end
         end

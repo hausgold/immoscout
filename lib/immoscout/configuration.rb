@@ -13,6 +13,8 @@ module Immoscout
 
     config_accessor(:api_version) { "v1.0" }
 
+    config_accessor(:user_name) { 'me' }
+
     config_accessor(:api_url_live) do
       "https://rest.immobilienscout24.de/" \
       "restapi/api/offer/#{api_version}"
