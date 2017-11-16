@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.name          = "immoscout"
   spec.version       = Immoscout::VERSION
   spec.authors       = ["Marcus Geissler"]
-  spec.email         = ["marcus3006@gmail.com"]
+  spec.email         = ["marcus.geissler@hanseventures.com"]
 
   spec.summary       = 'Ruby client for the Immobilienscout24 REST API'
   spec.homepage      = "https://github.com/hausgold/immoscout"
@@ -34,7 +34,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "activesupport", ">= 3.2.0"
   spec.add_dependency "faraday", ">= 0.10.0"
   spec.add_dependency "faraday_middleware", ">= 0.9.0"
-  spec.add_dependency "simple_oauth", ">= 0"
+  spec.add_dependency "simple_oauth", ">= 0.3"
 
   spec.add_development_dependency "bundler", "~> 1.15"
   spec.add_development_dependency "pry"
