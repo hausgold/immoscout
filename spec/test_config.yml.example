@@ -3,4 +3,3 @@ consumer_key: "myKey"
 consumer_secret: "asdasdasd"
 oauth_token: "oauthtoken"
 oauth_token_secret: "oauthsecret"
-use_sandbox: true

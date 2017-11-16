@@ -41,6 +41,7 @@ RSpec.configure do |config|
     Immoscout.configure do |immo|
       TEST_CONFIG.each do |key, value|
         immo.send("#{key}=", value)
+        immo.use_sandbox = true # always use the sandbox url for tests!
       end
     end
   end
