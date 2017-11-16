@@ -1,5 +1,9 @@
 ![Immoscout](doc/assets/project.png)
 
+[![Build Status](https://travis-ci.org/hausgold/immoscout.svg?branch=master)](https://travis-ci.org/hausgold/immoscout)
+[![Maintainability](https://api.codeclimate.com/v1/badges/bfd4a5c188d5f1aebd60/maintainability)](https://codeclimate.com/github/hausgold/immoscout/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/bfd4a5c188d5f1aebd60/test_coverage)](https://codeclimate.com/github/hausgold/immoscout/test_coverage)
+
 This gem provides an API wrapper for the [Immobilienscout24 REST API](https://api.immobilienscout24.de/our-apis/import-export.html). It provides the well known _ActiveRecord-like_ model methods.
 
 ## Installation
