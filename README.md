@@ -172,7 +172,7 @@ publish.destroy # unpublished!
 ```ruby
 picture = Immoscout::Models::Picture.new title: "Badezimmer", title_picture: true, floor_plan: false
 picture.file = File.open("the/path/to/the/file.jpg") #
-picture.attachable = Immoscout::Models::HouseBuy.last # you can also be just the ID
+picture.attachable = Immoscout::Models::HouseBuy.last # you can also pass the ID
 
 picture.save # attachment upload!
 # => #<Immoscout::Models::Picture:0x0055c9faea1fb8>
