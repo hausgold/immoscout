@@ -88,6 +88,11 @@ module Immoscout
             from_raw(response.body)
           end
 
+          def find_by(hash)
+            external_id = hash.symbolize_keys.fetch(:external_id)
+            find("ext-#{external_id}")
+          end
+
           def all
             response = api.get("user/#{api.user_name}/realestate")
             handle_response(response)
