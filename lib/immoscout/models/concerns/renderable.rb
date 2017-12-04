@@ -25,7 +25,8 @@ module Immoscout
           def to_h
             self.class.properties.each_with_object({}) do |(key, value), memo|
               # skip if it's readonly and should not be exposed in #as_json
-              return memo if value.fetch(:readonly, false)
+              readonly = value.fetch(:readonly, false)
+              return memo if readonly.try(:call, self) || readonly == true
               # use :alias instead of key as json-key
               property = value.fetch(:alias, key)
               # use :default if present AND value is nil

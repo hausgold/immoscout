@@ -20,17 +20,26 @@ module Immoscout
       property :firstname
       property :lastname
       property :fax_number
-      property :fax_number_country_code
-      property :fax_number_area_code
-      property :fax_number_subscriber
+      property :fax_number_country_code,
+               readonly: proc { |contact| contact.fax_number.present? }
+      property :fax_number_area_code,
+               readonly: proc { |contact| contact.fax_number.present? }
+      property :fax_number_subscriber,
+               readonly: proc { |contact| contact.fax_number.present? }
       property :phone_number
-      property :phone_number_country_code
-      property :phone_number_area_code
-      property :phone_number_subscriber
+      property :phone_number_country_code,
+               readonly: proc { |contact| contact.phone_number.present? }
+      property :phone_number_area_code,
+               readonly: proc { |contact| contact.phone_number.present? }
+      property :phone_number_subscriber,
+               readonly: proc { |contact| contact.phone_number.present? }
       property :cell_phone_number
-      property :cell_phone_number_country_code
-      property :cell_phone_number_area_code
-      property :cell_phone_number_subscriber
+      property :cell_phone_number_country_code,
+               readonly: proc { |contact| contact.cell_phone_number.present? }
+      property :cell_phone_number_area_code,
+               readonly: proc { |contact| contact.cell_phone_number.present? }
+      property :cell_phone_number_subscriber,
+               readonly: proc { |contact| contact.cell_phone_number.present? }
       property :address, coerce: Immoscout::Models::Parts::Address
       property :country_code
       property :title
