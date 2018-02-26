@@ -32,16 +32,16 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
   spec.add_dependency "activesupport", ">= 3.2.0"
-  spec.add_dependency "faraday", ">= 0.10.0"
-  spec.add_dependency "faraday_middleware", ">= 0.9.0"
+  spec.add_dependency "faraday", "~> 0.13.0"
+  spec.add_dependency "faraday_middleware", "~> 0.12.0"
   spec.add_dependency "simple_oauth", ">= 0.3"
 
   spec.add_development_dependency "bundler", "~> 1.15"
   spec.add_development_dependency "pry"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_development_dependency "rspec-json_expectations"
-  spec.add_development_dependency "vcr", ">= 3.0.0"
-  spec.add_development_dependency "webmock"
+  spec.add_development_dependency "rspec-json_expectations", "~> 1.4.0"
+  spec.add_development_dependency "vcr", "~> 3.0.0"
+  spec.add_development_dependency "webmock", "~> 2.3.0"
   spec.add_development_dependency "simplecov"
 end
