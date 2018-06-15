@@ -24,7 +24,11 @@ RSpec.describe Immoscout::Models::HouseBuy do
           street: "Berliner straße",
           house_number: 10,
           postcode: "10243",
-          city: "Berlin"
+          city: "Berlin",
+          international_country_region: {
+            region: "Berlin",
+            country: "DEU"
+          }
         },
         building_type: "SINGLE_FAMILY_HOUSE",
         plot_area: 10_000,

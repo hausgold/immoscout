@@ -16,6 +16,11 @@
              "latitude": 52.51245,
              "longitude": 13.43134
          },
+         "internationalCountryRegion":
+         {
+             "country": "DEU",
+             "region": "Berlin"
+         },
          "geoHierarchy":
          {
              "continent":

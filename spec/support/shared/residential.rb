@@ -57,6 +57,8 @@ RSpec.shared_examples "a residential property" do
       expect(subject.address.house_number).to be
       expect(subject.address.postcode).to be
       expect(subject.address.city).to be
+      expect(subject.address.international_country_region.country).to be
+      expect(subject.address.international_country_region.region).to be
       expect(subject.show_address).to be
     end
 
