@@ -5,6 +5,7 @@ require "spec_helper"
 RSpec.describe Immoscout::Models::Publish do
   let(:json) { file_fixture("publish.json").read }
   let(:parsed_json) { JSON.parse(json) }
+  let(:resource_id) { "68492877" }
 
   describe '#new' do
     context 'with hash argument' do
@@ -46,7 +47,7 @@ RSpec.describe Immoscout::Models::Publish do
 
       it 'set attributes' do
         publish.build_real_estate
-        publish.real_estate.id = "68492877"
+        publish.real_estate.id = resource_id
         publish.build_publish_channel
         expect(publish.save).to be
       end
@@ -56,7 +57,7 @@ RSpec.describe Immoscout::Models::Publish do
   describe '#destroy', vcr: true do
     let(:hash) do
       {
-        real_estate: { id: "68492877" }, publish_channel: { id: 10_000 }
+        real_estate: { id: resource_id }, publish_channel: { id: 10_000 }
       }
     end
     let(:publish) { described_class.new(hash) }
