@@ -6,12 +6,13 @@ RSpec.describe Immoscout::Models::Publish do
   let(:json) { file_fixture("publish.json").read }
   let(:parsed_json) { JSON.parse(json) }
   let(:resource_id) { "68492877" }
+  let(:publish_channel) { 10_000 } # means: listed on immoscout
 
   describe '#new' do
     context 'with hash argument' do
       let(:hash) do
         {
-          real_estate: { id: "id" }, publish_channel: { id: 10_000 }
+          real_estate: { id: "id" }, publish_channel: { id: publish_channel }
         }
       end
 
@@ -22,7 +23,7 @@ RSpec.describe Immoscout::Models::Publish do
       end
 
       it 'assigns publish_channel id' do
-        expect(subject.publish_channel.id).to eq 10_000
+        expect(subject.publish_channel.id).to eq publish_channel
       end
     end
   end
@@ -57,7 +58,8 @@ RSpec.describe Immoscout::Models::Publish do
   describe '#destroy', vcr: true do
     let(:hash) do
       {
-        real_estate: { id: resource_id }, publish_channel: { id: 10_000 }
+        real_estate: { id: resource_id },
+        publish_channel: { id: publish_channel }
       }
     end
     let(:publish) { described_class.new(hash) }
