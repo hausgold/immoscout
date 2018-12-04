@@ -23,7 +23,11 @@ module Immoscout
               "user/#{api.user_name}/realestate/#{attachable_id}/attachment",
               nil,
               attachment: Faraday::UploadIO.new(file, content_type, file_name),
-              metadata: as_json
+              metadata: Faraday::UploadIO.new(
+                StringIO.new(to_json),
+                'application/json',
+                'metadata.json'
+              )
             )
             handle_response(response)
             self.id = id_from_response(response)
