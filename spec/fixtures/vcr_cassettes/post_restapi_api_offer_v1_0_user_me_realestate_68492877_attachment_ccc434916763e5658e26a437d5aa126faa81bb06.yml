@@ -6,8 +6,8 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       base64_string: |
-        LS0tLS0tLS0tLS0tLVJ1YnlNdWx0aXBhcnRQb3N0LTAwMjAxMThhY2FmNmU0
-        ODhiNTAyMTZkMzJhMzczY2VkDQpDb250ZW50LURpc3Bvc2l0aW9uOiBmb3Jt
+        LS0tLS0tLS0tLS0tLVJ1YnlNdWx0aXBhcnRQb3N0LWRhMTU2NTI2ODFkOTVm
+        Nzc0Mjk4MDY4ZjYyOTkxZjczDQpDb250ZW50LURpc3Bvc2l0aW9uOiBmb3Jt
         LWRhdGE7IG5hbWU9ImF0dGFjaG1lbnQiOyBmaWxlbmFtZT0icGRmLnBkZiIN
         CkNvbnRlbnQtTGVuZ3RoOiA3NDI0DQpDb250ZW50LVR5cGU6IGFwcGxpY2F0
         aW9uL3BkZg0KQ29udGVudC1UcmFuc2Zlci1FbmNvZGluZzogYmluYXJ5DQoN
@@ -176,20 +176,23 @@ http_interactions:
         MzBDMEI5QjE1MDIxQUVFQTBDNzVDMDcyQz4KPDdCNzRGQTAzMEMwQjlCMTUw
         MjFBRUVBMEM3NUMwNzJDPiBdCi9Eb2NDaGVja3N1bSAvOEVFOEZFQzcwOUU4
         REZEMjNDNEE1ODE1MjA3NDFDOTcKPj4Kc3RhcnR4cmVmCjY5NDEKJSVFT0YK
-        DQotLS0tLS0tLS0tLS0tUnVieU11bHRpcGFydFBvc3QtMDAyMDExOGFjYWY2
-        ZTQ4OGI1MDIxNmQzMmEzNzNjZWQNCkNvbnRlbnQtRGlzcG9zaXRpb246IGZv
-        cm0tZGF0YTsgbmFtZT0ibWV0YWRhdGFbY29tbW9uLmF0dGFjaG1lbnRdW3Rp
-        dGxlXSINCg0KR3J1bmRyaXNzDQotLS0tLS0tLS0tLS0tUnVieU11bHRpcGFy
-        dFBvc3QtMDAyMDExOGFjYWY2ZTQ4OGI1MDIxNmQzMmEzNzNjZWQtLQ0KDQo=
+        DQotLS0tLS0tLS0tLS0tUnVieU11bHRpcGFydFBvc3QtZGExNTY1MjY4MWQ5
+        NWY3NzQyOTgwNjhmNjI5OTFmNzMNCkNvbnRlbnQtRGlzcG9zaXRpb246IGZv
+        cm0tZGF0YTsgbmFtZT0ibWV0YWRhdGEiOyBmaWxlbmFtZT0ibWV0YWRhdGEu
+        anNvbiINCkNvbnRlbnQtTGVuZ3RoOiA0Mw0KQ29udGVudC1UeXBlOiBhcHBs
+        aWNhdGlvbi9qc29uDQpDb250ZW50LVRyYW5zZmVyLUVuY29kaW5nOiBiaW5h
+        cnkNCg0KeyJjb21tb24uYXR0YWNobWVudCI6eyJ0aXRsZSI6IkdydW5kcmlz
+        cyJ9fQ0KLS0tLS0tLS0tLS0tLVJ1YnlNdWx0aXBhcnRQb3N0LWRhMTU2NTI2
+        ODFkOTVmNzc0Mjk4MDY4ZjYyOTkxZjczLS0NCg0K
     headers:
       User-Agent:
       - Faraday v0.13.1
       Content-Type:
-      - multipart/form-data; boundary=-----------RubyMultipartPost-0020118acaf6e488b50216d32a373ced
+      - multipart/form-data; boundary=-----------RubyMultipartPost-da15652681d95f774298068f62991f73
       Accept:
       - application/json
       Content-Length:
-      - '7874'
+      - '7995'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -198,7 +201,7 @@ http_interactions:
       message: ''
     headers:
       L-Is24-Requestrefnum:
-      - 4e090fdd-4b7d-4adc-a461-6d3a5c213320
+      - 1b33ddd7-cfa8-4ae9-893a-382033dca662
       L-Is24-Apiclient:
       - 06778437Key
       L-Is24-Causerid:
@@ -206,13 +209,13 @@ http_interactions:
       L-Is24-Resourceid:
       - '68492877'
       Location:
-      - http://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/user/me/realestate/68492877/attachment/672643644
+      - http://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/user/me/realestate/68492877/attachment/672642901
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
       - '165'
       Date:
-      - Tue, 14 Nov 2017 15:24:55 GMT
+      - Tue, 14 Nov 2017 15:07:22 GMT
       Server:
       - Apache
     body:
@@ -220,8 +223,8 @@ http_interactions:
       base64_string: |
         eyJjb21tb24ubWVzc2FnZXMiOlt7Im1lc3NhZ2UiOnsibWVzc2FnZUNvZGUi
         OiJNRVNTQUdFX1JFU09VUkNFX0NSRUFURUQiLCJtZXNzYWdlIjoiUmVzb3Vy
-        Y2UgW2F0dGFjaG1lbnRdIHdpdGggaWQgWzY3MjY0MzY0NF0gaGFzIGJlZW4g
-        Y3JlYXRlZC4iLCJpZCI6IjY3MjY0MzY0NCJ9fV19
-    http_version: 
-  recorded_at: Tue, 14 Nov 2017 15:24:55 GMT
+        Y2UgW2F0dGFjaG1lbnRdIHdpdGggaWQgWzY3MjY0MjkwMV0gaGFzIGJlZW4g
+        Y3JlYXRlZC4iLCJpZCI6IjY3MjY0MjkwMSJ9fV19
+    http_version:
+  recorded_at: Tue, 14 Nov 2017 15:07:22 GMT
 recorded_with: VCR 3.0.3
