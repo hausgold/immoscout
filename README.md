@@ -1,4 +1,4 @@
-![Immoscout](doc/assets/project.png)
+![Immoscout](doc/assets/project.svg)
 
 [![Build Status](https://travis-ci.org/hausgold/immoscout.svg?branch=master)](https://travis-ci.org/hausgold/immoscout)
 [![Gem Version](https://badge.fury.io/rb/immoscout.svg)](https://badge.fury.io/rb/immoscout)
