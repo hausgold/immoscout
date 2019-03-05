@@ -7,8 +7,6 @@ http_interactions:
       encoding: US-ASCII
       base64_string: ''
     headers:
-      User-Agent:
-      - Faraday v0.13.1
       Content-Type:
       - application/json;charset=UTF-8
       Accept:
@@ -47,6 +45,6 @@ http_interactions:
         OiJNRVNTQUdFX1JFU09VUkNFX0RFTEVURUQiLCJtZXNzYWdlIjoiUmVzb3Vy
         Y2UgW3B1Ymxpc2hdIHdpdGggaWQgWzY4NTQ5NDM4XzEwMDAwXSBoYXMgYmVl
         biBkZWxldGVkLiAiLCJpZCI6IjY4NTQ5NDM4XzEwMDAwIn19XX0=
-    http_version: 
+    http_version:
   recorded_at: Wed, 15 Nov 2017 14:40:52 GMT
 recorded_with: VCR 3.0.3

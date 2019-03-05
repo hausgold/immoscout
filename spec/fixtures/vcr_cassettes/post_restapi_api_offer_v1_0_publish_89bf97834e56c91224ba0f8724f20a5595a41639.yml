@@ -2,16 +2,13 @@
 http_interactions:
 - request:
     method: post
-    uri: https://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/user/me/contact
+    uri: https://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/publish
     body:
       encoding: UTF-8
       base64_string: |
-        eyJjb21tb24ucmVhbHRvckNvbnRhY3REZXRhaWwiOnsiZW1haWwiOiJoYW5z
-        Lm1laXNlckBleGFtcGxlLmNvbSIsImZpcnN0bmFtZSI6IkhhbnMiLCJsYXN0
-        bmFtZSI6Ik1laXNlciJ9fQ==
+        eyJjb21tb24ucHVibGlzaE9iamVjdCI6eyJyZWFsRXN0YXRlIjp7IkBpZCI6
+        IjY4NTQzMDY5In0sInB1Ymxpc2hDaGFubmVsIjp7IkBpZCI6MTAwMDB9fX0=
     headers:
-      User-Agent:
-      - Faraday v0.13.1
       Content-Type:
       - application/json;charset=UTF-8
       Accept:
@@ -24,7 +21,7 @@ http_interactions:
       message: ''
     headers:
       L-Is24-Requestrefnum:
-      - 72da18b6-abfd-49c9-a01d-18ff25ef1960
+      - ad497939-9201-4cc3-a6f3-1045ee47fa60
       L-Is24-Apiclient:
       - 06778437Key
       L-Is24-Causerid:
@@ -32,13 +29,13 @@ http_interactions:
       L-Is24-Resourceid:
       - "-"
       Location:
-      - http://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/user/me/contact/82511317
+      - http://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/publish/68543069_10000
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
-      - '158'
+      - '172'
       Date:
-      - Fri, 03 Nov 2017 14:10:53 GMT
+      - Wed, 15 Nov 2017 14:30:30 GMT
       Server:
       - Apache
     body:
@@ -46,8 +43,8 @@ http_interactions:
       base64_string: |
         eyJjb21tb24ubWVzc2FnZXMiOlt7Im1lc3NhZ2UiOnsibWVzc2FnZUNvZGUi
         OiJNRVNTQUdFX1JFU09VUkNFX0NSRUFURUQiLCJtZXNzYWdlIjoiUmVzb3Vy
-        Y2UgW2NvbnRhY3RdIHdpdGggaWQgWzgyNTExMzE3XSBoYXMgYmVlbiBjcmVh
-        dGVkLiIsImlkIjo4MjUxMTMxN319XX0=
-    http_version: 
-  recorded_at: Fri, 03 Nov 2017 14:10:54 GMT
+        Y2UgW3B1Ymxpc2hdIHdpdGggaWQgWzY4NTQzMDY5XzEwMDAwXSBoYXMgYmVl
+        biBjcmVhdGVkLiIsImlkIjoiNjg1NDMwNjlfMTAwMDAifX1dfQ==
+    http_version:
+  recorded_at: Wed, 15 Nov 2017 14:30:30 GMT
 recorded_with: VCR 3.0.3

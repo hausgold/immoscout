@@ -9,32 +9,36 @@ VCR.configure do |config|
     record: :once
   }
 
+  IGNORE_REQ_HEADERS = %w[Authorization User-Agent].freeze
+  IGNORE_RES_HEADERS = %w[Set-Cookie]
+
   config.before_record do |env|
-    env.response.headers.delete('Set-Cookie')
-    env.request.headers.delete('Authorization')
+    IGNORE_REQ_HEADERS.each { |header| env.request.headers.delete(header) }
+    IGNORE_RES_HEADERS.each { |header| env.response.headers.delete(header) }
   end
 
   config.around_http_request do |request|
     tape_sha = Digest::SHA1.hexdigest [
       request.method,
       request.uri,
-      if request.body.include?("RubyMultipartPost")
-        request.headers.except("Authorization", "Content-Type").to_s
+      if request.body.include?('RubyMultipartPost')
+        request.headers.except('Content-Type', *IGNORE_REQ_HEADERS).to_s
       else
-        request.headers.except("Authorization").to_s
+        request.headers.except(*IGNORE_REQ_HEADERS).to_s
       end,
       request.body.to_s.gsub(
         /RubyMultipartPost-\w{32}/,
         "RubyMultipartPost-#{'1' * 32}"
       )
     ].join('')
+
     tape_name = URI(request.uri)
                 .path
-                .split("/")
+                .split('/')
                 .delete_if(&:empty?)
                 .unshift(request.method)
-                .join("_")
-                .gsub(/\W/, "_")
+                .join('_')
+                .gsub(/\W/, '_')
     VCR.use_cassette("#{tape_name}_#{tape_sha}", &request)
   end
 end

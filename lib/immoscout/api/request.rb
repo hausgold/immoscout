@@ -26,6 +26,8 @@ module Immoscout
             request.headers['Content-Type'] = "application/json;charset=UTF-8"
           end
           request.headers['Accept'] = "application/json"
+          request.headers['User-Agent'] = \
+            "HausgoldImmoscout/#{Immoscout::VERSION}"
         end
       end
     end

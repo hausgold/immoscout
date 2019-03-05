@@ -1,14 +1,12 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: https://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/user/me/contact/82495983
+    method: delete
+    uri: https://rest.sandbox-immobilienscout24.de/restapi/api/offer/v1.0/publish/68543069_10000
     body:
       encoding: US-ASCII
       base64_string: ''
     headers:
-      User-Agent:
-      - Faraday v0.13.1
       Content-Type:
       - application/json;charset=UTF-8
       Accept:
@@ -25,31 +23,28 @@ http_interactions:
       Expires:
       - Thu, 01 Jan 1970 01:00:00 CET
       L-Is24-Requestrefnum:
-      - 5ef3221d-481a-4689-ad8a-cf40ee0b25ae
+      - ed271ffd-2c02-4aea-8eee-682bc2a55a36
       L-Is24-Apiclient:
       - 06778437Key
       L-Is24-Causerid:
       - '107268859'
       L-Is24-Resourceid:
-      - '82495983'
+      - '68543069_10000'
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
-      - '275'
+      - '173'
       Date:
-      - Fri, 03 Nov 2017 14:13:15 GMT
+      - Wed, 15 Nov 2017 14:30:30 GMT
       Server:
       - Apache
     body:
       encoding: UTF-8
       base64_string: |
-        eyJjb21tb24ucmVhbHRvckNvbnRhY3REZXRhaWwiOnsiQGlkIjoiODI0OTU5
-        ODMiLCJlbWFpbCI6ImpvaG4uYm9vZ2xlQGV4YW1wbGUuY29tIiwic2FsdXRh
-        dGlvbiI6Ik5PX1NBTFVUQVRJT04iLCJsYXN0bmFtZSI6IkJvb2dsZSIsImRl
-        ZmF1bHRDb250YWN0IjoiZmFsc2UiLCJsb2NhbFBhcnRuZXJDb250YWN0Ijoi
-        ZmFsc2UiLCJidXNpbmVzc0NhcmRDb250YWN0IjoiZmFsc2UiLCJyZWFsRXN0
-        YXRlUmVmZXJlbmNlQ291bnQiOjAsInNob3dPblByb2ZpbGVQYWdlIjoiZmFs
-        c2UifX0=
-    http_version: 
-  recorded_at: Fri, 03 Nov 2017 14:13:16 GMT
+        eyJjb21tb24ubWVzc2FnZXMiOlt7Im1lc3NhZ2UiOnsibWVzc2FnZUNvZGUi
+        OiJNRVNTQUdFX1JFU09VUkNFX0RFTEVURUQiLCJtZXNzYWdlIjoiUmVzb3Vy
+        Y2UgW3B1Ymxpc2hdIHdpdGggaWQgWzY4NTQzMDY5XzEwMDAwXSBoYXMgYmVl
+        biBkZWxldGVkLiAiLCJpZCI6IjY4NTQzMDY5XzEwMDAwIn19XX0=
+    http_version:
+  recorded_at: Wed, 15 Nov 2017 14:30:31 GMT
 recorded_with: VCR 3.0.3
