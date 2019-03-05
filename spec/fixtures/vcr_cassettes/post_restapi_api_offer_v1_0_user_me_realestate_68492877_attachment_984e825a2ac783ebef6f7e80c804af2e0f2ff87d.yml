@@ -185,8 +185,6 @@ http_interactions:
         cyJ9fQ0KLS0tLS0tLS0tLS0tLVJ1YnlNdWx0aXBhcnRQb3N0LWRhMTU2NTI2
         ODFkOTVmNzc0Mjk4MDY4ZjYyOTkxZjczLS0NCg0K
     headers:
-      User-Agent:
-      - Faraday v0.13.1
       Content-Type:
       - multipart/form-data; boundary=-----------RubyMultipartPost-da15652681d95f774298068f62991f73
       Accept:

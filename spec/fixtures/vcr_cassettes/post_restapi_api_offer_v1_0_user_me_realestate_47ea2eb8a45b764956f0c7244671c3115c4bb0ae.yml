@@ -16,8 +16,6 @@ http_interactions:
         bnRlcnZhbFR5cGUiOiJPTkVfVElNRV9DSEFSR0UifSwibGl2aW5nU3BhY2Ui
         OjEwMCwibnVtYmVyT2ZSb29tcyI6NCwicGxvdEFyZWEiOjEwMDAwfX0=
     headers:
-      User-Agent:
-      - Faraday v0.13.1
       Content-Type:
       - application/json;charset=UTF-8
       Accept:
@@ -54,6 +52,6 @@ http_interactions:
         OiJNRVNTQUdFX1JFU09VUkNFX0NSRUFURUQiLCJtZXNzYWdlIjoiUmVzb3Vy
         Y2UgW3JlYWxlc3RhdGVdIHdpdGggaWQgWzcwNjAxNjgxXSBoYXMgYmVlbiBj
         cmVhdGVkLiIsImlkIjoiNzA2MDE2ODEifX1dfQ==
-    http_version: 
+    http_version:
   recorded_at: Thu, 14 Jun 2018 15:30:06 GMT
 recorded_with: VCR 3.0.3
