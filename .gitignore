@@ -1,14 +1,16 @@
 /.bundle/
 /.yardoc
-/Gemfile.lock
 /_yardoc/
 /coverage/
-/doc/api
+/doc/api/
 /pkg/
 /spec/reports/
 /tmp/
+/vendor/
+/gemfiles/vendor/
+/Gemfile.lock
+*.gemfile.lock
+/spec/.credentials
 
 # rspec failure tracking
 .rspec_status
-
-spec/test_config\.yml

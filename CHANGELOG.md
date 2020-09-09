@@ -1,3 +1,9 @@
+### next
+
+* Dropped support for Rails <5.2 (#9)
+* Dropped support for Ruby <2.5 (#9)
+* Updated the faraday gem spec to `~> 1.0` (#9)
+
 ### 1.2.0
 
 * Added a changelog file to track changes for library users
