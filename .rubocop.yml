@@ -1,15 +1,24 @@
 Documentation:
   Enabled: false
 
-StringLiterals:
-  Enabled: false
+AllCops:
+  DisplayCopNames: true
+  TargetRubyVersion: 2.5
+  Exclude:
+    - bin/**/*
+    - vendor/**/*
+    - build/**/*
+    - gemfiles/vendor/**/*
 
 Metrics/BlockLength:
   Exclude:
-    - "spec/**/*"
-  ExcludedMethods:
-    - included
+    - Rakefile
+    - '*.gemspec'
+    - spec/**/*.rb
+    - '**/*.rake'
+    - doc/**/*.rb
 
-AllCops:
-  Exclude:
-    - "immoscout.gemspec"
+# We stay at 80 characters per line.
+# See: https://rubystyle.guide/#max-line-length
+Metrics/LineLength:
+  Max: 80

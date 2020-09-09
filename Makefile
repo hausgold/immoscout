@@ -15,17 +15,23 @@ VENDOR_DIR ?= vendor/bundle
 GEMFILES_DIR ?= gemfiles
 
 # Host binaries
+AWK ?= awk
 BASH ?= bash
 COMPOSE ?= docker-compose
+DOCKER ?= docker
+GREP ?= grep
 ID ?= id
 MKDIR ?= mkdir
 RM ?= rm
+XARGS ?= xargs
 
 # Container binaries
 BUNDLE ?= bundle
 APPRAISAL ?= appraisal
+GEM ?= gem
 RAKE ?= rake
 YARD ?= yard
+RAKE ?= rake
 RUBOCOP ?= rubocop
 
 # Files
@@ -49,7 +55,7 @@ endef
 endif
 
 all:
-	# HAUSGOLD SDK
+	# Immoscout
 	#
 	# install            Install the dependencies
 	# test               Run the whole test suite
@@ -62,6 +68,8 @@ install:
 	# Install the dependencies
 	@$(MKDIR) -p $(VENDOR_DIR)
 	@$(call run-shell,$(BUNDLE) check || $(BUNDLE) install --path $(VENDOR_DIR))
+	@$(call run-shell,GEM_HOME=vendor/bundle/ruby/$${RUBY_MAJOR}.0 \
+		$(GEM) install bundler -v "~> 1.0")
 	@$(call run-shell,$(BUNDLE) exec $(APPRAISAL) install)
 
 update: install
@@ -88,6 +96,11 @@ test-style-ruby:
 clean:
 	# Clean the dependencies
 	@$(RM) -rf $(VENDOR_DIR)
+	@$(RM) -rf $(VENDOR_DIR)/Gemfile.lock
+	@$(RM) -rf $(GEMFILES_DIR)/vendor
+	@$(RM) -rf $(GEMFILES_DIR)/*.lock
+	@$(RM) -rf pkg
+	@$(RM) -rf coverage
 
 clean-containers:
 	# Clean running containers
@@ -95,7 +108,15 @@ ifeq ($(MAKE_ENV),docker)
 	@$(COMPOSE) down
 endif
 
-distclean: clean clean-containers
+clean-images:
+	# Clean build images
+ifeq ($(MAKE_ENV),docker)
+	@-$(DOCKER) images | $(GREP) immoscout \
+		| $(AWK) '{ print $$3 }' \
+		| $(XARGS) -rn1 $(DOCKER) rmi -f
+endif
+
+distclean: clean clean-containers clean-images
 
 shell: install
 	# Run an interactive shell on the container
