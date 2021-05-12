@@ -1,3 +1,7 @@
+### 1.3.1
+
+* Corrected the GNU Make release target
+
 ### 1.3.0
 
 * Dropped support for Rails <5.2 (#9)
