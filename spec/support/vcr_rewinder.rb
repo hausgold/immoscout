@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'vcr'
 require 'set'
 USED_CASSETTES = Set.new
@@ -17,8 +19,8 @@ RSpec.configure do |config|
     end - USED_CASSETTES.to_a
     if cassettes.any?
       puts "Found #{cassettes.count} unused vcr cassettes"
-      if ENV.fetch("CLEAN_VCR", false)
-        puts "cleaning up..."
+      if ENV.fetch('CLEAN_VCR', false)
+        puts 'cleaning up...'
         cassettes.map { |f| File.delete(f) }
       end
     end

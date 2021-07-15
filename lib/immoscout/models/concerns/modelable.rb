@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'json'
 
 module Immoscout
@@ -37,16 +39,17 @@ module Immoscout
 
           def handle_response(response)
             return response if response.success?
+
             raise Immoscout::Errors::Failed, response
           end
 
           def id_from_response(response)
             response
               .body
-              .fetch("common.messages")
+              .fetch('common.messages')
               .first
-              .fetch("message", {})
-              .fetch("id", nil)
+              .fetch('message', {})
+              .fetch('id', nil)
           end
         end
       end

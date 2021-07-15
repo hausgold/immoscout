@@ -1,5 +1,7 @@
-require "faraday"
-require "faraday_middleware"
+# frozen_string_literal: true
+
+require 'faraday'
+require 'faraday_middleware'
 
 module Immoscout
   module Api

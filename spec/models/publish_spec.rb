@@ -1,25 +1,25 @@
 # frozen_string_literal: true
 
-require "spec_helper"
+require 'spec_helper'
 
 RSpec.describe Immoscout::Models::Publish do
-  let(:json) { file_fixture("publish.json").read }
+  let(:json) { file_fixture('publish.json').read }
   let(:parsed_json) { JSON.parse(json) }
-  let(:resource_id) { "68492877" }
+  let(:resource_id) { '68492877' }
   let(:publish_channel) { 10_000 } # means: listed on immoscout
 
   describe '#new' do
     context 'with hash argument' do
       let(:hash) do
         {
-          real_estate: { id: "id" }, publish_channel: { id: publish_channel }
+          real_estate: { id: 'id' }, publish_channel: { id: publish_channel }
         }
       end
 
       let(:subject) { described_class.new(hash) }
 
       it 'assigns real_estate id' do
-        expect(subject.real_estate.id).to eq "id"
+        expect(subject.real_estate.id).to eq 'id'
       end
 
       it 'assigns publish_channel id' do

@@ -1,6 +1,10 @@
+# frozen_string_literal: true
+
 require 'json'
 require_relative '../concerns/modelable'
 
+# rubocop:disable Metrics/BlockLength because this is how an ActiveSupport
+#   concern looks like
 module Immoscout
   module Models
     module Actions
@@ -12,11 +16,13 @@ module Immoscout
 
           self.unpack_collection = proc do |hash|
             hash
-              .fetch("realestates.realEstates", {})
-              .fetch("realEstateList", {})
-              .fetch("realEstateElement", nil)
+              .fetch('realestates.realEstates', {})
+              .fetch('realEstateList', {})
+              .fetch('realEstateElement', nil)
           end
 
+          # rubocop:disable Metrics/AbcSize because this is the
+          #   bare minimum logic
           def save
             response = \
               if id
@@ -29,6 +35,7 @@ module Immoscout
             self.id = id_from_response(response) unless id
             self
           end
+          # rubocop:enable Metrics/AbcSize
 
           def destroy
             response = api.delete("user/#{api.user_name}/realestate/#{id}")
@@ -93,6 +100,7 @@ module Immoscout
             find("ext-#{external_id}")
           end
 
+          # rubocop:disable Metrics/AbcSize because of the mapping logic
           def all
             response = api.get("user/#{api.user_name}/realestate")
             handle_response(response)
@@ -101,6 +109,7 @@ module Immoscout
               .map { |object| new(object) }
               .select { |object| object.type =~ /#{name.demodulize}/i }
           end
+          # rubocop:enable Metrics/AbcSize
 
           def first
             all.first
@@ -120,3 +129,4 @@ module Immoscout
     end
   end
 end
+# rubocop:enable Metrics/BlockLength

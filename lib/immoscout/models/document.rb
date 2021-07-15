@@ -13,7 +13,7 @@ module Immoscout
 
       attr_accessor :attachable, :file
 
-      self.json_wrapper = "common.attachment"
+      self.json_wrapper = 'common.attachment'
 
       property :id, alias: :@id
       property :type, alias: :'@xsi.type'

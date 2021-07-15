@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 VCR.configure do |config|
   config.hook_into :webmock
   config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
@@ -10,7 +12,7 @@ VCR.configure do |config|
   }
 
   IGNORE_REQ_HEADERS = %w[Authorization User-Agent].freeze
-  IGNORE_RES_HEADERS = %w[Set-Cookie]
+  IGNORE_RES_HEADERS = %w[Set-Cookie].freeze
 
   config.before_record do |env|
     IGNORE_REQ_HEADERS.each { |header| env.request.headers.delete(header) }

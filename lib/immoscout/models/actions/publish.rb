@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'json'
 require_relative '../concerns/modelable'
 
@@ -11,7 +13,7 @@ module Immoscout
           include Immoscout::Models::Concerns::Modelable
 
           def save
-            response = api.post("publish", as_json)
+            response = api.post('publish', as_json)
             handle_response(response)
             self
           end

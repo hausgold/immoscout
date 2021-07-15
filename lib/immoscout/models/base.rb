@@ -27,6 +27,7 @@ module Immoscout
             # puts "#{self.class.name} - missing property '#{key}'"
             next
           end
+
           set_property(property, key, value)
         end
       end

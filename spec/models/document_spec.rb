@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "spec_helper"
+require 'spec_helper'
 
 DOCUMENT_ACCESSORS = %w[
   id
@@ -17,23 +17,23 @@ DOCUMENT_ACCESSORS = %w[
 ].freeze
 
 RSpec.describe Immoscout::Models::Document do
-  let(:json) { file_fixture("document.json").read }
+  let(:json) { file_fixture('document.json').read }
   let(:parsed_json) { JSON.parse(json) }
-  let(:attachable_id) { "68492877" }
+  let(:attachable_id) { '68492877' }
   let(:resource_id) { '672642911' }
 
   describe '#new' do
     context 'with hash argument' do
       let(:hash) do
         {
-          title: "Grundriss"
+          title: 'Grundriss'
         }
       end
 
       let(:subject) { described_class.new(hash) }
 
       it 'assigns title' do
-        expect(subject.title).to eq "Grundriss"
+        expect(subject.title).to eq 'Grundriss'
       end
     end
   end
@@ -51,8 +51,8 @@ RSpec.describe Immoscout::Models::Document do
   end
 
   describe '#save', vcr: true do
-    let(:document) { described_class.new title: "Grundriss" }
-    let(:file) { file_fixture("pdf.pdf") }
+    let(:document) { described_class.new title: 'Grundriss' }
+    let(:file) { file_fixture('pdf.pdf') }
 
     it 'set attributes' do
       document.file = file

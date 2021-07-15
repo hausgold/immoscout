@@ -1,6 +1,10 @@
+# frozen_string_literal: true
+
 require 'json'
 require_relative '../concerns/modelable'
 
+# rubocop:disable Metrics/BlockLength because this is how an ActiveSupport
+#   concern looks like
 module Immoscout
   module Models
     module Actions
@@ -12,10 +16,12 @@ module Immoscout
 
           self.unpack_collection = proc do |hash|
             hash
-              .fetch("common.realtorContactDetailsList", {})
-              .fetch("realtorContactDetails", nil)
+              .fetch('common.realtorContactDetailsList', {})
+              .fetch('realtorContactDetails', nil)
           end
 
+          # rubocop:disable Metrics/AbcSize because this is the
+          #   bare minimum logic
           def save
             response = \
               if id
@@ -28,6 +34,7 @@ module Immoscout
             self.id = id_from_response(response) unless id
             self
           end
+          # rubocop:enable Metrics/AbcSize
 
           def destroy
             response = api.delete("user/#{api.user_name}/contact/#{id}")
@@ -73,3 +80,4 @@ module Immoscout
     end
   end
 end
+# rubocop:enable Metrics/BlockLength

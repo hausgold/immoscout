@@ -14,10 +14,10 @@ module Immoscout
 
       attr_accessor :attachable, :file
 
-      self.json_wrapper = "common.attachment"
+      self.json_wrapper = 'common.attachment'
 
       property :id, alias: :@id
-      property :type, alias: :'@xsi.type', default: "common:Picture"
+      property :type, alias: :'@xsi.type', default: 'common:Picture'
       property :href, alias: :'@xlink.href'
       property :publish_date, alias: :@publish_date
       property :creation, alias: :@creation

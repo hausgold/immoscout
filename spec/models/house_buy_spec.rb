@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "spec_helper"
+require 'spec_helper'
 
 HOUSE_ACCESSORS = %w[
   building_type
@@ -10,34 +10,34 @@ HOUSE_ACCESSORS = %w[
 ].freeze
 
 RSpec.describe Immoscout::Models::HouseBuy do
-  let(:json) { file_fixture("house.json").read }
+  let(:json) { file_fixture('house.json').read }
   let(:parsed_json) { JSON.parse(json) }
   let(:instance) { described_class.from_raw(json) }
 
-  it_behaves_like "a residential property" do
-    let(:json) { JSON.parse(file_fixture("house.json").read) }
-    let(:resource_id) { "68543069" }
+  it_behaves_like 'a residential property' do
+    let(:json) { JSON.parse(file_fixture('house.json').read) }
+    let(:resource_id) { '68543069' }
     let(:create_hash) do
       {
-        title: "test title",
+        title: 'test title',
         address: {
-          street: "Berliner straße",
+          street: 'Berliner straße',
           house_number: 10,
-          postcode: "10243",
-          city: "Berlin",
+          postcode: '10243',
+          city: 'Berlin',
           international_country_region: {
-            region: "Berlin",
-            country: "DEU"
+            region: 'Berlin',
+            country: 'DEU'
           }
         },
-        building_type: "SINGLE_FAMILY_HOUSE",
+        building_type: 'SINGLE_FAMILY_HOUSE',
         plot_area: 10_000,
         living_space: 100,
         number_of_rooms: 4,
         price: {
-          currency: "EUR",
-          marketing_type: "PURCHASE",
-          price_interval_type: "ONE_TIME_CHARGE",
+          currency: 'EUR',
+          marketing_type: 'PURCHASE',
+          price_interval_type: 'ONE_TIME_CHARGE',
           value: 400_000
         }
       }

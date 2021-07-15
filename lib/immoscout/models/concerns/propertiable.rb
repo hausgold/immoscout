@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Immoscout
   module Models
     module Concerns
@@ -16,7 +18,8 @@ module Immoscout
               match         = Regexp.last_match(1).intern
               properties    = self.class.properties
               coerce_klass  = properties.fetch(match).fetch(:coerce, nil)
-              return super if !properties.keys.include?(match) || !coerce_klass
+              return super if !properties.key?(match) || !coerce_klass
+
               send("#{match}=", coerce_klass.new)
             else
               super

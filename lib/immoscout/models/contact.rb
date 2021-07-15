@@ -12,7 +12,7 @@ module Immoscout
       include Immoscout::Models::Concerns::Propertiable
       include Immoscout::Models::Actions::Contact
 
-      self.json_wrapper = "common.realtorContactDetail"
+      self.json_wrapper = 'common.realtorContactDetail'
 
       property :id, alias: :@id
       property :email

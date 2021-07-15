@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'errors/failed'
 require_relative 'api/client'
 # renderable models

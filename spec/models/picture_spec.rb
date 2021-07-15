@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "spec_helper"
+require 'spec_helper'
 
 PICTURE_ACCESSORS = %w[
   id
@@ -18,23 +18,23 @@ PICTURE_ACCESSORS = %w[
 ].freeze
 
 RSpec.describe Immoscout::Models::Picture do
-  let(:json) { file_fixture("picture.json").read }
+  let(:json) { file_fixture('picture.json').read }
   let(:parsed_json) { JSON.parse(json) }
-  let(:attachable_id) { "68492877" }
+  let(:attachable_id) { '68492877' }
   let(:resource_id) { '672642550' }
 
   describe '#new' do
     context 'with hash argument' do
       let(:hash) do
         {
-          title: "Wohnzimmer"
+          title: 'Wohnzimmer'
         }
       end
 
       let(:subject) { described_class.new(hash) }
 
       it 'assigns title' do
-        expect(subject.title).to eq "Wohnzimmer"
+        expect(subject.title).to eq 'Wohnzimmer'
       end
     end
   end
@@ -52,8 +52,8 @@ RSpec.describe Immoscout::Models::Picture do
   end
 
   describe '#save', vcr: true do
-    let(:picture) { described_class.new title: "Wohnzimmer" }
-    let(:file) { file_fixture("png.png") }
+    let(:picture) { described_class.new title: 'Wohnzimmer' }
+    let(:file) { file_fixture('png.png') }
 
     it 'set attributes' do
       picture.file = file

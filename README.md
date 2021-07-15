@@ -2,9 +2,9 @@
 
 [![Continuous Integration](https://github.com/hausgold/immoscout/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/hausgold/immoscout/actions/workflows/test.yml)
 [![Gem Version](https://badge.fury.io/rb/immoscout.svg)](https://badge.fury.io/rb/immoscout)
-[![Maintainability](https://api.codeclimate.com/v1/badges/97fa2796b76085580c6c/maintainability)](https://codeclimate.com/repos/5cac8bc729ce6b78240071f2/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/97fa2796b76085580c6c/test_coverage)](https://codeclimate.com/repos/5cac8bc729ce6b78240071f2/test_coverage)
-[![API docs](https://img.shields.io/badge/docs-API-blue.svg)](https://www.rubydoc.info/gems/immoscout)
+[![Test Coverage](https://automate-api.hausgold.de/v1/coverage_reports/immoscout/coverage.svg)](https://knowledge.hausgold.de/coverage)
+[![Test Ratio](https://automate-api.hausgold.de/v1/coverage_reports/immoscout/ratio.svg)](https://knowledge.hausgold.de/coverage)
+[![API docs](https://automate-api.hausgold.de/v1/coverage_reports/immoscout/documentation.svg)](https://www.rubydoc.info/gems/immoscout)
 
 This gem provides an API wrapper for the [Immobilienscout24 REST
 API](https://api.immobilienscout24.de/our-apis/import-export.html). It provides

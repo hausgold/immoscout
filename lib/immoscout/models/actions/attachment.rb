@@ -1,6 +1,10 @@
+# frozen_string_literal: true
+
 require 'json'
 require_relative '../concerns/modelable'
 
+# rubocop:disable Metrics/BlockLength because this is how an ActiveSupport
+#   concern looks like
 module Immoscout
   module Models
     module Actions
@@ -12,11 +16,14 @@ module Immoscout
 
           self.unpack_collection = proc do |hash|
             hash
-              .fetch("common.attachments")
+              .fetch('common.attachments')
               .first
-              .fetch("attachment")
+              .fetch('attachment')
           end
 
+          # rubocop:disable Metrics/AbcSize because this is the
+          #   bare minimum logic
+          # rubocop:disable Metrics/MethodLength dito
           def save
             attachable_id = attachable.try(:id) || attachable
             response = api.post(
@@ -33,11 +40,15 @@ module Immoscout
             self.id = id_from_response(response)
             self
           end
+          # rubocop:enable Metrics/AbcSize
+          # rubocop:enable Metrics/MethodLength
 
           def destroy
             attachable_id = attachable.try(:id) || attachable
             response = api.delete(
-              "user/#{api.user_name}/realestate/#{attachable_id}/attachment/#{id}",
+              "user/#{api.user_name}/" \
+              "realestate/#{attachable_id}/" \
+              "attachment/#{id}"
             )
             handle_response(response)
             self
@@ -61,14 +72,15 @@ module Immoscout
         class_methods do
           def content_type_from_extension(ext)
             {
-              ".jpg"  => "image/jpeg",
-              ".jpeg" => "image/jpeg",
-              ".gif"  => "image/gif",
-              ".png"  => "image/png",
-              ".pdf"  => "application/pdf"
+              '.jpg' => 'image/jpeg',
+              '.jpeg' => 'image/jpeg',
+              '.gif' => 'image/gif',
+              '.png' => 'image/png',
+              '.pdf' => 'application/pdf'
             }.fetch(ext)
           end
 
+          # rubocop:disable Metrics/AbcSize because of the mapping logic
           def all(real_estate_id)
             response = api.get(
               "user/#{api.user_name}/realestate/#{real_estate_id}/attachment"
@@ -79,8 +91,10 @@ module Immoscout
               .map { |object| new(object) }
               .select { |object| object.type =~ /#{name.demodulize}/i }
           end
+          # rubocop:enable Metrics/AbcSize
         end
       end
     end
   end
 end
+# rubocop:enable Metrics/BlockLength

@@ -19,7 +19,7 @@ module Immoscout
       include Immoscout::Models::Concerns::Propertiable
       include Immoscout::Models::Actions::RealEstate
 
-      self.json_wrapper = "realestates.houseBuy"
+      self.json_wrapper = 'realestates.houseBuy'
 
       property :id, alias: :@id
       property :external_id

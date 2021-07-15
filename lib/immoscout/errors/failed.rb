@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Immoscout
   module Errors
     class Failed < StandardError

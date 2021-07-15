@@ -13,7 +13,7 @@ module Immoscout
       include Immoscout::Models::Concerns::Propertiable
       include Immoscout::Models::Actions::Publish
 
-      self.json_wrapper = "common.publishObject"
+      self.json_wrapper = 'common.publishObject'
 
       property :real_estate, coerce: Immoscout::Models::Parts::RealEstate
       property :publish_channel,

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RESIDENTIAL_ACCESSORS = %w[
   id
   creation_date
@@ -36,9 +38,9 @@ RESIDENTIAL_ACCESSORS = %w[
   energy_performance_certificate
 ].freeze
 
-RSpec.shared_examples "a residential property" do
+RSpec.shared_examples 'a residential property' do
   describe '.new' do
-    it "returns residential object" do
+    it 'returns residential object' do
       expect(described_class.new).to be_instance_of described_class
     end
   end
@@ -132,9 +134,9 @@ RSpec.shared_examples "a residential property" do
       let(:estate) { described_class.find(resource_id) }
 
       it 'changes attributes' do
-        estate.title = "Neuer Titel"
+        estate.title = 'Neuer Titel'
         expect(estate.save).to be
-        expect(estate.title).to eq "Neuer Titel"
+        expect(estate.title).to eq 'Neuer Titel'
       end
     end
   end

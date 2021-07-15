@@ -1,5 +1,9 @@
+# frozen_string_literal: true
+
 require 'json'
 
+# rubocop:disable Metrics/BlockLength because this is how an ActiveSupport
+#   concern looks like
 module Immoscout
   module Models
     module Concerns
@@ -22,11 +26,16 @@ module Immoscout
             self.class.try(:json_wrapper)
           end
 
+          # rubocop:disable Metrics/PerceivedComplexity because this is the
+          #   bare minimum logic
+          # rubocop:disable Metrics/MethodLength dito
+          # rubocop:disable Metrics/CyclomaticComplexity dito
           def to_h
             self.class.properties.each_with_object({}) do |(key, value), memo|
               # skip if it's readonly and should not be exposed in #as_json
               readonly = value.fetch(:readonly, false)
               next if readonly.try(:call, self) || readonly == true
+
               # use :alias instead of key as json-key
               property = value.fetch(:alias, key)
               # use :default if present AND value is nil
@@ -42,6 +51,9 @@ module Immoscout
               memo
             end
           end
+          # rubocop:enable Metrics/PerceivedComplexity
+          # rubocop:enable Metrics/MethodLength
+          # rubocop:enable Metrics/CyclomaticComplexity
 
           def to_json_wrapped
             { self.class.try(:json_wrapper) => to_json_unwrapped }
@@ -61,3 +73,4 @@ module Immoscout
     end
   end
 end
+# rubocop:enable Metrics/BlockLength

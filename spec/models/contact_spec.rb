@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "spec_helper"
+require 'spec_helper'
 
 CONTACT_ACCESSORS = %w[
   id
@@ -32,7 +32,7 @@ CONTACT_ACCESSORS = %w[
 ].freeze
 
 RSpec.describe Immoscout::Models::Contact do
-  let(:json) { file_fixture("contact.json").read }
+  let(:json) { file_fixture('contact.json').read }
   let(:parsed_json) { JSON.parse(json) }
   let(:instance) { described_class.from_raw(json) }
   let(:resource_id) { '82295371' }
@@ -81,9 +81,9 @@ RSpec.describe Immoscout::Models::Contact do
   describe '.create', vcr: true do
     let(:hash) do
       {
-        email: "hans.meiser@example.com",
-        firstname: "Hans",
-        lastname: "Meiser"
+        email: 'hans.meiser@example.com',
+        firstname: 'Hans',
+        lastname: 'Meiser'
       }
     end
 
@@ -99,13 +99,13 @@ RSpec.describe Immoscout::Models::Contact do
       let(:contact) { described_class.new }
 
       it 'set attributes' do
-        contact.firstname = "Hans"
-        contact.lastname = "Meiser"
-        contact.email = "hans.meiser@example.com"
+        contact.firstname = 'Hans'
+        contact.lastname = 'Meiser'
+        contact.email = 'hans.meiser@example.com'
         expect(contact.save).to be
-        expect(contact.email).to eq "hans.meiser@example.com"
-        expect(contact.firstname).to eq "Hans"
-        expect(contact.lastname).to eq "Meiser"
+        expect(contact.email).to eq 'hans.meiser@example.com'
+        expect(contact.firstname).to eq 'Hans'
+        expect(contact.lastname).to eq 'Meiser'
       end
     end
 
@@ -113,15 +113,15 @@ RSpec.describe Immoscout::Models::Contact do
       let(:contact) { described_class.find(resource_id) }
 
       it 'changes attributes' do
-        contact.email = "mynemail@example.com"
+        contact.email = 'mynemail@example.com'
         expect(contact.save).to be
-        expect(contact.email).to eq "mynemail@example.com"
+        expect(contact.email).to eq 'mynemail@example.com'
       end
     end
   end
 
   describe '#destroy', vcr: true do
-    let(:contact) { described_class.find("82495983") }
+    let(:contact) { described_class.find('82495983') }
 
     it 'returns the deleted object' do
       expect(contact.destroy).to be
