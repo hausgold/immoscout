@@ -31,7 +31,6 @@ APPRAISAL ?= appraisal
 GEM ?= gem
 RAKE ?= rake
 YARD ?= yard
-RAKE ?= rake
 RUBOCOP ?= rubocop
 
 # Files
