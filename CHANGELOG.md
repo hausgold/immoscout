@@ -1,3 +1,9 @@
+### 1.3.2
+
+* Migrated to Github Actions
+* Migrated to our own coverage reporting
+* Added the code statistics to the test process
+
 ### 1.3.1
 
 * Corrected the GNU Make release target
