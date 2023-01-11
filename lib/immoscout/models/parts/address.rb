@@ -10,9 +10,12 @@ require_relative '../concerns/renderable'
 module Immoscout
   module Models
     module Parts
+      # Shared address-related property definitions.
+      # See: https://bit.ly/3CSGnmN
       class Address < Base
         include Immoscout::Models::Concerns::Renderable
         include Immoscout::Models::Concerns::Propertiable
+
         property :street
         property :house_number
         property :postcode

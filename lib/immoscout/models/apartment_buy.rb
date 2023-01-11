@@ -12,6 +12,9 @@ require_relative 'parts/energy_source'
 
 module Immoscout
   module Models
+    # Real Estate. (selling an apartment)
+    # See: https://bit.ly/3iH3DNL
+    # See: https://bit.ly/3H7mQkY
     class ApartmentBuy < Base
       include Immoscout::Models::Concerns::Renderable
       include Immoscout::Models::Concerns::Propertiable

@@ -6,6 +6,7 @@ require_relative 'request'
 
 module Immoscout
   module Api
+    # The immoscout API client object.
     class Client
       include Singleton
       include Immoscout::Api::Connection

@@ -2,6 +2,7 @@
 
 module Immoscout
   module Api
+    # An abstract HTTP/API request.
     module Request
       def get(path, payload = nil, multipart = nil)
         request(:get, path, payload, multipart)
@@ -25,12 +26,12 @@ module Immoscout
           if multipart
             request.headers['Content-Type'] = 'multipart/form-data'
           else
-            request.body                    = payload if payload
+            request.body = payload if payload
             request.headers['Content-Type'] = 'application/json;charset=UTF-8'
           end
           request.headers['Accept'] = 'application/json'
           request.headers['User-Agent'] = \
-            "HausgoldImmoscout/#{Immoscout::VERSION}"
+            "RubyImmoscout/#{Immoscout::VERSION}"
         end
       end
       # rubocop:enable Metrics/MethodLength

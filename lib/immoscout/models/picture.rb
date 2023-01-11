@@ -7,6 +7,8 @@ require_relative 'actions/attachment'
 
 module Immoscout
   module Models
+    # Attachment (picture) of a Real Estate.
+    # See: https://bit.ly/3iE6K9h
     class Picture < Base
       include Immoscout::Models::Concerns::Renderable
       include Immoscout::Models::Concerns::Propertiable

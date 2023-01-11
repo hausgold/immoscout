@@ -11,12 +11,12 @@ VCR.configure do |config|
     record: :once
   }
 
-  IGNORE_REQ_HEADERS = %w[Authorization User-Agent].freeze
-  IGNORE_RES_HEADERS = %w[Set-Cookie].freeze
+  ignore_req_headers = %w[Authorization User-Agent].freeze
+  ignore_res_headers = %w[Set-Cookie].freeze
 
   config.before_record do |env|
-    IGNORE_REQ_HEADERS.each { |header| env.request.headers.delete(header) }
-    IGNORE_RES_HEADERS.each { |header| env.response.headers.delete(header) }
+    ignore_req_headers.each { |header| env.request.headers.delete(header) }
+    ignore_res_headers.each { |header| env.response.headers.delete(header) }
   end
 
   config.around_http_request do |request|
@@ -24,15 +24,15 @@ VCR.configure do |config|
       request.method,
       request.uri,
       if request.body.include?('RubyMultipartPost')
-        request.headers.except('Content-Type', *IGNORE_REQ_HEADERS).to_s
+        request.headers.except('Content-Type', *ignore_req_headers).to_s
       else
-        request.headers.except(*IGNORE_REQ_HEADERS).to_s
+        request.headers.except(*ignore_req_headers).to_s
       end,
       request.body.to_s.gsub(
         /RubyMultipartPost-\w{32}/,
         "RubyMultipartPost-#{'1' * 32}"
       )
-    ].join('')
+    ].join
 
     tape_name = URI(request.uri)
                 .path

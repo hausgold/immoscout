@@ -8,6 +8,8 @@ require_relative 'parts/publish_channel'
 
 module Immoscout
   module Models
+    # The Publish (object) of a Real Estate.
+    # See: https://bit.ly/3ZFoYYI
     class Publish < Base
       include Immoscout::Models::Concerns::Renderable
       include Immoscout::Models::Concerns::Propertiable

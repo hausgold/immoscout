@@ -5,6 +5,8 @@ require 'json'
 module Immoscout
   module Models
     module Concerns
+      # Provides base functionality to reference/map/(de)serialize
+      # models against the immoscout API.
       module Modelable
         extend ActiveSupport::Concern
 

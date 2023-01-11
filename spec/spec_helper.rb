@@ -8,14 +8,16 @@ require 'immoscout'
 require 'rspec/json_expectations'
 require 'vcr'
 require 'webmock'
+require 'active_support'
 
-Dir['./spec/support/**/*.rb'].sort.each { |f| require f }
+# Load all support helpers and shared examples
+Dir[File.join(__dir__, 'support', '**', '*.rb')].sort.each { |f| require f }
 
 TEST_CONFIG = begin
-                YAML.load_file File.join(__dir__, 'test_config.yml')
-              rescue Errno::ENOENT
-                {}
-              end
+  YAML.load_file File.join(__dir__, 'test_config.yml')
+rescue Errno::ENOENT
+  {}
+end
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
