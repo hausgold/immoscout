@@ -14,6 +14,9 @@ require_relative 'parts/firing_type'
 
 module Immoscout
   module Models
+    # Real Estate. (selling a house)
+    # See: https://bit.ly/3iH3DNL
+    # See: https://bit.ly/3CSGnmN
     class HouseBuy < Base
       include Immoscout::Models::Concerns::Renderable
       include Immoscout::Models::Concerns::Propertiable

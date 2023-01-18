@@ -7,6 +7,8 @@ require_relative 'parts/address'
 
 module Immoscout
   module Models
+    # A contact.
+    # See: https://bit.ly/3WcYquD
     class Contact < Base
       include Immoscout::Models::Concerns::Renderable
       include Immoscout::Models::Concerns::Propertiable

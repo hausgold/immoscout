@@ -8,6 +8,7 @@ require_relative '../concerns/modelable'
 module Immoscout
   module Models
     module Actions
+      # Actions to work with attachments.
       module Attachment
         extend ActiveSupport::Concern
 
@@ -54,7 +55,7 @@ module Immoscout
             self
           end
 
-          private
+          protected
 
           def file_extension
             File.extname(file_name)
@@ -80,7 +81,6 @@ module Immoscout
             }.fetch(ext)
           end
 
-          # rubocop:disable Metrics/AbcSize because of the mapping logic
           def all(real_estate_id)
             response = api.get(
               "user/#{api.user_name}/realestate/#{real_estate_id}/attachment"
@@ -91,7 +91,6 @@ module Immoscout
               .map { |object| new(object) }
               .select { |object| object.type =~ /#{name.demodulize}/i }
           end
-          # rubocop:enable Metrics/AbcSize
         end
       end
     end

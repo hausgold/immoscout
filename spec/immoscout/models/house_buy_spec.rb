@@ -46,21 +46,21 @@ RSpec.describe Immoscout::Models::HouseBuy do
 
   describe '.from_raw' do
     context 'with hash argument' do
-      let(:subject) { described_class.from_raw(parsed_json) }
+      let(:instance) { described_class.from_raw(parsed_json) }
 
       HOUSE_ACCESSORS.each do |attribute|
         it "assigns #{attribute}" do
-          expect(subject.send(attribute)).to be
+          expect(instance.send(attribute)).not_to be_nil
         end
       end
     end
 
     context 'with json argument' do
-      let(:subject) { described_class.from_raw(json) }
+      let(:instance) { described_class.from_raw(json) }
 
       HOUSE_ACCESSORS.each do |attribute|
         it "assigns #{attribute}" do
-          expect(subject.send(attribute)).to be
+          expect(instance.send(attribute)).not_to be_nil
         end
       end
     end
@@ -70,9 +70,7 @@ RSpec.describe Immoscout::Models::HouseBuy do
     it 'renders energy_sources_enev2014' do
       expect(instance.to_json).to include_json(
         'realestates.houseBuy' => {
-          energySourcesEnev2014: {
-            energySourceEnev2014: be_instance_of(Array)
-          }
+          energySourcesEnev2014: { energySourceEnev2014: be_instance_of(Array) }
         }
       )
     end

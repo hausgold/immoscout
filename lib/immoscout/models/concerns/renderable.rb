@@ -7,6 +7,7 @@ require 'json'
 module Immoscout
   module Models
     module Concerns
+      # Includes functionality to serialize a Ruby model properly.
       module Renderable
         extend ActiveSupport::Concern
 
@@ -15,12 +16,12 @@ module Immoscout
             wrapped? ? to_json_wrapped : to_json_unwrapped
           end
 
-          def to_json
+          def to_json(*)
             as_json.to_json
           end
           alias_method :to_s, :to_json
 
-          private
+          protected
 
           def wrapped?
             self.class.try(:json_wrapper)
@@ -30,6 +31,7 @@ module Immoscout
           #   bare minimum logic
           # rubocop:disable Metrics/MethodLength dito
           # rubocop:disable Metrics/CyclomaticComplexity dito
+          # rubocop:disable Metrics/AbcSize dito
           def to_h
             self.class.properties.each_with_object({}) do |(key, value), memo|
               # skip if it's readonly and should not be exposed in #as_json
@@ -54,6 +56,7 @@ module Immoscout
           # rubocop:enable Metrics/PerceivedComplexity
           # rubocop:enable Metrics/MethodLength
           # rubocop:enable Metrics/CyclomaticComplexity
+          # rubocop:enable Metrics/AbcSize
 
           def to_json_wrapped
             { self.class.try(:json_wrapper) => to_json_unwrapped }
@@ -65,9 +68,6 @@ module Immoscout
               .stringify_keys
               .deep_transform_keys { |key| key.camelize :lower }
           end
-        end
-
-        class_methods do
         end
       end
     end

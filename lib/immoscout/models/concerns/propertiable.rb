@@ -3,6 +3,8 @@
 module Immoscout
   module Models
     module Concerns
+      # Includes functionality to access and modify
+      # model attributes transparently.
       module Propertiable
         extend ActiveSupport::Concern
 
@@ -14,7 +16,7 @@ module Immoscout
           # :reek:ControlParameter - standard stuff, reek!
           # :reek:TooManyStatements
           def method_missing(method_name, *arguments, &block)
-            if method_name =~ /build\_(\w+)/
+            if method_name =~ /build_(\w+)/
               match         = Regexp.last_match(1).intern
               properties    = self.class.properties
               coerce_klass  = properties.fetch(match).fetch(:coerce, nil)
@@ -39,6 +41,7 @@ module Immoscout
         class_methods do
           def property(name, **opts)
             attr_accessor(name)
+
             alias_name = opts.fetch(:alias, false)
             if alias_name
               alias_method alias_name, name

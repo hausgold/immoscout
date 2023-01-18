@@ -3,11 +3,10 @@
 require 'json'
 require_relative '../concerns/modelable'
 
-# rubocop:disable Metrics/BlockLength because this is how an ActiveSupport
-#   concern looks like
 module Immoscout
   module Models
     module Actions
+      # Actions to work with contacts.
       module Contact
         extend ActiveSupport::Concern
 
@@ -20,8 +19,6 @@ module Immoscout
               .fetch('realtorContactDetails', nil)
           end
 
-          # rubocop:disable Metrics/AbcSize because this is the
-          #   bare minimum logic
           def save
             response = \
               if id
@@ -34,7 +31,6 @@ module Immoscout
             self.id = id_from_response(response) unless id
             self
           end
-          # rubocop:enable Metrics/AbcSize
 
           def destroy
             response = api.delete("user/#{api.user_name}/contact/#{id}")
@@ -61,14 +57,8 @@ module Immoscout
             objects = unpack_collection.call(response.body)
             objects.map { |object| new(object) }
           end
-
-          def first
-            all.first
-          end
-
-          def last
-            all.last
-          end
+          delegate :first, to: :all
+          delegate :last, to: :all
 
           def create(hash)
             instance = new(hash)
@@ -80,4 +70,3 @@ module Immoscout
     end
   end
 end
-# rubocop:enable Metrics/BlockLength

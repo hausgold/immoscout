@@ -8,6 +8,7 @@ require 'immoscout/version'
 require 'immoscout/configuration'
 require 'immoscout/models'
 
+# The top-namespace of the +immoscout+ gem.
 module Immoscout
   class << self
     attr_writer :configuration

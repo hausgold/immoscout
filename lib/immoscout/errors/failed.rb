@@ -2,6 +2,7 @@
 
 module Immoscout
   module Errors
+    # Representation of a failed API request/response.
     class Failed < StandardError
       def initialize(response)
         @status = response.status

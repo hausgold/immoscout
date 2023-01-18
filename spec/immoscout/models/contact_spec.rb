@@ -39,21 +39,21 @@ RSpec.describe Immoscout::Models::Contact do
 
   describe '.from_raw' do
     context 'with hash argument' do
-      let(:subject) { described_class.from_raw(parsed_json) }
+      let(:instance) { described_class.from_raw(parsed_json) }
 
       CONTACT_ACCESSORS.each do |attribute|
         it "assigns #{attribute}" do
-          expect(subject.send(attribute)).to be
+          expect(instance.send(attribute)).not_to be_nil
         end
       end
     end
 
     context 'with json argument' do
-      let(:subject) { described_class.from_raw(json) }
+      let(:instance) { described_class.from_raw(json) }
 
       CONTACT_ACCESSORS.each do |attribute|
         it "assigns #{attribute}" do
-          expect(subject.send(attribute)).to be
+          expect(instance.send(attribute)).not_to be_nil
         end
       end
     end
@@ -74,7 +74,7 @@ RSpec.describe Immoscout::Models::Contact do
     end
 
     it 'returns instances of contact' do
-      expect(result.all? { |c| c.is_a? described_class }).to be
+      expect(result.all? { |c| c.is_a? described_class }).not_to be_nil
     end
   end
 
@@ -95,36 +95,51 @@ RSpec.describe Immoscout::Models::Contact do
   end
 
   describe '#save', vcr: true do
-    context 'not persisted' do
-      let(:contact) { described_class.new }
+    context 'when not persisted' do
+      let(:instance) { described_class.new }
+
+      before do
+        instance.firstname = 'Hans'
+        instance.lastname = 'Meiser'
+        instance.email = 'hans.meiser@example.com'
+      end
 
       it 'set attributes' do
-        contact.firstname = 'Hans'
-        contact.lastname = 'Meiser'
-        contact.email = 'hans.meiser@example.com'
-        expect(contact.save).to be
-        expect(contact.email).to eq 'hans.meiser@example.com'
-        expect(contact.firstname).to eq 'Hans'
-        expect(contact.lastname).to eq 'Meiser'
+        expect(instance.save).to be(instance)
+      end
+
+      it 'set attributes (email)' do
+        expect(instance.email).to be_eql('hans.meiser@example.com')
+      end
+
+      it 'set attributes (firstname)' do
+        expect(instance.firstname).to be_eql('Hans')
+      end
+
+      it 'set attributes (lastname)' do
+        expect(instance.lastname).to be_eql('Meiser')
       end
     end
 
-    context 'persisted' do
-      let(:contact) { described_class.find(resource_id) }
+    context 'when persisted' do
+      let(:instance) { described_class.find(resource_id) }
 
       it 'changes attributes' do
-        contact.email = 'mynemail@example.com'
-        expect(contact.save).to be
-        expect(contact.email).to eq 'mynemail@example.com'
+        instance.email = 'mynemail@example.com'
+        expect(instance.save).to be(instance)
+      end
+
+      it 'changes attributes (email)' do
+        expect(instance.email).to be_eql('mynemail@example.com')
       end
     end
   end
 
   describe '#destroy', vcr: true do
-    let(:contact) { described_class.find('82495983') }
+    let(:instance) { described_class.find('82495983') }
 
     it 'returns the deleted object' do
-      expect(contact.destroy).to be
+      expect(instance.destroy).to be(instance)
     end
   end
 end

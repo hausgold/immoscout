@@ -15,42 +15,41 @@ RSpec.describe Immoscout::Models::Publish do
           real_estate: { id: 'id' }, publish_channel: { id: publish_channel }
         }
       end
-
-      let(:subject) { described_class.new(hash) }
+      let(:instance) { described_class.new(hash) }
 
       it 'assigns real_estate id' do
-        expect(subject.real_estate.id).to eq 'id'
+        expect(instance.real_estate.id).to eq 'id'
       end
 
       it 'assigns publish_channel id' do
-        expect(subject.publish_channel.id).to eq publish_channel
+        expect(instance.publish_channel.id).to eq publish_channel
       end
     end
   end
 
   describe '#from_raw' do
     context 'with hash argument' do
-      let(:subject) { described_class.from_raw(json) }
+      let(:instance) { described_class.from_raw(json) }
 
       it 'assigns real_estate id' do
-        expect(subject.real_estate.id).to be
+        expect(instance.real_estate.id).not_to be_nil
       end
 
       it 'assigns publish_channel id' do
-        expect(subject.publish_channel.id).to be
+        expect(instance.publish_channel.id).not_to be_nil
       end
     end
   end
 
   describe '#save', vcr: true do
-    context 'not persisted' do
-      let(:publish) { described_class.new }
+    context 'when not persisted' do
+      let(:instance) { described_class.new }
 
       it 'set attributes' do
-        publish.build_real_estate
-        publish.real_estate.id = resource_id
-        publish.build_publish_channel
-        expect(publish.save).to be
+        instance.build_real_estate
+        instance.real_estate.id = resource_id
+        instance.build_publish_channel
+        expect(instance.save).to be(instance)
       end
     end
   end
@@ -62,10 +61,10 @@ RSpec.describe Immoscout::Models::Publish do
         publish_channel: { id: publish_channel }
       }
     end
-    let(:publish) { described_class.new(hash) }
+    let(:instance) { described_class.new(hash) }
 
     it 'returns the deleted object' do
-      expect(publish.destroy).to be
+      expect(instance.destroy).to be_a(described_class)
     end
   end
 end

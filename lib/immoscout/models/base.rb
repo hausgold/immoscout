@@ -2,6 +2,7 @@
 
 module Immoscout
   module Models
+    # The base/abstract model.
     class Base
       attr_reader :base
 
@@ -10,7 +11,7 @@ module Immoscout
         set_properties
       end
 
-      private
+      protected
 
       def prepared_hash
         base

@@ -6,6 +6,8 @@ require_relative 'actions/attachment'
 
 module Immoscout
   module Models
+    # Attachment (document) of a Real Estate.
+    # See: https://bit.ly/3Xx32gj
     class Document < Base
       include Immoscout::Models::Concerns::Renderable
       include Immoscout::Models::Concerns::Propertiable

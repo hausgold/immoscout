@@ -12,11 +12,11 @@ RSpec.describe Immoscout::Configuration do
 
   it 'can set oauth_token' do
     expect { instance.oauth_token = 'token' }.to \
-      change { instance.oauth_token }.to('token')
+      change(instance, :oauth_token).to('token')
   end
 
   it 'can set use_sandbox' do
     expect { instance.use_sandbox = true }.to \
-      change { instance.use_sandbox }.to(true)
+      change(instance, :use_sandbox).to(true)
   end
 end

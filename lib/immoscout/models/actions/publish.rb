@@ -6,6 +6,7 @@ require_relative '../concerns/modelable'
 module Immoscout
   module Models
     module Actions
+      # Actions to publish a Real Estate.
       module Publish
         extend ActiveSupport::Concern
 
@@ -25,9 +26,6 @@ module Immoscout
             handle_response(response)
             self
           end
-        end
-
-        class_methods do
         end
       end
     end

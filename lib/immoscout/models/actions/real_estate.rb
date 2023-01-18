@@ -8,6 +8,7 @@ require_relative '../concerns/modelable'
 module Immoscout
   module Models
     module Actions
+      # Actions to work with real estate objects.
       module RealEstate
         extend ActiveSupport::Concern
 
@@ -21,8 +22,6 @@ module Immoscout
               .fetch('realEstateElement', nil)
           end
 
-          # rubocop:disable Metrics/AbcSize because this is the
-          #   bare minimum logic
           def save
             response = \
               if id
@@ -35,7 +34,6 @@ module Immoscout
             self.id = id_from_response(response) unless id
             self
           end
-          # rubocop:enable Metrics/AbcSize
 
           def destroy
             response = api.delete("user/#{api.user_name}/realestate/#{id}")
@@ -79,7 +77,7 @@ module Immoscout
             self
           end
 
-          private
+          protected
 
           def check_placement_type(type)
             raise ArgumentError, "Unknown placement type '#{type}'" unless %w[
@@ -100,7 +98,6 @@ module Immoscout
             find("ext-#{external_id}")
           end
 
-          # rubocop:disable Metrics/AbcSize because of the mapping logic
           def all
             response = api.get("user/#{api.user_name}/realestate")
             handle_response(response)
@@ -109,15 +106,8 @@ module Immoscout
               .map { |object| new(object) }
               .select { |object| object.type =~ /#{name.demodulize}/i }
           end
-          # rubocop:enable Metrics/AbcSize
-
-          def first
-            all.first
-          end
-
-          def last
-            all.last
-          end
+          delegate :first, to: :all
+          delegate :last, to: :all
 
           def create(hash)
             instance = new(hash)
