@@ -28,9 +28,9 @@ the well known _ActiveRecord-like_ model methods.
     - [Attachment (Picture & Document)](#attachment-picture--document)
       - [Overview supported actions](#overview-supported-actions-3)
 - [Development](#development)
-- [Contributing](#contributing)
-- [License](#license)
 - [Code of Conduct](#code-of-conduct)
+- [Contributing](#contributing)
+- [Releasing](#releasing)
 
 ## Installation
 
@@ -217,34 +217,32 @@ picture.destroy # attachment destroy!
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run
-`rake spec` to run the tests. You can also run `bin/console` for an interactive
-prompt that will allow you to experiment.
+After checking out the repo, run `make install` to install dependencies. Then,
+run `make test` to run the tests. You can also run `make shell-irb` for an
+interactive prompt that will allow you to experiment.
 
 To run specs against the immobilienscout24 sandbox api, you need to create some
 keys and tokens. Copy the `spec/test_config.yml.example` to
 `spec/test_config.yml` and fill in your generated values.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To
-release a new version, update the version number in `version.rb`, and then run
-`bundle exec rake release`, which will create a git tag for the version, push
-git commits and tags, and push the `.gem` file to
-[rubygems.org](https://rubygems.org).
+## Code of Conduct
+
+Everyone interacting in the project codebase, issue tracker, chat
+rooms and mailing lists is expected to follow the [code of
+conduct](./CODE_OF_CONDUCT.md).
 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at
-https://github.com/hausgold/immoscout. This project is intended to be a safe,
-welcoming space for collaboration, and contributors are expected to adhere to
-the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+https://github.com/hausgold/immoscout. Make sure that every pull request adds
+a bullet point to the [changelog](./CHANGELOG.md) file with a reference to the
+actual pull request.
 
-## License
+## Releasing
 
-The gem is available as open source under the terms of the [MIT
-License](http://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Immoscout project’s codebases, issue trackers, chat
-rooms and mailing lists is expected to follow the [code of
-conduct](https://github.com/hausgold/immoscout/blob/master/CODE_OF_CONDUCT.md).
+The release process of this Gem is fully automated. You just need to open the
+Github Actions [Release
+Workflow](https://github.com/hausgold/immoscout/actions/workflows/release.yml)
+and trigger a new run via the **Run workflow** button. Insert the new version
+number (check the [changelog](./CHANGELOG.md) first for the latest release) and
+you're done.
