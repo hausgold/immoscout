@@ -1,6 +1,6 @@
 ### next
 
-* TODO: Replace this bullet point with an actual description of a change.
+* Moved the development dependencies from the gemspec to the Gemfile (#11)
 
 ### 1.5.0
 
