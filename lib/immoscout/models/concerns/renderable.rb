@@ -42,7 +42,7 @@ module Immoscout
               property = value.fetch(:alias, key)
               # use :default if present AND value is nil
               rendered = send(key) || value.fetch(:default, nil)
-              memo[property] = \
+              memo[property] =
                 if rendered.is_a?(Array)
                   rendered.map do |elem|
                     elem.try(:as_json) || elem

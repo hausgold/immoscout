@@ -20,7 +20,7 @@ module Immoscout
           end
 
           def save
-            response = \
+            response =
               if id
                 api.put("user/#{api.user_name}/contact/#{id}", as_json)
               else

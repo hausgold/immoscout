@@ -30,7 +30,7 @@ module Immoscout
             request.headers['Content-Type'] = 'application/json;charset=UTF-8'
           end
           request.headers['Accept'] = 'application/json'
-          request.headers['User-Agent'] = \
+          request.headers['User-Agent'] =
             "RubyImmoscout/#{Immoscout::VERSION}"
         end
       end

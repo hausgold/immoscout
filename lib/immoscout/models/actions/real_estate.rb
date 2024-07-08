@@ -23,7 +23,7 @@ module Immoscout
           end
 
           def save
-            response = \
+            response =
               if id
                 api.put("user/#{api.user_name}/realestate/#{id}", as_json)
               else
