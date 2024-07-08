@@ -14,7 +14,8 @@ require 'active_support'
 Dir[File.join(__dir__, 'support', '**', '*.rb')].sort.each { |f| require f }
 
 TEST_CONFIG = begin
-  YAML.load_file File.join(__dir__, 'test_config.yml')
+  load_method = YAML.respond_to?(:unsafe_load) ? :unsafe_load : :load
+  YAML.send(load_method, File.read(File.join(__dir__, 'test_config.yml')))
 rescue Errno::ENOENT
   {}
 end
