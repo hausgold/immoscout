@@ -41,7 +41,7 @@ RSpec.describe Immoscout::Models::Publish do
     end
   end
 
-  describe '#save', vcr: true do
+  describe '#save', :vcr do
     context 'when not persisted' do
       let(:instance) { described_class.new }
 
@@ -54,7 +54,7 @@ RSpec.describe Immoscout::Models::Publish do
     end
   end
 
-  describe '#destroy', vcr: true do
+  describe '#destroy', :vcr do
     let(:hash) do
       {
         real_estate: { id: resource_id },

@@ -133,14 +133,14 @@ RSpec.shared_examples 'a residential property' do
     end
   end
 
-  describe '.find', vcr: true do
+  describe '.find', :vcr do
     it 'returns an instance' do
       expect(described_class.find(resource_id)).to \
         be_an_instance_of(described_class)
     end
   end
 
-  describe '.all', vcr: true do
+  describe '.all', :vcr do
     let(:result) { described_class.all }
 
     it 'returns an array' do
@@ -152,7 +152,7 @@ RSpec.shared_examples 'a residential property' do
     end
   end
 
-  describe '.create', vcr: true do
+  describe '.create', :vcr do
     it 'returns the instance' do
       expect(
         described_class.create(create_hash)
@@ -160,7 +160,7 @@ RSpec.shared_examples 'a residential property' do
     end
   end
 
-  describe '#save', vcr: true do
+  describe '#save', :vcr do
     context 'when not persisted' do
       let(:estate) { described_class.new(create_hash) }
 
@@ -175,12 +175,12 @@ RSpec.shared_examples 'a residential property' do
       it 'changes attributes' do
         estate.title = 'Neuer Titel'
         estate.save
-        expect(estate.title).to be_eql('Neuer Titel')
+        expect(estate.title).to eql('Neuer Titel')
       end
     end
   end
 
-  describe '#publish', vcr: true do
+  describe '#publish', :vcr do
     let(:estate) { described_class.find(resource_id) }
 
     it 'returns publish instance' do
@@ -188,7 +188,7 @@ RSpec.shared_examples 'a residential property' do
     end
   end
 
-  describe '#unpublish', vcr: true do
+  describe '#unpublish', :vcr do
     let(:estate) { described_class.find(resource_id) }
 
     it 'returns publish instance' do
@@ -196,7 +196,7 @@ RSpec.shared_examples 'a residential property' do
     end
   end
 
-  describe '#destroy', vcr: true do
+  describe '#destroy', :vcr do
     let(:estate) { described_class.find(resource_id) }
 
     it 'returns the deleted object' do

@@ -48,7 +48,7 @@ RSpec.describe Immoscout::Models::Document do
     end
   end
 
-  describe '#save', vcr: true do
+  describe '#save', :vcr do
     let(:instance) { described_class.new title: 'Grundriss' }
     let(:file) { file_fixture('pdf.pdf') }
 
@@ -63,7 +63,7 @@ RSpec.describe Immoscout::Models::Document do
     end
   end
 
-  describe '#destroy', vcr: true do
+  describe '#destroy', :vcr do
     let(:instance) { described_class.new(id: resource_id) }
 
     before { instance.attachable = attachable_id }

@@ -59,14 +59,14 @@ RSpec.describe Immoscout::Models::Contact do
     end
   end
 
-  describe '.find', vcr: true do
+  describe '.find', :vcr do
     it 'returns an instance' do
       expect(described_class.find(resource_id)).to \
         be_an_instance_of(described_class)
     end
   end
 
-  describe '.all', vcr: true do
+  describe '.all', :vcr do
     let(:result) { described_class.all }
 
     it 'returns an array' do
@@ -78,7 +78,7 @@ RSpec.describe Immoscout::Models::Contact do
     end
   end
 
-  describe '.create', vcr: true do
+  describe '.create', :vcr do
     let(:hash) do
       {
         email: 'hans.meiser@example.com',
@@ -94,7 +94,7 @@ RSpec.describe Immoscout::Models::Contact do
     end
   end
 
-  describe '#save', vcr: true do
+  describe '#save', :vcr do
     context 'when not persisted' do
       let(:instance) { described_class.new }
 
@@ -109,15 +109,15 @@ RSpec.describe Immoscout::Models::Contact do
       end
 
       it 'set attributes (email)' do
-        expect(instance.email).to be_eql('hans.meiser@example.com')
+        expect(instance.email).to eql('hans.meiser@example.com')
       end
 
       it 'set attributes (firstname)' do
-        expect(instance.firstname).to be_eql('Hans')
+        expect(instance.firstname).to eql('Hans')
       end
 
       it 'set attributes (lastname)' do
-        expect(instance.lastname).to be_eql('Meiser')
+        expect(instance.lastname).to eql('Meiser')
       end
     end
 
@@ -130,12 +130,12 @@ RSpec.describe Immoscout::Models::Contact do
       end
 
       it 'changes attributes (email)' do
-        expect(instance.email).to be_eql('mynemail@example.com')
+        expect(instance.email).to eql('mynemail@example.com')
       end
     end
   end
 
-  describe '#destroy', vcr: true do
+  describe '#destroy', :vcr do
     let(:instance) { described_class.find('82495983') }
 
     it 'returns the deleted object' do
