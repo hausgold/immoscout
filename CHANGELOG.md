@@ -1,5 +1,9 @@
 ### next
 
+* TODO: Replace this bullet point with an actual description of a change.
+
+### 1.6.1
+
 * Added API docs building to continuous integration (#13)
 
 ### 1.6.0
