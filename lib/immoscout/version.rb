@@ -3,7 +3,7 @@
 # The gem version details.
 module Immoscout
   # The version of the +immoscout+ gem
-  VERSION = '1.7.0'
+  VERSION = '1.8.0'
 
   class << self
     # Returns the version of gem as a string.

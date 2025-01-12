@@ -1,5 +1,9 @@
 ### next
 
+* TODO: Replace this bullet point with an actual description of a change.
+
+### 1.8.0 (12 January 2025)
+
 * Switched to Zeitwerk as autoloader (#15)
 
 ### 1.7.0 (3 January 2025)
