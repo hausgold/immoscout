@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'faraday'
-require 'faraday_middleware'
-
 module Immoscout
   module Api
     # A connection builder/handler for reusable connections.

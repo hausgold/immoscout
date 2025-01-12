@@ -1,17 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'concerns/renderable'
-require_relative 'concerns/propertiable'
-require_relative 'actions/real_estate'
-require_relative 'parts/api_search_data'
-require_relative 'parts/address'
-require_relative 'parts/contact'
-require_relative 'parts/price'
-require_relative 'parts/courtage'
-require_relative 'parts/energy_source'
-require_relative 'parts/energy_certificate'
-require_relative 'parts/firing_type'
-
 module Immoscout
   module Models
     # Real Estate. (selling a house)

@@ -1,10 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'concerns/renderable'
-require_relative 'concerns/propertiable'
-require_relative 'actions/contact'
-require_relative 'parts/address'
-
 module Immoscout
   module Models
     # A contact.

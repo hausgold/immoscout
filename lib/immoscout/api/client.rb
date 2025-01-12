@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-require 'singleton'
-require_relative 'connection'
-require_relative 'request'
-
 module Immoscout
   module Api
     # The immoscout API client object.

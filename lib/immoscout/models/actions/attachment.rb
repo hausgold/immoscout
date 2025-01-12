@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'json'
-require_relative '../concerns/modelable'
-
 # rubocop:disable Metrics/BlockLength because this is how an ActiveSupport
 #   concern looks like
 module Immoscout

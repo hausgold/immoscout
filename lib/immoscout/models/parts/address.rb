@@ -1,12 +1,5 @@
 # frozen_string_literal: true
 
-require_relative '../base'
-require_relative '../parts/coordinate'
-require_relative '../parts/geo_hierarchy'
-require_relative '../parts/international_country_region'
-require_relative '../concerns/propertiable'
-require_relative '../concerns/renderable'
-
 module Immoscout
   module Models
     module Parts

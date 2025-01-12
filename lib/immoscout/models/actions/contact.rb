@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'json'
-require_relative '../concerns/modelable'
-
 module Immoscout
   module Models
     module Actions
