@@ -36,4 +36,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'faraday', '~> 1.10'
   spec.add_dependency 'faraday_middleware', '~> 1.2'
   spec.add_dependency 'simple_oauth', '>= 0.3'
+  spec.add_dependency 'zeitwerk', '~> 2.6'
 end

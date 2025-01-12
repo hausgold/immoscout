@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'json'
-
 # rubocop:disable Metrics/BlockLength because this is how an ActiveSupport
 #   concern looks like
 module Immoscout

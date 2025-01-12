@@ -1,15 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'concerns/renderable'
-require_relative 'concerns/propertiable'
-require_relative 'actions/real_estate'
-require_relative 'parts/api_search_data'
-require_relative 'parts/address'
-require_relative 'parts/contact'
-require_relative 'parts/price'
-require_relative 'parts/courtage'
-require_relative 'parts/energy_source'
-
 module Immoscout
   module Models
     # Real Estate. (selling an apartment)

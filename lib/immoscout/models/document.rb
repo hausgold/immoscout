@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'concerns/renderable'
-require_relative 'concerns/propertiable'
-require_relative 'actions/attachment'
-
 module Immoscout
   module Models
     # Attachment (document) of a Real Estate.
