@@ -20,14 +20,19 @@ VCR.configure do |config|
   end
 
   config.around_http_request do |request|
+    headers =
+      if request.body.include?('RubyMultipartPost')
+        request.headers.except('Content-Type', *ignore_req_headers)
+      else
+        request.headers.except(*ignore_req_headers)
+      end
+    headers = headers.map { |key, val| %("#{key}"=>#{val}) }.join(', ')
+    headers = "{#{headers}}"
+
     tape_sha = Digest::SHA1.hexdigest [
       request.method,
       request.uri,
-      if request.body.include?('RubyMultipartPost')
-        request.headers.except('Content-Type', *ignore_req_headers).to_s
-      else
-        request.headers.except(*ignore_req_headers).to_s
-      end,
+      headers,
       request.body.to_s.gsub(
         /RubyMultipartPost-\w{32}/,
         "RubyMultipartPost-#{'1' * 32}"
