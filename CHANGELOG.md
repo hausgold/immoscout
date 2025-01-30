@@ -1,6 +1,6 @@
 ### next
 
-* TODO: Replace this bullet point with an actual description of a change.
+* Added all versions up to Ruby 3.4 to the CI matrix (#17)
 
 ### 1.8.1 (17 January 2025)
 
