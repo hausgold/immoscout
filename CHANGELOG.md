@@ -1,18 +1,22 @@
 ### next
 
-* Added all versions up to Ruby 3.4 to the CI matrix (#17)
+* TODO: Replace this bullet point with an actual description of a change.
+
+### 1.9.0 (30 January 2025)
+
+* Added all versions up to Ruby 3.4 to the CI matrix ([#17](https://github.com/hausgold/immoscout/pull/17))
 
 ### 1.8.1 (17 January 2025)
 
-* Added the logger dependency (#16)
+* Added the logger dependency ([#16](https://github.com/hausgold/immoscout/pull/16))
 
 ### 1.8.0 (12 January 2025)
 
-* Switched to Zeitwerk as autoloader (#15)
+* Switched to Zeitwerk as autoloader ([#15](https://github.com/hausgold/immoscout/pull/15))
 
 ### 1.7.0 (3 January 2025)
 
-* Raised minimum supported Ruby/Rails version to 2.7/6.1 (#14)
+* Raised minimum supported Ruby/Rails version to 2.7/6.1 ([#14](https://github.com/hausgold/immoscout/pull/14))
 
 ### 1.6.5 (15 August 2024)
 
@@ -32,12 +36,12 @@
 
 ### 1.6.1 (9 August 2024)
 
-* Added API docs building to continuous integration (#13)
+* Added API docs building to continuous integration ([#13](https://github.com/hausgold/immoscout/pull/13))
 
 ### 1.6.0 (8 July 2024)
 
-* Moved the development dependencies from the gemspec to the Gemfile (#11)
-* Dropped support for Ruby <2.7 (#12)
+* Moved the development dependencies from the gemspec to the Gemfile ([#11](https://github.com/hausgold/immoscout/pull/11))
+* Dropped support for Ruby <2.7 ([#12](https://github.com/hausgold/immoscout/pull/12))
 
 ### 1.5.0 (24 February 2023)
 
@@ -45,11 +49,11 @@
 
 ### 1.4.0 (18 January 2023)
 
-* Bundler >= 2.3 is from now on required as minimal version (#10)
-* Dropped support for Ruby < 2.5 (#10)
-* Dropped support for Rails < 5.2 (#10)
+* Bundler >= 2.3 is from now on required as minimal version ([#10](https://github.com/hausgold/immoscout/pull/10))
+* Dropped support for Ruby < 2.5 ([#10](https://github.com/hausgold/immoscout/pull/10))
+* Dropped support for Rails < 5.2 ([#10](https://github.com/hausgold/immoscout/pull/10))
 * Updated all development/runtime gems to their latest
-  Ruby 2.5 compatible version (#10)
+  Ruby 2.5 compatible version ([#10](https://github.com/hausgold/immoscout/pull/10))
 
 ### 1.3.2 (15 October 2021)
 
@@ -63,16 +67,16 @@
 
 ### 1.3.0 (9 September 2020)
 
-* Dropped support for Rails <5.2 (#9)
-* Dropped support for Ruby <2.5 (#9)
-* Updated the faraday gem spec to `~> 1.0` (#9)
+* Dropped support for Rails <5.2 ([#9](https://github.com/hausgold/immoscout/pull/9))
+* Dropped support for Ruby <2.5 ([#9](https://github.com/hausgold/immoscout/pull/9))
+* Updated the faraday gem spec to `~> 1.0` ([#9](https://github.com/hausgold/immoscout/pull/9))
 
 ### 1.2.0 (6 March 2019)
 
 * Added a changelog file to track changes for library users
-* Allow newer version of faraday/faraday-middleware. (#7)
+* Allow newer version of faraday/faraday-middleware. ([#7](https://github.com/hausgold/immoscout/pull/7))
 * Set `HausgoldImmoscout/#{gem_version}` as user agent
-* Set correct content type and filename for mixed multipart (#5)
+* Set correct content type and filename for mixed multipart ([#5](https://github.com/hausgold/immoscout/pull/5))
 * Dropped support for EOL Ruby 2.2
 * Added support for Ruby 2.6
 
