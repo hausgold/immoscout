@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# rubocop:disable Metrics/BlockLength because this is how an ActiveSupport
+# rubocop:disable Metrics/BlockLength -- because this is how an ActiveSupport
 #   concern looks like
 module Immoscout
   module Models
