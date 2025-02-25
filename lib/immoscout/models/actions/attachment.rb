@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# rubocop:disable Metrics/BlockLength because this is how an ActiveSupport
+# rubocop:disable Metrics/BlockLength -- because this is how an ActiveSupport
 #   concern looks like
 module Immoscout
   module Models
@@ -19,9 +19,9 @@ module Immoscout
               .fetch('attachment')
           end
 
-          # rubocop:disable Metrics/AbcSize because this is the
-          #   bare minimum logic
-          # rubocop:disable Metrics/MethodLength dito
+          # rubocop:disable Metrics/AbcSize -- because this is the bare minimum
+          #   logic
+          # rubocop:disable Metrics/MethodLength -- dito
           def save
             attachable_id = attachable.try(:id) || attachable
             response = api.post(

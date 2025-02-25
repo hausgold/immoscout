@@ -1,6 +1,6 @@
 ### next
 
-* TODO: Replace this bullet point with an actual description of a change.
+* Corrected some RuboCop glitches (#18)
 
 ### 1.9.0 (30 January 2025)
 

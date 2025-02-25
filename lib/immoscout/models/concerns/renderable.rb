@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# rubocop:disable Metrics/BlockLength because this is how an ActiveSupport
+# rubocop:disable Metrics/BlockLength -- because this is how an ActiveSupport
 #   concern looks like
 module Immoscout
   module Models
@@ -25,11 +25,11 @@ module Immoscout
             self.class.try(:json_wrapper)
           end
 
-          # rubocop:disable Metrics/PerceivedComplexity because this is the
+          # rubocop:disable Metrics/PerceivedComplexity -- because this is the
           #   bare minimum logic
-          # rubocop:disable Metrics/MethodLength dito
-          # rubocop:disable Metrics/CyclomaticComplexity dito
-          # rubocop:disable Metrics/AbcSize dito
+          # rubocop:disable Metrics/MethodLength -- dito
+          # rubocop:disable Metrics/CyclomaticComplexity -- dito
+          # rubocop:disable Metrics/AbcSize -- dito
           def to_h
             self.class.properties.each_with_object({}) do |(key, value), memo|
               # skip if it's readonly and should not be exposed in #as_json

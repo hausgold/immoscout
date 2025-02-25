@@ -14,17 +14,11 @@ module Immoscout
             Immoscout::Api::Client.instance
           end
 
-          def api
-            self.class.api
-          end
+          delegate :api, to: :class
 
-          def handle_response(response)
-            self.class.handle_response(response)
-          end
+          delegate :handle_response, to: :class
 
-          def id_from_response(response)
-            self.class.id_from_response(response)
-          end
+          delegate :id_from_response, to: :class
         end
 
         class_methods do
