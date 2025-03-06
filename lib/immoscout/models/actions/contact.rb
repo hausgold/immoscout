@@ -12,8 +12,7 @@ module Immoscout
 
           self.unpack_collection = proc do |hash|
             hash
-              .fetch('common.realtorContactDetailsList', {})
-              .fetch('realtorContactDetails', nil)
+              .dig('common.realtorContactDetailsList', 'realtorContactDetails')
           end
 
           def save

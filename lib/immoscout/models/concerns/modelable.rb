@@ -42,8 +42,7 @@ module Immoscout
               .body
               .fetch('common.messages')
               .first
-              .fetch('message', {})
-              .fetch('id', nil)
+              .dig('message', 'id')
           end
         end
       end

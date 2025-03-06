@@ -13,10 +13,9 @@ module Immoscout
           include Immoscout::Models::Concerns::Modelable
 
           self.unpack_collection = proc do |hash|
-            hash
-              .fetch('realestates.realEstates', {})
-              .fetch('realEstateList', {})
-              .fetch('realEstateElement', nil)
+            hash.dig('realestates.realEstates',
+                     'realEstateList',
+                     'realEstateElement')
           end
 
           def save
