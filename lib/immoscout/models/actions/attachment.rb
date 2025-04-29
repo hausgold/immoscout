@@ -21,7 +21,7 @@ module Immoscout
 
           # rubocop:disable Metrics/AbcSize -- because this is the bare minimum
           #   logic
-          # rubocop:disable Metrics/MethodLength -- dito
+          # rubocop:disable Metrics/MethodLength -- ditto
           def save
             attachable_id = attachable.try(:id) || attachable
             response = api.post(

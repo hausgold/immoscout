@@ -27,9 +27,9 @@ module Immoscout
 
           # rubocop:disable Metrics/PerceivedComplexity -- because this is the
           #   bare minimum logic
-          # rubocop:disable Metrics/MethodLength -- dito
-          # rubocop:disable Metrics/CyclomaticComplexity -- dito
-          # rubocop:disable Metrics/AbcSize -- dito
+          # rubocop:disable Metrics/MethodLength -- ditto
+          # rubocop:disable Metrics/CyclomaticComplexity -- ditto
+          # rubocop:disable Metrics/AbcSize -- ditto
           def to_h
             self.class.properties.each_with_object({}) do |(key, value), memo|
               # skip if it's readonly and should not be exposed in #as_json
