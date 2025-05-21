@@ -1,8 +1,12 @@
 ### next
 
-* Corrected some RuboCop glitches (#18)
-* Upgraded the rubocop dependencies (#19)
-* Corrected some RuboCop glitches (#20)
+* TODO: Replace this bullet point with an actual description of a change.
+
+### 1.9.1 (21 May 2025)
+
+* Corrected some RuboCop glitches ([#18](https://github.com/hausgold/immoscout/pull/18))
+* Upgraded the rubocop dependencies ([#19](https://github.com/hausgold/immoscout/pull/19))
+* Corrected some RuboCop glitches ([#20](https://github.com/hausgold/immoscout/pull/20))
 
 ### 1.9.0 (30 January 2025)
 
