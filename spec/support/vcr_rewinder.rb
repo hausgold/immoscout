@@ -12,6 +12,7 @@ module CassetteReporter
 end
 VCR.extend(CassetteReporter)
 
+# rubocop:disable Rails/Output -- because we want to write to stdout here
 RSpec.configure do |config|
   config.after(:suite) do
     cassettes = Dir['spec/fixtures/vcr_cassettes/*.yml'].map do |d|
@@ -26,3 +27,4 @@ RSpec.configure do |config|
     end
   end
 end
+# rubocop:enable Rails/Output
