@@ -15,7 +15,7 @@ module Immoscout
 
           # :reek:ControlParameter - standard stuff, reek!
           # :reek:TooManyStatements
-          def method_missing(method_name, *arguments, &block)
+          def method_missing(method_name, *arguments, &)
             if method_name =~ /build_(\w+)/
               match         = Regexp.last_match(1).intern
               properties    = self.class.properties
