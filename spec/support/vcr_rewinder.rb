@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'vcr'
-require 'set'
 USED_CASSETTES = Set.new
 
 module CassetteReporter
