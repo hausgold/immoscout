@@ -13,8 +13,6 @@ module Immoscout
             {}
           end
 
-          # :reek:ControlParameter - standard stuff, reek!
-          # :reek:TooManyStatements
           def method_missing(method_name, *arguments, &)
             if method_name =~ /build_(\w+)/
               match         = Regexp.last_match(1).intern
@@ -32,7 +30,6 @@ module Immoscout
             self.class.properties.keys.sort
           end
 
-          # :reek:BooleanParameter - standard stuff, reek!
           def respond_to_missing?(method_name, include_private = false)
             method_name.to_s.start_with?('build_') || super
           end
