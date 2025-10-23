@@ -10,7 +10,7 @@ gemspec
 # Development dependencies
 gem 'appraisal', '~> 2.4'
 gem 'bundler', '~> 2.6'
-gem 'countless', '~> 2.0'
+gem 'countless', '~> 2.2'
 gem 'factory_bot', '~> 6.2'
 gem 'guard-rspec', '~> 4.7'
 gem 'railties', '>= 7.1'
