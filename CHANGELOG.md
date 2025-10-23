@@ -1,9 +1,13 @@
 ### next
 
-* Dropped Reek (#23)
-* Added support for Rails 8.1 (#24)
+* TODO: Replace this bullet point with an actual description of a change.
+
+### 2.1.0 (23 October 2025)
+
+* Dropped Reek ([#23](https://github.com/hausgold/immoscout/pull/23))
+* Added support for Rails 8.1 ([#24](https://github.com/hausgold/immoscout/pull/24))
 * Switched from `ActiveSupport::Configurable` to a custom implementation based
-  on `ActiveSupport::OrderedOptions` (#25)
+  on `ActiveSupport::OrderedOptions` ([#25](https://github.com/hausgold/immoscout/pull/25))
 
 ### 2.0.0 (28 June 2025)
 
