@@ -1,7 +1,9 @@
 ### next
 
+* Dropped Reek (#23)
 * Added support for Rails 8.1 (#24)
-* Dropped Reek (#22)
+* Switched from `ActiveSupport::Configurable` to a custom implementation based
+  on `ActiveSupport::OrderedOptions` (#25)
 
 ### 2.0.0 (28 June 2025)
 
