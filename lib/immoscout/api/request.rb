@@ -20,7 +20,6 @@ module Immoscout
         request(:delete, path, payload, multipart)
       end
 
-      # rubocop:disable Metrics/MethodLength -- because of the header handling
       def request(method, path, payload = nil, multipart = nil)
         connection.send(method, path, multipart) do |request|
           if multipart
@@ -34,7 +33,6 @@ module Immoscout
             "RubyImmoscout/#{Immoscout::VERSION}"
         end
       end
-      # rubocop:enable Metrics/MethodLength
     end
   end
 end

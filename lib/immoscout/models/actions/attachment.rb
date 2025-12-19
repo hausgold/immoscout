@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# rubocop:disable Metrics/BlockLength -- because this is how an ActiveSupport
-#   concern looks like
 module Immoscout
   module Models
     module Actions
@@ -19,9 +17,6 @@ module Immoscout
               .fetch('attachment')
           end
 
-          # rubocop:disable Metrics/AbcSize -- because this is the bare minimum
-          #   logic
-          # rubocop:disable Metrics/MethodLength -- ditto
           def save
             attachable_id = attachable.try(:id) || attachable
             response = api.post(
@@ -38,8 +33,6 @@ module Immoscout
             self.id = id_from_response(response)
             self
           end
-          # rubocop:enable Metrics/AbcSize
-          # rubocop:enable Metrics/MethodLength
 
           def destroy
             attachable_id = attachable.try(:id) || attachable
@@ -93,4 +86,3 @@ module Immoscout
     end
   end
 end
-# rubocop:enable Metrics/BlockLength
