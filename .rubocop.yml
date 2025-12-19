@@ -1,11 +1,12 @@
+inherit_from:
+  - https://potpourri.hausgold.de/config/rubocop.yml
+  - https://potpourri.hausgold.de/config/rubocop-gem.yml
+
 plugins:
   - rubocop-rspec
   - rubocop-rails
 
 Rails:
-  Enabled: true
-
-Style/Documentation:
   Enabled: true
 
 AllCops:
@@ -20,24 +21,8 @@ AllCops:
     - build/**/*
     - gemfiles/**/*
 
-Metrics/BlockLength:
-  Exclude:
-    - Rakefile
-    - '*.gemspec'
-    - spec/**/*.rb
-    - '**/*.rake'
-    - doc/**/*.rb
-
-# We stay at 80 characters per line.
-# See: https://rubystyle.guide/#max-line-length
-Layout/LineLength:
-  Max: 80
-
-# MFA is not yet enabled for our gems yet.
-Gemspec/RequireMFA:
+# Document all the things.
+# TODO: Add missing documentations for all methods.
+Style/DocumentationMethod:
   Enabled: false
-
-# We use memoized helpers all over the place to construct inputs and output
-# which can be customized at nested contexts easily.
-RSpec/MultipleMemoizedHelpers:
-  Enabled: false
+  RequireForNonPublicMethods: false
