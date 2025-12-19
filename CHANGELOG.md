@@ -1,6 +1,10 @@
 ### next
 
-* Migrated to a shared Rubocop configuration for HAUSGOLD gems (#26)
+* TODO: Replace this bullet point with an actual description of a change.
+
+### 2.2.0 (19 December 2025)
+
+* Migrated to a shared Rubocop configuration for HAUSGOLD gems ([#26](https://github.com/hausgold/immoscout/pull/26))
 
 ### 2.1.0 (23 October 2025)
 
