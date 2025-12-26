@@ -1,6 +1,7 @@
 ### next
 
 * Dropped Ruby 3.2 and Rails 7.1 support (#27)
+* Added Ruby 4.0 support (#28)
 * Upgraded to Faraday 2 (#29)
 
 ### 2.2.0 (19 December 2025)
