@@ -10,7 +10,9 @@ require 'active_support/core_ext/hash'
 require 'active_support/core_ext/module'
 require 'singleton'
 require 'faraday'
-require 'faraday_middleware'
+require 'faraday/multipart'
+require 'faraday/follow_redirects'
+require 'faraday/oauth1'
 require 'json'
 
 # The top-namespace of the +immoscout+ gem.

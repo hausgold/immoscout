@@ -20,7 +20,8 @@ module Immoscout
 
       def configure_oauth(builder)
         builder.request(
-          :oauth,
+          :oauth1,
+          :header,
           token: config.oauth_token,
           token_secret: config.oauth_token_secret,
           consumer_key: config.consumer_key,

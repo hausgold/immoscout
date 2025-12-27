@@ -33,8 +33,9 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 3.3'
 
   spec.add_dependency 'activesupport', '>= 7.2'
-  spec.add_dependency 'faraday', '~> 1.10'
-  spec.add_dependency 'faraday_middleware', '~> 1.2'
-  spec.add_dependency 'simple_oauth', '>= 0.3'
+  spec.add_dependency 'faraday', '~> 2.14'
+  spec.add_dependency 'faraday-follow_redirects', '>= 0.5.0'
+  spec.add_dependency 'faraday-multipart', '~> 1.2'
+  spec.add_dependency 'faraday-oauth1', '>= 0.1.1'
   spec.add_dependency 'zeitwerk', '~> 2.6'
 end
