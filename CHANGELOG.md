@@ -1,5 +1,6 @@
 ### next
 
+* Migrated to hausgold/actions@v2 (#30)
 * Dropped Ruby 3.2 and Rails 7.1 support (#27)
 * Upgraded to Faraday 2 (#29)
 
