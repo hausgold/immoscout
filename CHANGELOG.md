@@ -1,5 +1,6 @@
 ### next
 
+* Upgraded to Ubuntu 24.04 on Github Actions (#31)
 * Migrated to hausgold/actions@v2 (#30)
 * Dropped Ruby 3.2 and Rails 7.1 support (#27)
 * Upgraded to Faraday 2 (#29)
