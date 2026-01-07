@@ -1,10 +1,14 @@
 ### next
 
-* Upgraded to Ubuntu 24.04 on Github Actions (#31)
-* Migrated to hausgold/actions@v2 (#30)
-* Dropped Ruby 3.2 and Rails 7.1 support (#27)
-* Added Ruby 4.0 support (#28)
-* Upgraded to Faraday 2 (#29)
+* TODO: Replace this bullet point with an actual description of a change.
+
+### 2.3.0 (7 January 2026)
+
+* Upgraded to Ubuntu 24.04 on Github Actions ([#31](https://github.com/hausgold/immoscout/pull/31))
+* Migrated to hausgold/actions@v2 ([#30](https://github.com/hausgold/immoscout/pull/30))
+* Dropped Ruby 3.2 and Rails 7.1 support ([#27](https://github.com/hausgold/immoscout/pull/27))
+* Added Ruby 4.0 support ([#28](https://github.com/hausgold/immoscout/pull/28))
+* Upgraded to Faraday 2 ([#29](https://github.com/hausgold/immoscout/pull/29))
 
 ### 2.2.0 (19 December 2025)
 
