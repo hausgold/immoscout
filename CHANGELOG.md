@@ -1,6 +1,10 @@
 ### next
 
-* Dropped Rails 7.1 support (#32)
+* TODO: Replace this bullet point with an actual description of a change.
+
+### 2.5.0 (28 January 2026)
+
+* Dropped Rails 7.1 support ([#32](https://github.com/hausgold/immoscout/pull/32))
 
 ### 2.4.0 (19 January 2026)
 
