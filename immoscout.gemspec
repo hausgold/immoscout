@@ -36,7 +36,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'faraday', '~> 2.14'
   spec.add_dependency 'faraday-follow_redirects', '>= 0.5.0'
   spec.add_dependency 'faraday-multipart', '~> 1.2'
-  spec.add_dependency 'faraday-oauth1', '>= 0.1.1'
+  spec.add_dependency 'faraday-oauth1', '~> 1.0'
   spec.add_dependency 'logger', '~> 1.7'
   spec.add_dependency 'zeitwerk', '~> 2.6'
 end

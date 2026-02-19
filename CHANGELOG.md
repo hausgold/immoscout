@@ -1,6 +1,6 @@
 ### next
 
-* TODO: Replace this bullet point with an actual description of a change.
+* Upgraded the `faraday-oauth1` gem which supports Ruby 4 (#34)
 
 ### 2.6.0 (18 February 2026)
 

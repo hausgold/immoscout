@@ -22,7 +22,6 @@ jobs:
         rails: ['8.0', '8.1']
     env:
       BUNDLE_GEMFILE: 'gemfiles/rails_${{ matrix.rails }}.gemfile'
-    continue-on-error: ${{ matrix.ruby == '4.0' }}
     steps:
       - name: Prepare the environment
         uses: hausgold/actions/ci@v2
