@@ -1,6 +1,10 @@
 ### next
 
-* Upgraded the `faraday-oauth1` gem which supports Ruby 4 (#34)
+* TODO: Replace this bullet point with an actual description of a change.
+
+### 2.7.0 (19 February 2026)
+
+* Upgraded the `faraday-oauth1` gem which supports Ruby 4 ([#34](https://github.com/hausgold/immoscout/pull/34))
 
 ### 2.6.0 (18 February 2026)
 
