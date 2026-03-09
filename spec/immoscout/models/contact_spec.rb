@@ -74,7 +74,7 @@ RSpec.describe Immoscout::Models::Contact do
     end
 
     it 'returns instances of contact' do
-      expect(result.all? { |c| c.is_a? described_class }).not_to be_nil
+      expect(result.all?(described_class)).not_to be_nil
     end
   end
 
