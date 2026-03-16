@@ -1,6 +1,10 @@
 ### next
 
-* Corrected some RuboCop issues (#35)
+* TODO: Replace this bullet point with an actual description of a change.
+
+### 2.8.0 (16 March 2026)
+
+* Corrected some RuboCop issues ([#35](https://github.com/hausgold/immoscout/pull/35))
 
 ### 2.7.0 (19 February 2026)
 
