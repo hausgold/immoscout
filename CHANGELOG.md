@@ -1,6 +1,10 @@
 ### next
 
-* Dropped Ruby 3.x and Rails <8.1 support (#36)
+* TODO: Replace this bullet point with an actual description of a change.
+
+### 2.9.0 (4 May 2026)
+
+* Dropped Ruby 3.x and Rails <8.1 support ([#36](https://github.com/hausgold/immoscout/pull/36))
 
 ### 2.8.0 (16 March 2026)
 
