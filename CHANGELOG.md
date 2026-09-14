@@ -1,6 +1,10 @@
 ### next
 
-* Pinned json gem to <3.0 (#39)
+* TODO: Replace this bullet point with an actual description of a change.
+
+### 2.12.0 (14 September 2026)
+
+* Pinned json gem to <3.0 ([#39](https://github.com/hausgold/immoscout/pull/39))
 
 ### 2.11.0 (27 August 2026)
 
