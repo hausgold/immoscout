@@ -1,6 +1,10 @@
 ### next
 
-* Upgraded the simplecov gem to 1.3 (#40)
+* TODO: Replace this bullet point with an actual description of a change.
+
+### 2.13.0 (28 September 2026)
+
+* Upgraded the simplecov gem to 1.3 ([#40](https://github.com/hausgold/immoscout/pull/40))
 
 ### 2.12.0 (14 September 2026)
 
