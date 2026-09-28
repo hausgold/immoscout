@@ -1,6 +1,10 @@
 ### next
 
-* Dropped the json gem <3.0 pin (#41)
+* TODO: Replace this bullet point with an actual description of a change.
+
+### 2.14.0 (28 September 2026)
+
+* Dropped the json gem <3.0 pin ([#41](https://github.com/hausgold/immoscout/pull/41))
 
 ### 2.13.0 (28 September 2026)
 
