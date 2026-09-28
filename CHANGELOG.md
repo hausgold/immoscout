@@ -1,6 +1,6 @@
 ### next
 
-* TODO: Replace this bullet point with an actual description of a change.
+* Dropped the json gem <3.0 pin (#41)
 
 ### 2.13.0 (28 September 2026)
 
